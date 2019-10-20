@@ -225,11 +225,15 @@ li {
     -webkit-text-fill-color: transparent;
     padding: 1rem;
     user-select: none;
+    position: relative;
+    top: -5rem;
 }
 
 .landing-text h6 {
     font-size: 1.5rem;
     font-weight: 300;
+    position: relative;
+    top: -5rem;
 }
 
 /*End header*/
