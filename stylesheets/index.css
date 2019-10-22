@@ -236,13 +236,21 @@ header {
     font-weight: 300;
     position: relative;
     top: -5rem;
+    /* width:30em; */
+}
+
+.icon-link{
+    font-size: 5em;
+    padding:1em;
+}
+
+.icon-link i:hover{
+    background: linear-gradient(to top, #00927f 20%, #ffe838 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /*End header*/
-
-/* Start Social Nav */
-
-/* End Social Nav */
 
 /*Start about*/
 
@@ -274,33 +282,8 @@ header {
     bottom:-3rem;
 }
 
-.profile-img {
-    flex: 1;
-    margin-right: 5rem;
-}
-
 .about-details {
     flex: 1;
-}
-
-.social-media {
-    margin-top: 5rem;
-}
-
-.social-media i {
-    font-size: 5rem;
-    transition: color 650ms;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-
-.fa-github:hover {
-    color: #4267b2
-}
-
-.fa-linkedin:hover {
-    color: #4267b2
 }
 
 /*End about*/
