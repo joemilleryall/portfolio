@@ -27,7 +27,7 @@ body {
 
 section {
     /* padding: 6rem 0; */
-    padding-bottom: 6em;
+    /* padding-bottom: 6em; */
     padding-top: 0.5em;
 }
 
@@ -255,6 +255,11 @@ header {
     -webkit-text-fill-color: transparent;
 }
 
+.skip{
+    position: relative;
+    top: 2rem;
+}
+
 /*End header*/
 
 /*Start about*/
@@ -280,12 +285,19 @@ header {
     opacity: 0.3;
 }
 
-.about-heading h6 {
+.about-heading h5 {
     font-size: 2rem;
     font-weight: 300;
     position: relative;
     bottom: -3rem;
 }
+/* .about-heading h6 {
+    font-size: 1rem;
+    font-weight: 300;
+    position: relative;
+    bottom: -4.2rem;
+} */
+
 
 .about-details {
     flex: 1;
@@ -294,10 +306,6 @@ header {
 /*End about*/
 
 /*Start services*/
-.icon{
-    font-size:1.5em;
-    color:yellow;
-}
 
 .my-skills {
     /* margin-top: 10rem; */
@@ -354,21 +362,59 @@ header {
 .skill-icons {
     font-size: 3rem;
     display: flex;
-    grid-template-columns: 1fr, 2fr, 3fr;
+    /* grid-template-columns: 1fr, 2fr, 3fr; */
     padding: 1rem;
     flex-wrap: wrap;
     justify-content: center;
-}
-.design-icons {
-    font-size: 3rem;
-    position: relative;
-    left: 10rem;
 }
 
 .skill-icons i {
     padding: 0.5em;  
 }
 
+.design-icons {
+    font-size: 2.1rem;
+    position: relative;
+    top: .65em;
+    margin-bottom: .5em;
+    opacity: .8;
+}
+
+.design-icons p {
+    color: yellow;
+    position: relative;
+    font-size: 1.5rem;
+    top: -.2rem;
+    font-weight: 400;
+    margin-left: 2rem;
+}
+
+.icon{
+    font-size:1.5em;
+    color:yellow;
+    position: relative;
+    left:0.6rem;
+}
+
+.office p {
+    position: relative;
+    top:.4rem;
+    font-size: 1.5rem;
+}
+
+.json-api{
+    position: relative;
+    top: .5em;
+    margin-left: .5em;
+    margin-bottom: .5em;
+}
+
+.json-api p {
+    font-size: 1.5rem;
+    position: relative;
+    top: -.4rem;
+    font-weight: 400;
+}
 
 .redux-icon {
     position: relative;
