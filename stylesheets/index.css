@@ -518,7 +518,7 @@ header {
 /*End services*/
 
 /*Start timeline*/
-.timeline ul {
+#timeline {
     border-left: 4px solid yellow;
     border-radius: .8rem;
     background-color: black;
