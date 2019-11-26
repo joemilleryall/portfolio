@@ -298,14 +298,32 @@ header {
     bottom: -4.2rem;
 } */
 
+.languageColor {
+    color: rgb(255, 162, 162);
+} 
+
+.bgFieldsColor {
+    color: rgb(103, 216, 250);
+}
+
+.personalColor  {
+    color: lightgoldenrodyellow;
+}
 
 .about-details {
-    flex: 1;
+    /* flex: 1; */
+}
+
+.about-details a {
+    position: relative;
+    left: 75%;
+    font-size: 2em;
+    color: blue;
 }
 
 /*End about*/
 
-/*Start services*/
+/*Start Skills*/
 
 .my-skills {
     /* margin-top: 10rem; */
@@ -313,7 +331,7 @@ header {
     /* grid-template-columns: repeat(auto-fit, minmax(25rem, 2fr)); */
     /* grid-gap: 2.5rem; */
     text-align: center;
-    align-items: center;
+    /* align-items: center; */
 }
 
 /* .skill {
@@ -332,11 +350,10 @@ header {
 .skill-item {
     background: black;
     opacity: 0.6;
+    /* width: 0; */
     /* padding: 1em 1em 2em; */
-    /* border-radius: 10%; */
-    display:flex;
-    flex-direction: row;
-    align-items: center;
+    /* flex-direction: row;
+    /* align-items: center; */
 }
 
 .icon-container {
@@ -463,7 +480,7 @@ header {
 
 
 
-/*End services*/
+/*End Skills*/
 
 /*Start portfolio*/
 .portfolio-item {
@@ -504,6 +521,7 @@ header {
 
 .portfolio-description .cta {
     display: inline-block;
+    margin-right: 2em;
     margin-top: 2.5rem;
     font-size: 1.5rem;
     text-transform: uppercase;
@@ -512,7 +530,7 @@ header {
 }
 
 .portfolio-description .cta:hover {
-    color: #2f67cd;
+    color: #aad2fa;
 }
 
 /*End services*/
@@ -531,12 +549,39 @@ header {
     width: 70%;
 }
 
+.timeline ul {
+    margin: 2em;
+    font-size: 1.1em;
+}
+
+.timeline ul li {
+    margin: 1em;
+}
+
 .timeline h1 {
     font-size: 2rem;
     text-transform: uppercase;
     font-weight: 300;
     margin-bottom: 1rem;
-    opacity: 0.3;
+    opacity: 0.6;
+    color: #fd57bf;
+}
+
+.timeline h2 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    opacity: 0.8;
+    color: yellow;
+}
+
+.timeline h3 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    opacity: 0.8;
+    color: yellow;
 }
 
 .timeline .date {
@@ -562,7 +607,7 @@ header {
 
 .timeline .date::before {
     content: attr(data-date);
-    left: -19rem;
+    left: -20rem;
     text-align: right;
     min-width: 12rem;
     font-size: 1.5rem;
@@ -572,7 +617,7 @@ header {
     content: '';
     box-shadow: 0 0 0 4px #fd57bf;
     border-radius: 100%;
-    left: -6.1rem;
+    left: -7rem;
     height: 1.5rem;
     width: 1.5rem;
     background-color: #313534;
