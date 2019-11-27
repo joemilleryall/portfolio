@@ -15,9 +15,14 @@ html {
 body {
     width: 100%;
     height: 100%;
-    background: url("../images/bg11.jpg") no-repeat center fixed;
+    background: url("../images/bg11.jpg") no-repeat center center fixed;
     background-color: black;
-    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    margin: 0;
+    background-attachment: fixed;
+    max-width: 100%;
 }
 
 /* header{
@@ -521,8 +526,9 @@ header {
 }
 
 .portfolio-description .cta {
-    display: inline-block;
-    margin: 2em;
+    display: inline-flex;
+    flex-wrap: nowrap;
+    margin: .5em;
     margin-top: 2.5rem;
     font-size: 1.5rem;
     text-transform: uppercase;
@@ -532,6 +538,9 @@ header {
 
 .portfolio-description .cta:hover {
     color: #aad2fa;
+}
+.makeSmall {
+    font-size: 1.2em;
 }
 
 /*End services*/
@@ -723,7 +732,8 @@ input[type="submit"]:hover {
 /*End animations*/
 
 /*Start media queries*/
-@media screen and (max-width: 768px) {
+
+@media screen and (max-width: 820px) {
     body {
         background: url("../images/bg11.jpg") no-repeat center fixed;
         background-size: cover;
@@ -783,6 +793,26 @@ input[type="submit"]:hover {
         font-size: 4rem;
     }
 
+    .profile-img {
+        margin: 0 0 7rem 0;
+    }
+
+    .portfolio-item {
+        flex-direction: column;
+    }
+
+    .portfolio-img {
+        width: 40rem;
+        margin: 0 0 2rem 0;
+        order: 1;
+    }
+
+    .portfolio-description {
+        margin: 0;
+        order: 2;
+    }
+
+
     #timeline {
         padding: 1rem;
 
@@ -839,24 +869,6 @@ input[type="submit"]:hover {
             flex-direction: column;
         }
 
-        .profile-img {
-            margin: 0 0 7rem 0;
-        }
-
-        .portfolio-item {
-            flex-direction: column;
-        }
-
-        .portfolio-img {
-            margin: 0 0 2rem 0;
-            order: 1;
-        }
-
-        .portfolio-description {
-            margin: 0;
-            order: 2;
-        }
-
         #timeline {
             padding: 1rem;
 
@@ -896,6 +908,15 @@ input[type="submit"]:hover {
             .timeline .date::before {
                 font-size: .8rem;
             }
+
+            .portfolio-img {
+                width: 30rem;
+            }
+
+            .portfolio-description .cta {
+                display: flex;
+            }
+
             @media screen and (max-width:350px) {
 
                 .about h1 {
