@@ -315,10 +315,11 @@ header {
 }
 
 .about-details a {
-    position: relative;
-    left: 75%;
+    /* position: relative;
+    left: 75%; */
     font-size: 2em;
     color: blue;
+    
 }
 
 /*End about*/
@@ -617,7 +618,7 @@ header {
     content: '';
     box-shadow: 0 0 0 4px #fd57bf;
     border-radius: 100%;
-    left: -7rem;
+    left: -7.1rem;
     height: 1.5rem;
     width: 1.5rem;
     background-color: #313534;
@@ -723,10 +724,10 @@ input[type="submit"]:hover {
 
 /*Start media queries*/
 @media screen and (max-width: 768px) {
-    /* body {
-        background: url("../images/sitebg2.jpg") no-repeat center fixed;
+    body {
+        background: url("../images/bg11.jpg") no-repeat center fixed;
         background-size: cover;
-    } */
+    }
 
     .top-nav {
         top: -120vh;
@@ -782,17 +783,29 @@ input[type="submit"]:hover {
         font-size: 4rem;
     }
 
+    #timeline {
+        padding: 1rem;
+
+    }
+    
     .timeline ul {
-        margin: 0 0 0 auto;
+        margin: 1em;
+        font-size: 1.2em;
+    }
+    
+    .timeline ul li {
+        margin: 1em;
     }
 
-    .timeline .date:before {
-        left: -20rem;
+    .timeline .date::before {
+        left: -16rem;
+        font-size: 1.5rem;
+    }
+    
+    .timeline .date::after {
+        left: -3.1rem;
     }
 
-    .timeline .date:after {
-        left: -6.1rem;
-    }
 
     .up {
         width: 3.7rem;
@@ -844,12 +857,27 @@ input[type="submit"]:hover {
             order: 2;
         }
 
-        .timeline p {
-            font-size: 1.6rem;
+        #timeline {
+            padding: 1rem;
+
+        }
+        
+        .timeline ul {
+            margin: 0em;
+            font-size: 1.2em;
+        }
+        
+        .timeline ul li {
+            margin: 1em;
         }
 
-        .timeline .date:before {
-            font-size: 1.4rem;
+        .timeline .date::before {
+            left: -16rem;
+            font-size: 1.5rem;
+        }
+        
+        .timeline .date::after {
+            left: -3.1rem;
         }
 
         form {
@@ -863,6 +891,22 @@ input[type="submit"]:hover {
 
         .up i {
             font-size: 1rem;
+        }
+        @media screen and (max-width:500px) {
+            .timeline .date::before {
+                font-size: .8rem;
+            }
+            @media screen and (max-width:350px) {
+
+                .about h1 {
+                    font-size: 7em;
+                }
+
+                .portfolio-img {
+                    width: 22rem;
+                    flex: 1;
+                }
+            }
         }
     }
 
