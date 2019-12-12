@@ -255,25 +255,6 @@ header {
     -webkit-text-fill-color: transparent;
 }
 
-.resume-link {
-    font-size: 4em;
-    padding: 0.5em;
-    
-}
-
-.resume-link i{
-    color:#00927f;
-    display: inline-block;
-}
-
-.resume-link i:hover {
-    background: linear-gradient(to top, #00927f 20%, #ffe838 80%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-
-
 .skip{
     position: relative;
     top: 2rem;
