@@ -357,26 +357,6 @@ header {
     /* align-items: center; */
 }
 
-.icon-container {
-    width: 6rem;
-    height: 6rem;
-    box-shadow: 5px 5px 10px black;
-    border-radius: 100%;
-    border: 5px solid #e94544;
-    background-color: #c73938;
-    margin-bottom: 2rem;
-    /* display: flex; */
-    /* justify-content: center; */
-    /* transform: rotate(45deg); */
-}
-
-.icon-container i {
-    color: white;
-    font-size: 2rem;
-    margin: auto;
-    /* transform: rotate(-45deg); */
-}
-
 .skill-icons {
     font-size: 3rem;
     display: flex;
@@ -407,12 +387,12 @@ header {
     margin-left: 2rem;
 }
 
-.icon{
+/* .icon{
     font-size:1.5em;
     color:yellow;
     position: relative;
     left:0.6rem;
-}
+} */
 
 .office p {
     position: relative;
@@ -438,6 +418,7 @@ header {
     position: relative;
     top: .5em;
     margin-left: .5em;
+    margin-right: .5em;
     margin-bottom: .5em;
 }
 
@@ -484,12 +465,18 @@ header {
 /*End Skills*/
 
 /*Start portfolio*/
+
+.portfolio-item-container{
+    background: black;
+    opacity: 0.8;
+    padding:5em 5em 0em;
+    margin-bottom: 5rem;
+}
 .portfolio-item {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 5rem;
-    padding: 5em;
+    /* padding: 5em; */
     background: black;
     opacity: 0.8;
 }
@@ -537,6 +524,26 @@ header {
 .makeSmall {
     font-size: 1.2em;
 }
+
+.project-skills {
+    font-size: 2rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 2em;
+}
+
+.project-skills i{
+    font-size: 1.3em;
+    align-items: center;
+    justify-content: center;
+    margin:0 1.8rem;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+/* .project-skills p{
+    font-size: 1.3em;
+} */
 
 /*End services*/
 
@@ -850,6 +857,10 @@ input[type="submit"]:hover {
         order: 2;
     }
 
+    .project-skills i{
+        font-size: 1em;
+        margin:0 1rem;
+    }
 
     #timeline {
         padding: 1rem;
@@ -905,6 +916,14 @@ input[type="submit"]:hover {
 
         .about .container {
             flex-direction: column;
+        }
+        .project-skills i{
+            font-size: .8em;
+            margin:0 .4rem;
+        }
+
+        .project-skills p{
+            font-size: .8em;
         }
 
         #timeline {

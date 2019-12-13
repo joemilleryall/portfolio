@@ -39,7 +39,8 @@
                     <a href="#experience" class="nav-link">Experience</a>
                 </li>
                 <li>
-                    <a href="https://photo-bucket-one.s3.amazonaws.com/joeMillerResume.pdf" class="nav-link" target="_blank">Resume</a>
+                    <a href="https://photo-bucket-one.s3.amazonaws.com/joeMillerResume.pdf" class="nav-link"
+                        target="_blank">Resume</a>
                 </li>
                 <!-- <li>
                         <a href="#contact" class="nav-link">Contact</a>
@@ -83,14 +84,14 @@
     <!-- ---------------------ABOUT SECTION------------------------------------------ -->
     <section class="about" id="about">
         <div class="container">
-            <div class="about-details" data-aos="fade-left">
-                <div class="about-heading">
+            <div class="about-details">
+                <div class="about-heading"data-aos="fade-left">
                     <h1>About</h1>
                     <h5>Joe Miller</h5>
                     <!-- <h6>sup y'all</h6> -->
                 </div>
 
-                <p>
+                <p data-aos="fade-in">
                     A Front-End Developer with a primary focus on
                     <span class="languageColor">JavaScript ES6</span>,
                     <span class="languageColor">React</span>, and
@@ -129,17 +130,17 @@
             </div>
 
             <div class="my-skills">
-                <div class="skill" data-aos="fade-in" data-aos-delay="100">
+                <div class="skill" data-aos="fade-in" data-aos-delay="50">
                     <div class="skill-item">
                         <div class="skill-icons">
-                            <i class="devicon-javascript-plain colored">
+                            <i class="devicon-javascript-plain colored" data-aos="fade-in" data-aos-delay="200">
                                 <p>JavaScript
                                     ES6</p>
                             </i>
-                            <i class="devicon-react-original colored">
+                            <i class="devicon-react-original colored"data-aos="fade-in" data-aos-delay="300">
                                 <p>React</p>
                             </i>
-                            <div class="redux-icon">
+                            <div class="redux-icon"data-aos="fade-in" data-aos-delay="400">
                                 <span class="iconify" data-icon="logos-redux" data-inline="false"></span>
                                 <p>Redux</p>
                             </div>
@@ -153,26 +154,26 @@
                             <!-- <i class="devicon-react-original"><p>React-Native</p></i> -->
                             <!-- <i class="devicon-nodejs-plain colored"><p>Node</p></i>
                                 <i class="devicon-jquery-plain colored"><p>jQuery</p></i> -->
-                            <i class="devicon-ruby-plain colored">
+                            <i class="devicon-ruby-plain colored"data-aos="fade-in" data-aos-delay="500">
                                 <p>Ruby</p>
                             </i>
-                            <i class="devicon-rails-plain colored">
+                            <i class="devicon-rails-plain colored"data-aos="fade-in" data-aos-delay="600">
                                 <p>Rails</p>
                             </i>
                             <i class="devicon-amazonwebservices-original
-                                    colored">
+                                    colored"data-aos="fade-in" data-aos-delay="700">
                                 <p>AWS</p>
                             </i>
-                            <i class="devicon-postgresql-plain colored">
+                            <i class="devicon-postgresql-plain colored"data-aos="fade-in" data-aos-delay="800">
                                 <p>PostgreSQL</p>
                             </i>
-                            <i class="devicon-git-plain colored">
+                            <i class="devicon-git-plain colored"data-aos="fade-in" data-aos-delay="900">
                                 <p>Git</p>
                             </i>
-                            <i class="devicon-bootstrap-plain colored">
+                            <i class="devicon-bootstrap-plain colored"data-aos="fade-in" data-aos-delay="1000">
                                 <p>Bootstrap</p>
                             </i>
-                            <div class="json-api">
+                            <div class="json-api"data-aos="fade-in" data-aos-delay="1100">
                                 <span class="iconify" data-icon="mdi:json" data-inline="false"></span>
                                 <p>JSON APIs</p>
                             </div>
@@ -227,56 +228,106 @@
                     </div>
 
                 </div> -->
-            <div class="portfolio-item">
-                <div class="portfolio-description has-margin-right" data-aos="fade-right">
-                    <h6>Web Development</h6>
-                    <h1>PhotoFly</h1>
-                    <p>
-                        An App that allows users to upload photos directly
-                        to an Amazon S3
-                        Bucket. It hosts the photos on AWS and uses a Ruby
-                        on Rails API to
-                        organize them into albums. The app also features a
-                        React front end
-                        which uses conditional rendering between album and
-                        image views and
-                        adds an Image Carousel with mobile gesture support.
-                    </p>
-                    <a href="https://github.com/joe-millers-code/photo-fly-frontend" class="cta"
-                        target="_blank">Front-End Code</a>
-                    <a href="https://github.com/joe-millers-code/photo-fly-api" class="cta" target="_blank">Back-End
-                        Code</a>
-                    <a href="https://young-refuge-03424.herokuapp.com/" class="cta" target="_blank">Demo</a>
-
-                    <p class="makeSmall">(please allow a moment for sleeping servers on demo)</p>
+            <div class="portfolio-item-container">
+                <div class="portfolio-item">
+                    <div class="portfolio-description has-margin-right" data-aos="fade-right">
+                        <h6>Web Development</h6>
+                        <h1>PhotoFly</h1>
+                        <p>
+                            Upload an image directly to an Amazon S3
+                            bucket. An app designed specifically to build
+                            skills with AWS and towards another series
+                            of training apps I plan to later combine. I
+                            built the Photo Fly backend with Ruby on
+                            Rails which organizes the photos into albums
+                            with a PostgreSQL database. On the frontend,
+                            I used React to design the views and image
+                            carousel which features mobile gesture
+                            support.
+                        </p>
+                        <a href="https://github.com/joe-millers-code/photo-fly-frontend" class="cta"
+                            target="_blank">Front-End Code</a>
+                        <a href="https://github.com/joe-millers-code/photo-fly-api" class="cta" target="_blank">Back-End
+                            Code</a>
+                        <a href="https://young-refuge-03424.herokuapp.com/" class="cta" target="_blank">Demo</a>
+    
+                        <p class="makeSmall">(please allow a moment for sleeping servers on demo)</p>
+    
+                    </div>
+    
+                    <div class="portfolio-img" data-aos="fade-left">
+                        <img src="images/photoflyport.jpg" alt="" />
+                    </div>
 
                 </div>
 
-                <div class="portfolio-img" data-aos="fade-left">
-                    <img src="images/photoflyport.jpg" alt="" />
+                <div class="project-skills"data-aos="fade-in" data-aos-delay="400">
+                        <i class="devicon-javascript-plain colored">
+                            <p>JavaScript
+                                ES6</p>
+                        </i>
+                        <i class="devicon-react-original colored">
+                            <p>React</p>
+                        </i>
+                        <i class="devicon-ruby-plain colored">
+                            <p>Ruby</p>
+                        </i>
+                        <i class="devicon-rails-plain colored">
+                            <p>Rails</p>
+                        </i>
+                        <i class="devicon-amazonwebservices-original
+                                colored">
+                            <p>AWS</p>
+                        </i>
+                        <i class="devicon-postgresql-plain colored">
+                            <p>PostgreSQL</p>
+                        </i>
+                        <i class="devicon-git-plain colored">
+                            <p>Git</p>
+                        </i>
                 </div>
             </div>
 
-            <div class="portfolio-item">
-                <div class="portfolio-img has-margin-right" data-aos="fade-right">
-                    <img src="images/eBaeport.png" alt="" />
+            <div class="portfolio-item-container">
+                <div class="portfolio-item">
+                    <div class="portfolio-img has-margin-right" data-aos="fade-right">
+                        <img src="images/eBaeport.png" alt="" />
+                    </div>
+    
+                    <div class="portfolio-description" data-aos="fade-left">
+                        <h6>Web Development</h6>
+                        <h1>Ebae</h1>
+                        <p>
+                            A single-page e-commerce app which allows a user to
+                            buy and sell items. It was made with a partner,
+                            Jahaziel Guzman, who designed the Ruby on Rails
+                            backend which powers the app. I used Bulma.css on
+                            the front end to design the aesthetic but did the
+                            modals without the framework for design practice.
+                            Vanilla JS and Bulma.css were my primary tools for
+                            this project.
+                        </p>
+                        <a href="https://github.com/JahazielGuzman/eBae" class="cta" target="_blank">Code</a>
+                        <a href="https://www.youtube.com/watch?v=o8PpujSC9Eg" class="cta" target="_blank">Video Demo</a>
+                    </div>
                 </div>
-
-                <div class="portfolio-description" data-aos="fade-left">
-                    <h6>Web Development</h6>
-                    <h1>Ebae</h1>
-                    <p>
-                        A single-page e-commerce app which allows a user to
-                        buy and sell items. It was made with a partner,
-                        Jahaziel Guzman, who designed the Ruby on Rails
-                        backend which powers the app. I used Bulma.css on
-                        the front end to design the aesthetic but did the
-                        modals without the framework for design practice.
-                        Vanilla JS and Bulma.css were my primary tools for
-                        this project.
-                    </p>
-                    <a href="https://github.com/JahazielGuzman/eBae" class="cta" target="_blank">Code</a>
-                    <a href="https://www.youtube.com/watch?v=o8PpujSC9Eg" class="cta" target="_blank">Video Demo</a>
+                <div class="project-skills"data-aos="fade-in" data-aos-delay="200">
+                    <i class="devicon-javascript-plain colored">
+                        <p>JavaScript
+                            ES6</p>
+                    </i>
+                    <i class="devicon-ruby-plain colored">
+                        <p>Ruby</p>
+                    </i>
+                    <i class="devicon-rails-plain colored">
+                        <p>Rails</p>
+                    </i>
+                    <i class="devicon-postgresql-plain colored">
+                        <p>PostgreSQL</p>
+                    </i>
+                    <i class="devicon-git-plain colored">
+                        <p>Git</p>
+                    </i>
                 </div>
             </div>
         </div>
@@ -292,12 +343,12 @@
             <div class="timeline" data-aos="fade-down">
                 <ul id="timeline">
                     <li class="Hawkeye-Marketing-Services date" data-date="2017-2019">
-                        <h1>Web Developer</h1>
+                        <h1>Web Developer/Media Creator</h1>
                         <h2>Hawkeye Marketing Services</h2>
                         <h3>Tallahassee, Fl - Remote</h3>
                         <div>
                             <ul>
-                                <li>Designed dozens of static websites using
+                                <li>Developed 40+ static websites using
                                     HTML/CSS.</li>
                                 <li>Produced written and visual marketing
                                     campaigns designed to convert web
