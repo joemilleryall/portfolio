@@ -98,6 +98,12 @@ img {
     bottom: -1.1rem;
 } */
 
+.section-heading h5 {
+    font-size: 1.6rem;
+    font-weight: 300;
+    opacity: 0.6;;
+}
+
 .section-heading h6 {
     font-size: 1.6rem;
     font-weight: 300;
