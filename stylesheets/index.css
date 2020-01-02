@@ -531,6 +531,16 @@ header {
 .portfolio-description .cta:hover {
     color: #aad2fa;
 }
+
+.mma {
+    color: #3883ff;
+    transition: color 650ms;
+}
+
+.mma:hover {
+    color: #aad2fa;
+}
+
 .makeSmall {
     font-size: 1.2em;
 }
