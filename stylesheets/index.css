@@ -475,6 +475,66 @@ header {
 /*End Skills*/
 
 /*Start portfolio*/
+.toy-container-container {
+    display: flex;
+}
+
+.toy-container{
+    background: black;
+    display: flex;
+    opacity: 0.8;
+    padding:5em 5em 0em;
+    margin: 5rem;
+    width: 45%;
+}
+.toy-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding: 5em; */
+    background: black;
+    opacity: 0.8;
+}
+
+.toy-description h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    margin: 1rem 0;
+}
+
+.toy-description h6 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    opacity: 0.3;
+}
+
+.toy-description .cta {
+    display: inline-flex;
+    flex-wrap: nowrap;
+    margin: .5em;
+    margin-top: 2.5rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: #3883ff;
+    transition: color 650ms;
+}
+
+.toy-description .cta:hover {
+    color: #aad2fa;
+}
+
+.toy-skills {
+    font-size: 2rem;
+    display: flex;
+}
+
+.toy-skills i{
+    font-size: 1.3em;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 
 .portfolio-item-container{
     background: black;
