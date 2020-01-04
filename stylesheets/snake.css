@@ -4,14 +4,10 @@ body {
     font-family: sans-serif;
     font-size: 2em;
     text-align: center;
-}
+} 
 
-.canvas {
+.canvas{
     background-color: #3e3e3e;
-}
-
-.score {
-
 }
 
 .diff {

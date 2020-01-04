@@ -470,8 +470,6 @@ header {
     font-weight: 400;
 }
 
-
-
 /*End Skills*/
 
 /*Start portfolio*/
@@ -491,7 +489,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* padding: 5em; */
+    padding-bottom: 5em;
     background: black;
     opacity: 0.8;
 }
