@@ -51,9 +51,6 @@ function setup(){
         const score = document.querySelector(".score");
             score.innerText = snake.total;
 
-        const scoreBoard = document.querySelector(".score-board");
-        const lastScore = localStorage.getItem('score')
-            scoreBoard.innerText = `Last Game's Score: ${lastScore} `
 
         if(diff === "medium"){
             score.innerText = snake.total * 2;
