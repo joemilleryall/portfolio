@@ -490,8 +490,8 @@ header {
     align-items: center;
     justify-content: center;
     padding-bottom: 5em;
-    background: black;
-    opacity: 0.8;
+    /* background: black;
+    opacity: 0.8; */
 }
 
 .toy-description h1 {
@@ -919,6 +919,11 @@ input[type="submit"]:hover {
     .profile-img {
         margin: 0 0 7rem 0;
     }
+
+    .toy-container-container {
+        display: inline-block;
+    }
+    
 
     .portfolio-item {
         flex-direction: column;
