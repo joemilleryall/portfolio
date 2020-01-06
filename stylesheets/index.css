@@ -322,6 +322,7 @@ header {
 
 .about-details {
     /* flex: 1; */
+    text-indent: 3em;
 }
 
 .about-details a {
