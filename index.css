@@ -1,0 +1,59 @@
+
+body{
+    background-color: black;
+}
+p{
+    color:white;
+}
+h1{
+    color: white;
+}
+
+#landing{
+    width: 100vw;
+    height:100vh;
+    /* background-image: url("landing.jpg"); */
+    text-align: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.landing-box{
+    position: relative;
+    top: 20%;
+    margin: 0 auto;
+    width: 30rem;
+    height: 15rem;
+    border: thin white solid;
+}
+
+#content-container{
+    display: flex;
+    justify-content: space-around;
+}
+
+#webdev{
+    width: 30%;
+    border: white solid 10px;
+    background-image: url("");
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#fighter{
+    width: 30%;
+    border: white solid 10px;
+    height:500px;
+    background-image: url("");
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
