@@ -1,0 +1,250 @@
+html {
+    background: #1a1a1a;
+    color: white;
+}
+
+body {
+    text-align: center;
+}
+
+
+#wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+/* ---------NAME/TITLES----------------------- */
+
+.intro {
+    font-family: monospace;
+    background: #262626;
+    padding: 20px;
+    margin: 0.5em;
+    height: 180px;
+    width: 200px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.name {
+    position: relative;
+    top: -20px;
+}
+
+.name {
+    overflow: hidden;
+    letter-spacing: 2px;
+    animation:
+        typing 2s steps(20, end),
+        blink .75s 3;
+
+    white-space: nowrap;
+    border-right: 4px solid transparent;
+    box-sizing: border-box;
+}
+
+.webDev {
+    position: relative;
+    animation:
+        typing2 6s steps(30, end),
+        blink .75s 2s 4.1;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 4px solid transparent;
+}
+
+.proFighter {
+    animation:
+        typing2 6s steps(30, end),
+        blink .75s 2s 10;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 4px solid transparent;
+}
+
+@keyframes typing {
+    0% {
+        width: 0%
+    }
+
+    100% {
+        width: 100%
+    }
+}
+
+@keyframes blink {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: orange;
+    }
+}
+
+@keyframes typing2 {
+    0% {
+        width: 0%
+    }
+
+    50% {
+        width: 0%
+    }
+
+    100% {
+        width: 100%
+    }
+}
+
+
+
+/* ----------SOCIAL LINKS-------------- */
+
+
+#social-links ul {
+    position: relative;
+    left: -20px;
+}
+
+#social-links ul li {
+    /* list-style: none; */
+    margin-top: -2px;
+    display: inline-block;
+    margin: 10px;
+    font-size: 1.5em;
+}
+
+#social-links ul li a {
+    color: white
+}
+
+#social-links ul li a:hover {
+    color: #ffffcc;
+    text-shadow: 0 0 10px #ffffcc;
+}
+
+#social-links {
+    position: relative;
+    bottom: -15px;
+}
+
+.github {
+    position: relative;
+    left: -20px;
+}
+
+.email {
+    position: relative;
+    right: -20px;
+}
+
+/* ---------------BIO--------------------- */
+
+#bio {
+    font-family: monospace;
+    /* display: none; */
+    background: #262626;
+    padding: 20px;
+    width: 200px;
+    height: 180px;
+    margin: 0.5em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* #bio:hover{
+    transform: rotateZ(-30deg);
+} */
+
+#bio h2 {
+    position: relative;
+    top: -40px;
+    left: -110px;
+    transform: rotate(-35deg);
+}
+
+#bio p {
+    position: relative;
+    top: -15px;
+}
+
+.extendedBio {
+    position: relative;
+    left: -60px;
+    bottom: -90px;
+}
+
+
+/* --------PROJECTS------------------------- */
+
+#projects {
+    font-family: monospace;
+    display: inline-block;
+    background: #0d0d0d;
+    /* float: left; */
+    padding: 20px;
+    margin: 0.5em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#projects h2 {
+    position: relative;
+    left: -310px;
+    top: -30px;
+    transform: rotate(-35deg);
+}
+
+.project {
+    position: relative;
+    top: -30px;
+    font-family: monospace;
+    display: inline-block;
+    background: #262626;
+    /* float: left; */
+    padding: 20px;
+    margin: 0.5em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.project h3 {
+    position: relative;
+    top: -25px;
+}
+.image img {
+    width: 150px;
+}
+
+.project p {
+    position: relative;
+    top: -20px;
+}
+
+
+/* ----------------------SKILLS------------------------ */
+
+#skills {
+    font-family: monospace;
+    /* float: center; */
+    /* display: none; */
+    background: #262626;
+    /* padding: 20px; */
+    width: 240px;
+    height: 220px;
+    margin: 0.5em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#skills h2 {
+    position: relative;
+    top: -15px;
+    left: -100px;
+    transform: rotate(-35deg);
+}
+
+#skills ul li {
+    display: inline-block;
+    list-style: circle;
+    position: relative;
+    top: -30px;
+    left: -20px;
+    text-align: left;
+    font-size: .95em;
+    margin: 0px;
+    padding: 3px;
