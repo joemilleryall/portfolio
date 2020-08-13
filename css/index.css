@@ -265,4 +265,12 @@ body {
     #skills h2 {
         top: 0px;
     }
+    .project{
+        display: block;
+        position: relative;
+        top: 0px;
+    }
+    #projects h2 {
+        display:none;
+    }
 }
