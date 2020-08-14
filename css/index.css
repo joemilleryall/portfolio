@@ -193,17 +193,38 @@ body {
     transform: rotate(-35deg);
 }
 
-#skills ul li {
-    display: inline-block;
-    list-style: circle;
-    position: relative;
-    top: -30px;
-    left: -20px;
+/* #skills li {
+    display: block;
     text-align: left;
-    font-size: .95em;
-    margin: 0px;
-    padding: 3px;
+    position: relative;
+    top: -10px;
+    left: -20px;
+    padding: 10px;
+} */
+
+#skills div:last-child{
+    margin-bottom:0;
 }
+
+.skill{
+    border: 1px solid #262626;
+    /* border-radius: 15px; */
+    width:90%;
+    margin:auto;
+    background-color: #111;
+    text-align: left;
+    margin-bottom:10px;
+    position: relative;
+    top:-20px;
+
+}
+
+.skill p{
+    margin-block-start:8px;
+    margin-block-end: 8px;
+    margin-left:20px;
+}
+
 
 /* --------PROJECTS------------------------- */
 
@@ -251,7 +272,7 @@ body {
 }
 
 
-/* ----------------------MEDIA SCREENS/RESPONSIVENESS------------------------ */
+/* ----------------------MEDIA SCREENS------------------------ */
 
 
 @media screen and (max-width: 710px) {
