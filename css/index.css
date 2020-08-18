@@ -213,9 +213,19 @@ body {
     margin-bottom:10px;
 }
 .pane{
+    padding-right:10px;
     border-right:5px solid #FF69B4;
     /* background-color: darkgrey; */
     width:100%;
+}
+.expandedPane{
+    height:400px;
+    width:400px;
+    z-index:2;
+    background-color: #111;
+    display:none;
+    position:absolute;
+    top:-20px;
 }
 
 .extendedBio {
