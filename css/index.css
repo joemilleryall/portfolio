@@ -167,7 +167,7 @@ body {
 
 #bio ul {
     position: relative;
-    top: -63px;
+    top: -65px;
     right:-5px;
     /* border: white solid 1px; */
     list-style-type: none;
@@ -176,30 +176,46 @@ body {
     padding: 0;
     font-size: 11px;
     text-align: right;
-    border-right: solid 1px #FF69B4;
+    /* border-right: solid 1px #FF69B4; */
 }
 #bio li{
     position: relative;
-    right:50px;
     width:240px;
 }
-#bio li:nth-child(odd)::before{
-    position:relative;
-    right:-4px;
-    margin-left:0px;
-    content: "\2022";
-    color:#FF69B4;
+/* #bio hr{
+    margin-top:1px;
+    border: 1px solid #111;
+    margin-right:10px;
+    
 }
-#bio li:nth-child(even){
-    margin-bottom:8px;
-    right: 20px;
+#bio hr:first-child{
+    margin-bottom:0;
+} */
+/* .date::before{
+    position:relative;
+    right:-5px;
+    margin-left:0px;
+    /* content: "\2022"; */
+    color:#FF69B4;
+} */
+.date{
+    margin-right: 5px;
     list-style-type: none;
 }
-#bio li:nth-child(odd){
+.date{
     right:1.5px;
     color:#FF69B4;
     font-weight: bolder;
     font-size:10px;
+}
+.item{
+    margin-right:7px;
+    margin-bottom:10px;
+}
+.pane{
+    border-right:5px solid #FF69B4;
+    /* background-color: darkgrey; */
+    width:100%;
 }
 
 .extendedBio {
