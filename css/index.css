@@ -218,14 +218,19 @@ body {
     /* background-color: darkgrey; */
     width:100%;
 }
-#expandedPane{
-    height:400px;
+.expandedPane{
+    height:250px;
     width:400px;
     z-index:2;
     background-color: #111;
     display:none;
     position:absolute;
-    top:-20px;
+    top:-10px;
+    opacity: 0.8;
+}
+.itemHeader{
+    color:white;
+    font-size: 16px;
 }
 
 

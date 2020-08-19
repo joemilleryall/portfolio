@@ -1,5 +1,7 @@
-const expandedPane = document.querySelector('#expandedPane');
+const bio = document.querySelector('#bio');
 const timeline = document.querySelector('#timeline')
+const expandedPane = document.querySelector('.expandedPane');
+
 
 
 timeline.addEventListener('mouseover', e => {
@@ -17,43 +19,62 @@ timeline.addEventListener('mouseover', e => {
         cornellModal()
     }
 })
+var modalContainer = document.createElement("div")
+    modalContainer.className = "expandedPane"
 
 expandedPane.addEventListener('mouseleave', e => {
     expandedPane.style.display = "none"
 })
 
 function davieModal() {
-    var divTag = document.createElement("div")
-    divTag.className = "expandedPane"
-    expandedPane.style.display = "block"
+    var modalContainer = document.createElement("div")
+    modalContainer.className = "expandedPane"
+    modalContainer.style.display = "block"
+
+    var itemHeader = document.createElement("p")
+    itemHeader.className = "itemHeader"
+    itemHeader.innerText = "2006 - Davie, Florida"
+
+    modalContainer.appendChild(itemHeader)
+    bio.appendChild(modalContainer)
+    console.log(modalContainer)
 }
 
+
 function fsuModal(){
-    var divTag = document.createElement("div")
-    divTag.className = "expandedPane"
+    var modalContainer = document.createElement("div")
+    modalContainer.className = "expandedPane"
     expandedPane.style.display = "block"
+
+    var itemHeader = document.createElement("p")
+    itemHeader.className = "itemHeader"
+    itemHeader.innerText = "2014 - Tallahassee, Florida"
+
+    modalContainer.appendChild(itemHeader)
+    bio.appendChild(modalContainer)
+    console.log(modalContainer)
 }
 
 function thapaeModal() {
-    var divTag = document.createElement("div")
-    divTag.className = "expandedPane"
+    var modalContainer = document.createElement("div")
+    modalContainer.className = "expandedPane"
     expandedPane.style.display = "block"
 }
 
 function nycModal() {
-    var divTag = document.createElement("div")
-    divTag.className = "expandedPane"
+    var modalContainer = document.createElement("div")
+    modalContainer.className = "expandedPane"
     expandedPane.style.display = "block"
 }
 
 function flatironModal() {
-    var divTag = document.createElement("div")
-    divTag.className = "expandedPane"
+    var modalContainer = document.createElement("div")
+    modalContainer.className = "expandedPane"
     expandedPane.style.display = "block"
 }
 
 function cornellModal() {
-    var divTag = document.createElement("div")
-    divTag.className = "expandedPane"
+    var modalContainer = document.createElement("div")
+    modalContainer.className = "expandedPane"
     expandedPane.style.display = "block"
 }
