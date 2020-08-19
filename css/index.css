@@ -218,7 +218,7 @@ body {
     /* background-color: darkgrey; */
     width:100%;
 }
-.expandedPane{
+#expandedPane{
     height:400px;
     width:400px;
     z-index:2;
@@ -228,11 +228,6 @@ body {
     top:-20px;
 }
 
-.extendedBio {
-    /* position: relative;
-    left: -60px;
-    bottom: -90px; */
-}
 
 /* ----------------------SKILLS------------------------ */
 
