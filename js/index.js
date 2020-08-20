@@ -35,26 +35,48 @@ closeBtn.addEventListener('click', e => {
 })
 
 function davieModal() {
-    // var itemHeader = document.createElement("p")
-    // itemHeader.className = "itemHeader"
-    // itemHeader.innerText = "2006 - Davie, Florida"
+    var itemHeader = document.createElement("p")
+    itemHeader.className = "itemHeader"
+    itemHeader.innerText = "2006 - Davie, Florida"
 
-    // briefPane.appendChild(itemHeader)
-    // briefPane.appendChild(closeBtn)
+    var itemUl = document.createElement('ul')
 
-    // closeBtn.style.display = "block"
-    // briefPane.style.display = "block"
+    var liOne = document.createElement('li')
+    liOne.className="itemBody"
+    liOne.innerText = "I was born and raised in Davie, Fl."
+    itemUl.appendChild(liOne)
 
-    const viewPane = document.querySelector('#viewPane')
-    viewPane.innerText = ""
+    var liTwo = document.createElement('li')
+    liTwo.innerText = "I began combat sports competition in 2005"
+    liTwo.className="itemBody"
+    itemUl.appendChild(liTwo)
 
-    pTag = document.createElement('p')
-    pTag.className = 'viewPaneBody'
-    pTag.innerText = "davie"
+    var liThree = document.createElement('li')
+    liThree.innerText = "I graduated from William T. Mcfatter Tehnical Highschool in 2006"
+    liThree.className="itemBody"
+    itemUl.appendChild(liThree)
 
-    viewPane.appendChild(pTag)
 
 
+    briefPane.appendChild(itemHeader)
+    briefPane.appendChild(itemUl)
+    briefPane.appendChild(closeBtn)
+
+    closeBtn.style.display = "block"
+    briefPane.style.display = "block"
+
+    // const viewPane = document.querySelector('#viewPane')
+    // viewPane.innerText = ""
+
+    // const newViewPane = document.createElement('div')
+    // newViewPane.className = "newViewPane"
+
+    // pTag = document.createElement('p')
+    // pTag.className = 'viewPaneBody'
+    // pTag.innerText = "davie"
+
+    // newViewPane.appendChild(pTag)
+    // viewPane.appendChild(newViewPane)
 }
 
 
