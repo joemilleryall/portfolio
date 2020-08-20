@@ -1,8 +1,8 @@
 const bio = document.querySelector('#bio');
 const timeline = document.querySelector('#timeline')
 const expandedPane = document.querySelector('.expandedPane');
-
-
+const briefPane = document.querySelector('.briefPane')
+const closeBtn = document.querySelector(".closeBtn")
 
 timeline.addEventListener('mouseover', e => {
     if (e.target.dataset.id == 2006){
@@ -25,13 +25,36 @@ expandedPane.addEventListener('mouseleave', e => {
     expandedPane.innerText = ''
 })
 
-function davieModal() {
-    var itemHeader = document.createElement("p")
-    itemHeader.className = "itemHeader"
-    itemHeader.innerText = "2006 - Davie, Florida"
+briefPane.addEventListener('mouseleave', e => {
+    briefPane.style.display = "none"
+    briefPane.innerText = ''
+})
 
-    expandedPane.appendChild(itemHeader)
-    expandedPane.style.display = "block"
+closeBtn.addEventListener('click', e => {
+    briefPane.style.display = "none"
+})
+
+function davieModal() {
+    // var itemHeader = document.createElement("p")
+    // itemHeader.className = "itemHeader"
+    // itemHeader.innerText = "2006 - Davie, Florida"
+
+    // briefPane.appendChild(itemHeader)
+    // briefPane.appendChild(closeBtn)
+
+    // closeBtn.style.display = "block"
+    // briefPane.style.display = "block"
+
+    const viewPane = document.querySelector('#viewPane')
+    viewPane.innerText = ""
+
+    pTag = document.createElement('p')
+    pTag.className = 'viewPaneBody'
+    pTag.innerText = "davie"
+
+    viewPane.appendChild(pTag)
+
+
 }
 
 
@@ -40,8 +63,11 @@ function fsuModal(){
     itemHeader.className = "itemHeader"
     itemHeader.innerText = "2014 - Tallahassee, Florida"
 
-    expandedPane.appendChild(itemHeader)
-    expandedPane.style.display = "block"
+    briefPane.appendChild(itemHeader)
+    briefPane.appendChild(closeBtn)
+
+    closeBtn.style.display = "block"
+    briefPane.style.display = "block"
 }
 
 function thapaeModal() {
