@@ -208,10 +208,6 @@ body {
     font-size:10px;
 }
 
-/* .pane:hover{
-    background-color: white;
-} */
-
 .item{
     margin-right:7px;
     margin-bottom:10px;
@@ -219,18 +215,9 @@ body {
 .pane{
     padding-right:10px;
     border-right:5px solid #FF69B4;
-    /* background-color: darkgrey; */
     width:100%;
 }
-/* .expandedPane{
-    height:250px;
-    width:400px;
-    z-index:2;
-    background-color: #111;
-    display:none;
-    position:absolute;
-    opacity: 0.8;
-} */
+
 .briefPane{
     animation:
         fadeIn 0.2s;
@@ -238,14 +225,24 @@ body {
     z-index:2;
     display:none;
     position: absolute;
-    top:25px;
-    opacity: 0.9;
+    /* opacity: 0.9; */
     background: #0d0d0d;
-    padding: 20px;
-    width:177px;
-    height: 160px;
-    margin: 0;
+    /* padding: 20px; */
+    /* margin: 0; */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.davie{
+    height:50px;
+    width:260px;
+    top:10px;
+    /* margin:0; */
+    
+}
+.davieBody{
+    /* position:relative; */
+    /* top:-10px; */
+    /* margin:0; */
 }
 
 .closeBtn{
@@ -270,15 +267,10 @@ body {
 .itemBody{
     color:white;
     font-size: 12px;
-    position: relative;
     animation:
         fadeIn 2s;
-    /* overflow: hidden; */
-    /* white-space: nowrap; */
-    /* border-right: 4px solid transparent; */
-    /* left:-50px; */
     width:100%;
-    text-align: center;
+    line-height: 16px;
 }
 
 @keyframes fadeIn {
