@@ -225,7 +225,6 @@ body {
     z-index:2;
     display:none;
     position: absolute;
-    /* opacity: 0.9; */
     background: #0d0d0d;
     /* padding: 20px; */
     /* margin: 0; */
@@ -233,16 +232,36 @@ body {
 }
 
 .davie{
-    height:50px;
     width:260px;
-    top:10px;
-    /* margin:0; */
+    top:20px;
+    margin:0;
     
 }
+
+.davieHeader{
+    top:-7px;
+    right:-20px;
+}
+
 .davieBody{
     /* position:relative; */
     /* top:-10px; */
     /* margin:0; */
+}
+
+.tally{
+    width:260px;
+    margin:0;
+    top:40px;
+}
+.thailand{
+    width:260px;
+    top:80px;
+}
+.nyc{
+    width:260px;
+    margin:0;
+    top:120px;
 }
 
 .closeBtn{
@@ -254,12 +273,12 @@ body {
 }
 
 .itemHeader{
-    position: relative;
+    position: absolute;
     left:50px;
     bottom:10px;
     margin-top:0;
     color:#FF69B4;
-    font-size: 16px;
+    font-size: 14px;
     animation:
         fadeIn 1s;
 }
@@ -269,8 +288,9 @@ body {
     font-size: 12px;
     animation:
         fadeIn 2s;
-    width:100%;
-    line-height: 16px;
+    width:90%;
+    line-height: 14px;
+    margin-left:5%;
 }
 
 @keyframes fadeIn {

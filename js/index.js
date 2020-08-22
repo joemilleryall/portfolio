@@ -9,15 +9,17 @@ const closeBtn = document.querySelector(".closeBtn")
 timeline.addEventListener('mouseover', e => {
     if (e.target.dataset.id == 2006){
         davieModal()
+    }     
+    else if (e.target.dataset.id == 2014){
+        fsuModal()
     } 
-    
-    // else if (e.target.dataset.id == 2014){
-    //     fsuModal()
-    // } else if (e.target.dataset.id == 2016){
-    //     thapaeModal()
-    // } else if (e.target.dataset.id == 2017){
-    //     nycModal()
-    // } else if (e.target.dataset.id == 2019){
+    else if (e.target.dataset.id == 2016){
+        thailandModal()
+    } 
+    else if (e.target.dataset.id == 2017){
+        nycModal()
+    } 
+    // else if (e.target.dataset.id == 2019){
     //     flatironModal()
     // } else if (e.target.dataset.id == 2020){
     //     cornellModal()
@@ -27,8 +29,8 @@ timeline.addEventListener('mouseover', e => {
 
 briefPane.addEventListener('mouseleave', e => {
     briefPane.style.display = "none"
-    briefPane.innerText = ''
     briefPane.className="briefPane"
+    briefPane.innerText = ''
 })
 
 closeBtn.addEventListener('click', e => {
@@ -36,20 +38,16 @@ closeBtn.addEventListener('click', e => {
 })
 
 function davieModal() {
-    // var itemHeader = document.createElement("p")
-    // itemHeader.className = "itemHeader"
-    // itemHeader.innerText = "~2006"
-    // briefPane.appendChild(itemHeader)
+    var itemHeader = document.createElement("p")
+    itemHeader.className = "itemHeader davieHeader"
+    itemHeader.innerText = "~2006"
+    briefPane.appendChild(itemHeader)
 
     var liOne = document.createElement('p')
     liOne.className="itemBody davieBody"
     liOne.innerText = "My hometown, 25 miles north of Miami"
     briefPane.appendChild(liOne)
 
-    // var liTwo = document.createElement('p')
-    // liTwo.className="itemBody davieBody"
-    // liTwo.innerText = "I left in 2006 for college in Tallahassee where I earned a Bachelor's degree"
-    // briefPane.appendChild(liTwo)
 
     briefPane.className="briefPane davie"
 
@@ -71,29 +69,31 @@ function fsuModal(){
     briefPane.appendChild(itemHeader)
 
     var liOne = document.createElement('p')
-    liOne.className="itemBody"
-    liOne.innerText = "My college years in Tallahassee turned out to be more about progressing through Combat Sports than studying"
+    liOne.className="itemBody tallyBody"
+    liOne.innerText = "Bachelor's in Editing, Writing, and Media Florida State University"
     briefPane.appendChild(liOne)
 
     // closeBtn.style.display = "block"
     briefPane.style.display = "block"
+    briefPane.className="briefPane tally"
 
     briefPane.appendChild(closeBtn)
 }
 
-function thapaeModal() {
+function thailandModal() {
     var itemHeader = document.createElement("p")
     itemHeader.className = "itemHeader"
     itemHeader.innerText = "2016"
     briefPane.appendChild(itemHeader)
 
     var liOne = document.createElement('p')
-    liOne.className="itemBody"
-    liOne.innerText = "While living in Thailand"
+    liOne.className="itemBody thailandBody"
+    liOne.innerText = "After college, I lived in Thailand and pursued a long-time passion, Muay Thai. I had 9 fights in 7 months. (6-3)"
     briefPane.appendChild(liOne)
 
     // closeBtn.style.display = "block"
     briefPane.style.display = "block"
+    briefPane.className="briefPane thailand"
 
     briefPane.appendChild(closeBtn)
 }
@@ -105,12 +105,13 @@ function nycModal() {
     briefPane.appendChild(itemHeader)
 
     var liOne = document.createElement('p')
-    liOne.className="itemBody"
-    liOne.innerText = "After a year back in Tallahassee, we decided"
+    liOne.className="itemBody nycBody"
+    liOne.innerText = "Moved to NYC to chase big fights with the lady of my dreams."
     briefPane.appendChild(liOne)
 
     // closeBtn.style.display = "block"
     briefPane.style.display = "block"
+    briefPane.className="briefPane nyc"
 
     briefPane.appendChild(closeBtn)
 }
