@@ -230,6 +230,15 @@ body {
     /* margin: 0; */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+.overlay{
+    position: absolute;
+    /* z-index: 3; */
+    display:block;
+    height:200px;
+    width:240px;
+    opacity:0.9;
+    background-color: #111;
+}
 
 .davie{
     width:260px;
@@ -239,8 +248,8 @@ body {
 }
 
 .davieHeader{
-    top:-7px;
-    right:-20px;
+    top:-6px;
+    right:-60px;
 }
 
 .davieBody{
@@ -254,14 +263,27 @@ body {
     margin:0;
     top:40px;
 }
+
+.tallyHeader{
+    top:-6px;
+    right:-60px;
+}
 .thailand{
     width:260px;
-    top:80px;
+    top:60px;
+}
+.thailandHeader{
+    top:-6px;
+    right:-60px;
 }
 .nyc{
     width:260px;
     margin:0;
-    top:120px;
+    top:110px;
+}
+.nycHeader{
+    top:-8px;
+    right:-60px;
 }
 
 .closeBtn{

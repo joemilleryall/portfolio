@@ -38,6 +38,10 @@ closeBtn.addEventListener('click', e => {
 })
 
 function davieModal() {
+    // var overlay = document.createElement('div')
+    // overlay.className="overlay"
+    // briefPane.appendChild(overlay)
+
     var itemHeader = document.createElement("p")
     itemHeader.className = "itemHeader davieHeader"
     itemHeader.innerText = "~2006"
@@ -64,7 +68,7 @@ function davieModal() {
 
 function fsuModal(){
     var itemHeader = document.createElement("p")
-    itemHeader.className = "itemHeader"
+    itemHeader.className = "itemHeader tallyHeader"
     itemHeader.innerText = "2014"
     briefPane.appendChild(itemHeader)
 
@@ -82,13 +86,13 @@ function fsuModal(){
 
 function thailandModal() {
     var itemHeader = document.createElement("p")
-    itemHeader.className = "itemHeader"
+    itemHeader.className = "itemHeader thailandHeader"
     itemHeader.innerText = "2016"
     briefPane.appendChild(itemHeader)
 
     var liOne = document.createElement('p')
     liOne.className="itemBody thailandBody"
-    liOne.innerText = "After college, I lived in Thailand and pursued a long-time passion, Muay Thai. I had 9 fights in 7 months. (6-3)"
+    liOne.innerText = "I lived in Thailand as a freelancer and pursued a fight career in Muay Thai. I had 9 fights in 7 months and won the Thapae Stadium Championship."
     briefPane.appendChild(liOne)
 
     // closeBtn.style.display = "block"
@@ -100,7 +104,7 @@ function thailandModal() {
 
 function nycModal() {
     var itemHeader = document.createElement("p")
-    itemHeader.className = "itemHeader"
+    itemHeader.className = "itemHeader nycHeader"
     itemHeader.innerText = "2017"
     briefPane.appendChild(itemHeader)
 
