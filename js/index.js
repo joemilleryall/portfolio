@@ -5,6 +5,7 @@ const timeline = document.querySelector('#timeline')
 const expandedPane = document.querySelector('.expandedPane');
 const briefPane = document.querySelector('.briefPane')
 const closeBtn = document.querySelector(".closeBtn")
+const panes = document.getElementsByClassName('.pane')
 
 timeline.addEventListener('mouseover', e => {
     if (e.target.dataset.id == 2006){
@@ -19,11 +20,11 @@ timeline.addEventListener('mouseover', e => {
     else if (e.target.dataset.id == 2017){
         nycModal()
     } 
-    // else if (e.target.dataset.id == 2019){
-    //     flatironModal()
-    // } else if (e.target.dataset.id == 2020){
-    //     cornellModal()
-    // }
+    else if (e.target.dataset.id == 2019){
+        flatironModal()
+    } else if (e.target.dataset.id == 2020){
+        cornellModal()
+    }
 })
 
 
@@ -38,9 +39,7 @@ closeBtn.addEventListener('click', e => {
 })
 
 function davieModal() {
-    // var overlay = document.createElement('div')
-    // overlay.className="overlay"
-    // briefPane.appendChild(overlay)
+
 
     var itemHeader = document.createElement("p")
     itemHeader.className = "itemHeader davieHeader"
@@ -54,12 +53,6 @@ function davieModal() {
 
 
     briefPane.className="briefPane davie"
-
-    // var pane = document.querySelector("#davie")
-    // pane.className = "pane davie"
-
-
-    // closeBtn.style.display = "block"
     briefPane.style.display = "block"
 
     briefPane.appendChild(closeBtn)
@@ -92,7 +85,7 @@ function thailandModal() {
 
     var liOne = document.createElement('p')
     liOne.className="itemBody thailandBody"
-    liOne.innerText = "I lived in Thailand as a freelancer and pursued a fight career in Muay Thai. I had 9 fights in 7 months and won the Thapae Stadium Championship."
+    liOne.innerText = "lived in Thailand and pursued a fight career in Muay Thai. I had 9 fights in 7 months and won the Thapae Stadium Championship."
     briefPane.appendChild(liOne)
 
     // closeBtn.style.display = "block"
@@ -110,7 +103,7 @@ function nycModal() {
 
     var liOne = document.createElement('p')
     liOne.className="itemBody nycBody"
-    liOne.innerText = "Moved to NYC to chase big fights with the lady of my dreams."
+    liOne.innerText = "Moved to NYC to chase big fights and big opportunities in tech."
     briefPane.appendChild(liOne)
 
     // closeBtn.style.display = "block"
@@ -122,34 +115,36 @@ function nycModal() {
 
 function flatironModal() {
     var itemHeader = document.createElement("p")
-    itemHeader.className = "itemHeader"
+    itemHeader.className = "itemHeader flatironHeader"
     itemHeader.innerText = "2019"
     briefPane.appendChild(itemHeader)
 
     var liOne = document.createElement('p')
-    liOne.className="itemBody"
-    liOne.innerText = "i decided to shift my priorities from fighting to professional development"
+    liOne.className="itemBody flatironBody"
+    liOne.innerText = "Flatiron School: Access Labs - Software Engineering Bootcamp. 15-week, fulltime - Javascript, React, Redux, Ruby, Rails, and SQL."
     briefPane.appendChild(liOne)
 
     // closeBtn.style.display = "block"
     briefPane.style.display = "block"
+    briefPane.className="briefPane flatiron"
 
     briefPane.appendChild(closeBtn)
 }
 
 function cornellModal() {
     var itemHeader = document.createElement("p")
-    itemHeader.className = "itemHeader"
+    itemHeader.className = "itemHeader cornellHeader"
     itemHeader.innerText = "2020"
     briefPane.appendChild(itemHeader)
 
     var liOne = document.createElement('p')
-    liOne.className="itemBody"
-    liOne.innerText = " february of 2019, four months after the bootcamp"
+    liOne.className="itemBody cornellnBody"
+    liOne.innerText = "Web Analyst, hired in February. PHP - DRUPAL - Pantheon"
     briefPane.appendChild(liOne)
 
     // closeBtn.style.display = "block"
     briefPane.style.display = "block"
+    briefPane.className="briefPane cornell"
 
     briefPane.appendChild(closeBtn)
 }

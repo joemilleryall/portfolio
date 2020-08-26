@@ -230,15 +230,6 @@ body {
     /* margin: 0; */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.overlay{
-    position: absolute;
-    /* z-index: 3; */
-    display:block;
-    height:200px;
-    width:240px;
-    opacity:0.9;
-    background-color: #111;
-}
 
 .davie{
     width:260px;
@@ -248,7 +239,7 @@ body {
 }
 
 .davieHeader{
-    top:-6px;
+    top:-8px;
     right:-60px;
 }
 
@@ -261,7 +252,7 @@ body {
 .tally{
     width:260px;
     margin:0;
-    top:40px;
+    top:38px;
 }
 
 .tallyHeader{
@@ -270,7 +261,7 @@ body {
 }
 .thailand{
     width:260px;
-    top:60px;
+    top:70px;
 }
 .thailandHeader{
     top:-6px;
@@ -279,10 +270,29 @@ body {
 .nyc{
     width:260px;
     margin:0;
-    top:110px;
+    top:106px;
 }
 .nycHeader{
-    top:-8px;
+    top:-7px;
+    right:-60px;
+}
+
+.flatiron{
+    width:260px;
+    margin:0;
+    top:140px;
+}
+.flatironHeader{
+    top:-7px;
+    right:-60px;
+}
+.cornell{
+    width:260px;
+    margin:0;
+    top:177px;
+}
+.cornellHeader{
+    top:-7px;
     right:-60px;
 }
 
@@ -296,7 +306,7 @@ body {
 
 .itemHeader{
     position: absolute;
-    left:50px;
+    left:20px;
     bottom:10px;
     margin-top:0;
     color:#FF69B4;
