@@ -4,7 +4,7 @@ const bio = document.querySelector('#bio');
 const timeline = document.querySelector('#timeline')
 const expandedPane = document.querySelector('.expandedPane');
 const briefPane = document.querySelector('.briefPane')
-const closeBtn = document.querySelector(".closeBtn")
+const cmoreBtn = document.querySelector(".cmoreBtn")
 const panes = document.getElementsByClassName('.pane')
 
 timeline.addEventListener('mouseover', e => {
@@ -32,15 +32,14 @@ briefPane.addEventListener('mouseleave', e => {
     briefPane.style.display = "none"
     briefPane.className="briefPane"
     briefPane.innerText = ''
+    cmoreBtn.style.top = ""
 })
 
-closeBtn.addEventListener('click', e => {
+cmoreBtn.addEventListener('click', e => {
     briefPane.style.display = "none"
 })
 
 function davieModal() {
-
-
     var itemHeader = document.createElement("p")
     itemHeader.className = "itemHeader davieHeader"
     itemHeader.innerText = "~2006"
@@ -55,7 +54,9 @@ function davieModal() {
     briefPane.className="briefPane davie"
     briefPane.style.display = "block"
 
-    briefPane.appendChild(closeBtn)
+    cmoreBtn.style.display = "block"
+    cmoreBtn.style.top = "25px"
+    briefPane.appendChild(cmoreBtn)
 }
 
 
@@ -70,11 +71,12 @@ function fsuModal(){
     liOne.innerText = "Bachelor's in Editing, Writing, and Media Florida State University"
     briefPane.appendChild(liOne)
 
-    // closeBtn.style.display = "block"
     briefPane.style.display = "block"
     briefPane.className="briefPane tally"
 
-    briefPane.appendChild(closeBtn)
+    cmoreBtn.style.display = "block"
+    cmoreBtn.style.top = "39px"
+    briefPane.appendChild(cmoreBtn)
 }
 
 function thailandModal() {
@@ -88,11 +90,12 @@ function thailandModal() {
     liOne.innerText = "lived in Thailand and pursued a fight career in Muay Thai. I had 9 fights in 7 months and won the Thapae Stadium Championship."
     briefPane.appendChild(liOne)
 
-    // closeBtn.style.display = "block"
     briefPane.style.display = "block"
     briefPane.className="briefPane thailand"
 
-    briefPane.appendChild(closeBtn)
+    cmoreBtn.style.display = "block"
+    cmoreBtn.style.top = "53px"
+    briefPane.appendChild(cmoreBtn)
 }
 
 function nycModal() {
@@ -106,11 +109,12 @@ function nycModal() {
     liOne.innerText = "Moved to NYC to chase big fights and big opportunities in tech."
     briefPane.appendChild(liOne)
 
-    // closeBtn.style.display = "block"
     briefPane.style.display = "block"
     briefPane.className="briefPane nyc"
 
-    briefPane.appendChild(closeBtn)
+    cmoreBtn.style.display = "block"
+    cmoreBtn.style.top = "40px"
+    briefPane.appendChild(cmoreBtn)
 }
 
 function flatironModal() {
@@ -124,11 +128,12 @@ function flatironModal() {
     liOne.innerText = "Flatiron School: Access Labs - Software Engineering Bootcamp. 15-week, fulltime - Javascript, React, Redux, Ruby, Rails, and SQL."
     briefPane.appendChild(liOne)
 
-    // closeBtn.style.display = "block"
     briefPane.style.display = "block"
     briefPane.className="briefPane flatiron"
 
-    briefPane.appendChild(closeBtn)
+    cmoreBtn.style.display = "block"
+    cmoreBtn.style.top = "53px"
+    briefPane.appendChild(cmoreBtn)
 }
 
 function cornellModal() {
@@ -139,14 +144,20 @@ function cornellModal() {
 
     var liOne = document.createElement('p')
     liOne.className="itemBody cornellnBody"
-    liOne.innerText = "Web Analyst, hired in February. PHP - DRUPAL - Pantheon"
+    liOne.innerText = "Junior Drupal/PHP Developer"
     briefPane.appendChild(liOne)
 
-    // closeBtn.style.display = "block"
+    var liTwo = document.createElement('p')
+    liTwo.className="itemBody cornellnBody"
+    liTwo.innerText = "PHP - DRUPAL - Pantheon"
+    briefPane.appendChild(liTwo)
+
     briefPane.style.display = "block"
     briefPane.className="briefPane cornell"
 
-    briefPane.appendChild(closeBtn)
+    cmoreBtn.style.display = "block"
+    cmoreBtn.style.top = "50px"
+    briefPane.appendChild(cmoreBtn)
 }
 
 // ------------------BIO SECTION END------------------------------
