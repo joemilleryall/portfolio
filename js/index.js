@@ -124,15 +124,25 @@ function flatironModal() {
     briefPane.appendChild(itemHeader)
 
     var liOne = document.createElement('p')
-    liOne.className="itemBody flatironBody"
-    liOne.innerText = "Flatiron School: Access Labs - Software Engineering Bootcamp. 15-week, fulltime - Javascript, React, Redux, Ruby, Rails, and SQL."
+    liOne.className="itemBody flatironBody margin-top"
+    liOne.innerText = "Flatiron School: Access Labs"
     briefPane.appendChild(liOne)
+
+    var liTwo = document.createElement('p')
+    liTwo.className="itemBody flatironBody"
+    liTwo.innerText = "Software Engineering Bootcamp"
+    briefPane.appendChild(liTwo)
+
+    var liThree = document.createElement('p')
+    liThree.className="itemBody flatironBody margin-bottom"
+    liThree.innerText = "Graduated October 2019"
+    briefPane.appendChild(liThree)
 
     briefPane.style.display = "block"
     briefPane.className="briefPane flatiron"
 
     cmoreBtn.style.display = "block"
-    cmoreBtn.style.top = "53px"
+    cmoreBtn.style.top = "50px"
     briefPane.appendChild(cmoreBtn)
 }
 
@@ -143,20 +153,20 @@ function cornellModal() {
     briefPane.appendChild(itemHeader)
 
     var liOne = document.createElement('p')
-    liOne.className="itemBody cornellnBody"
-    liOne.innerText = "Junior Drupal/PHP Developer"
+    liOne.className="itemBody cornellBody"
+    liOne.innerText = "Junior Drupal/PHP Developer, hired February 2020"
     briefPane.appendChild(liOne)
 
-    var liTwo = document.createElement('p')
-    liTwo.className="itemBody cornellnBody"
-    liTwo.innerText = "PHP - DRUPAL - Pantheon"
-    briefPane.appendChild(liTwo)
+    // var liTwo = document.createElement('p')
+    // liTwo.className="itemBody cornellBody"
+    // liTwo.innerText = "PHP - DRUPAL - Pantheon"
+    // briefPane.appendChild(liTwo)
 
     briefPane.style.display = "block"
     briefPane.className="briefPane cornell"
 
     cmoreBtn.style.display = "block"
-    cmoreBtn.style.top = "50px"
+    cmoreBtn.style.top = "40px"
     briefPane.appendChild(cmoreBtn)
 }
 

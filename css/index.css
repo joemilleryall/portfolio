@@ -166,19 +166,20 @@ body {
 #bio ul {
     position: relative;
     top: -65px;
-    right:-5px;
+    right: -5px;
     /* border: white solid 1px; */
     list-style-type: none;
-    direction:rtl;
+    direction: rtl;
     margin: 0;
     padding: 0;
     font-size: 11px;
     text-align: right;
     /* border-right: solid 1px #FF69B4; */
 }
-#bio li{
+
+#bio li {
     position: relative;
-    width:195px;
+    width: 195px;
 }
 
 /* #bio hr{
@@ -195,36 +196,38 @@ body {
     right:-5px;
     margin-left:0px;
     /* content: "\2022"; */
-} */
+}
 
-.date{
+*/ .date {
     margin-right: 5px;
     list-style-type: none;
 }
-.date{
-    right:1.5px;
-    color:#FF69B4;
+
+.date {
+    right: 1.5px;
+    color: #FF69B4;
     font-weight: bolder;
-    font-size:10px;
+    font-size: 10px;
 }
 
-.item{
-    margin-right:7px;
-    margin-bottom:10px;
-}
-.pane{
-    padding-right:10px;
-    border-right:5px solid #FF69B4;
-    width:100%;
+.item {
+    margin-right: 7px;
+    margin-bottom: 10px;
 }
 
-.briefPane{
+.pane {
+    padding-right: 10px;
+    border-right: 5px solid #FF69B4;
+    width: 100%;
+}
+
+.briefPane {
     animation:
         fadeIntoOpaque 0.3s;
     border-radius: 5px;
-    opacity:0.95;
-    z-index:2;
-    display:none;
+    opacity: 0.95;
+    z-index: 2;
+    display: none;
     position: absolute;
     background: #0d0d0d;
     /* padding: 20px; */
@@ -232,104 +235,119 @@ body {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.davie{
-    width:260px;
-    top:20px;
-    margin:0;
-    
+.davie {
+    width: 260px;
+    top: 20px;
+    margin: 0;
+
 }
 
-.davieHeader{
-    top:-8px;
-    right:-60px;
+.davieHeader {
+    top: -8px;
+    right: -60px;
 }
 
-.davieBody{
+.davieBody {
     /* position:relative; */
     /* top:-10px; */
     /* margin:0; */
 }
 
-.tally{
-    width:260px;
-    margin:0;
-    top:38px;
+.tally {
+    width: 260px;
+    margin: 0;
+    top: 38px;
 }
 
-.tallyHeader{
-    top:-6px;
-    right:-60px;
-}
-.thailand{
-    width:260px;
-    top:70px;
-}
-.thailandHeader{
-    top:-6px;
-    right:-60px;
-}
-.nyc{
-    width:260px;
-    margin:0;
-    top:106px;
-}
-.nycHeader{
-    top:-7px;
-    right:-60px;
+.tallyHeader {
+    top: -6px;
+    right: -60px;
 }
 
-.flatiron{
-    width:260px;
-    margin:0;
-    top:140px;
-}
-.flatironHeader{
-    top:-7px;
-    right:-60px;
-}
-.cornell{
-    width:260px;
-    margin:0;
-    top:177px;
-}
-.cornellHeader{
-    top:-7px;
-    right:-60px;
+.thailand {
+    width: 260px;
+    top: 70px;
 }
 
-.cmoreBtn{
-    position:absolute;
-    display:none;
-    top:23px;
+.thailandHeader {
+    top: -6px;
+    right: -60px;
+}
+
+.nyc {
+    width: 260px;
+    margin: 0;
+    top: 106px;
+}
+
+.nycHeader {
+    top: -7px;
+    right: -60px;
+}
+
+.flatiron {
+    width: 260px;
+    margin: 0;
+    top: 140px;
+}
+
+.flatironHeader {
+    top: -7px;
+    right: -60px;
+}
+
+.flatironBody {
+    margin: 0;
+    /* text-align: left; */
+}
+
+.cornell {
+    width: 260px;
+    margin: 0;
+    top: 177px;
+}
+
+.cornellHeader {
+    top: -7px;
+    right: -60px;
+}
+
+.cmoreBtn {
+    position: absolute;
+    display: none;
+    top: 23px;
     cursor: pointer;
     animation:
-        fadeIn 4s;
-    font-size:10px;
-    color:gray;
-}
-.cmoreBtn:hover{
-    color:yellow;
+        pulse 3s infinite;
+    font-size: 10px;
+    opacity:.8;
+    /* color: yellow; */
 }
 
-.itemHeader{
+.cmoreBtn:hover {
+    color: yellow;
+    animation-play-state: paused;
+}
+
+.itemHeader {
     position: absolute;
-    left:20px;
-    bottom:10px;
-    margin-top:0;
-    color:#FF69B4;
+    left: 20px;
+    bottom: 10px;
+    margin-top: 0;
+    color: #FF69B4;
     font-size: 14px;
     animation:
         fadeIn 1s;
 }
 
-.itemBody{
-    color:white;
+.itemBody {
+    color: white;
     font-size: 12px;
     animation:
         fadeIn 2s;
-    width:90%;
+    width: 90%;
     line-height: 14px;
-    margin-left:5%;
+    margin-left: 5%;
 }
 
 @keyframes fadeIntoOpaque {
@@ -345,6 +363,7 @@ body {
         opacity: 0.9;
     }
 }
+
 @keyframes fadeIn {
     0% {
         opacity: 0.0;
@@ -358,6 +377,21 @@ body {
         opacity: 1;
     }
 }
+
+@keyframes pulse {
+    0% {
+        color: black;
+    }
+
+    50% {
+        color:yellow;
+    }
+
+    100% {
+        color: black;
+    }
+}
+
 /* .viewPaneBody{
     position: relative;
     animation:
@@ -507,4 +541,14 @@ body {
         position: relative;
         top: 0px;
     }
+}
+
+/* ----------------------reusables------------------------------------- */
+
+.margin-top {
+    margin-top: 10px;
+}
+
+.margin-bottom {
+    margin-bottom: 10px;
 }
