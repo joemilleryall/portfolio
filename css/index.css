@@ -235,6 +235,27 @@ body {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.itemHeader {
+    position: absolute;
+    left: 20px;
+    bottom: 10px;
+    margin-top: 0;
+    color: #FF69B4;
+    font-size: 14px;
+    animation:
+        fadeIn 1s;
+}
+
+.itemBody {
+    color: white;
+    font-size: 12px;
+    animation:
+        fadeIn 2s;
+    width: 90%;
+    line-height: 14px;
+    margin-left: 5%;
+}
+
 .davie {
     width: 260px;
     top: 20px;
@@ -284,6 +305,9 @@ body {
     top: -7px;
     right: -60px;
 }
+.ajarn{
+    color:lightblue;
+}
 
 .flatiron {
     width: 260px;
@@ -304,7 +328,7 @@ body {
 .cornell {
     width: 260px;
     margin: 0;
-    top: 177px;
+    top: 195px;
 }
 
 .cornellHeader {
@@ -327,27 +351,6 @@ body {
 .cmoreBtn:hover {
     color: yellow;
     animation-play-state: paused;
-}
-
-.itemHeader {
-    position: absolute;
-    left: 20px;
-    bottom: 10px;
-    margin-top: 0;
-    color: #FF69B4;
-    font-size: 14px;
-    animation:
-        fadeIn 1s;
-}
-
-.itemBody {
-    color: white;
-    font-size: 12px;
-    animation:
-        fadeIn 2s;
-    width: 90%;
-    line-height: 14px;
-    margin-left: 5%;
 }
 
 @keyframes fadeIntoOpaque {

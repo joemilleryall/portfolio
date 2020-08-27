@@ -106,7 +106,7 @@ function nycModal() {
 
     var liOne = document.createElement('p')
     liOne.className="itemBody nycBody"
-    liOne.innerText = "Moved to NYC to chase big fights and big opportunities in tech."
+    liOne.innerHTML = `Moved to NYC to chase big fights and world class training from <a class="ajarn" target="_blank" href="https://www.youtube.com/watch?v=IB32gkmsst4">Ajarn Phil Nurse</a>`
     briefPane.appendChild(liOne)
 
     briefPane.style.display = "block"
@@ -130,7 +130,7 @@ function flatironModal() {
 
     var liTwo = document.createElement('p')
     liTwo.className="itemBody flatironBody"
-    liTwo.innerText = "Software Engineering Bootcamp"
+    liTwo.innerText = "Software Engineering Program"
     briefPane.appendChild(liTwo)
 
     var liThree = document.createElement('p')
@@ -154,7 +154,7 @@ function cornellModal() {
 
     var liOne = document.createElement('p')
     liOne.className="itemBody cornellBody"
-    liOne.innerText = "Junior Drupal/PHP Developer, hired February 2020"
+    liOne.innerText = "Web Analyst, hired February 2020"
     briefPane.appendChild(liOne)
 
     // var liTwo = document.createElement('p')
@@ -166,7 +166,7 @@ function cornellModal() {
     briefPane.className="briefPane cornell"
 
     cmoreBtn.style.display = "block"
-    cmoreBtn.style.top = "40px"
+    cmoreBtn.style.top = "25px"
     briefPane.appendChild(cmoreBtn)
 }
 
