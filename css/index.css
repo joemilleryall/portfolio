@@ -322,6 +322,7 @@ body {
 
 .flatironBody {
     margin: 0;
+    margin-left:15px;
     /* text-align: left; */
 }
 
