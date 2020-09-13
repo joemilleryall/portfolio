@@ -68,14 +68,14 @@ function fsuModal(){
 
     var liOne = document.createElement('p')
     liOne.className="itemBody tallyBody"
-    liOne.innerText = "Bachelor's in Editing, Writing, and Media Florida State University"
+    liOne.innerHTML = `B.A. <br> <a target="_blank" class="lightBlue" href="https://english.fsu.edu/programs/editing-writing-and-media">Editing, Writing, and Media</a><br> Florida State University`
     briefPane.appendChild(liOne)
 
     briefPane.style.display = "block"
     briefPane.className="briefPane tally"
 
     cmoreBtn.style.display = "block"
-    cmoreBtn.style.top = "39px"
+    cmoreBtn.style.top = "55px"
     briefPane.appendChild(cmoreBtn)
 }
 
@@ -106,7 +106,7 @@ function nycModal() {
 
     var liOne = document.createElement('p')
     liOne.className="itemBody nycBody"
-    liOne.innerHTML = `Moved to NYC to chase big fights and world class training from <a class="ajarn" target="_blank" href="https://www.youtube.com/watch?v=IB32gkmsst4">Ajarn Phil Nurse</a>`
+    liOne.innerHTML = `Moved to NYC to chase big fights and world class training from <a class="lightBlue" target="_blank" href="https://www.youtube.com/watch?v=IB32gkmsst4">Ajarn Phil Nurse</a>`
     briefPane.appendChild(liOne)
 
     briefPane.style.display = "block"
@@ -130,7 +130,7 @@ function flatironModal() {
 
     var liTwo = document.createElement('p')
     liTwo.className="itemBody flatironBody"
-    liTwo.innerText = "Software Engineering Program"
+    liTwo.innerHTML = `<a class="lightBlue" href="https://flatironschool.com/career-courses/coding-bootcamp#curriculum" target="_blank">Software Engineering Program</a>`
     briefPane.appendChild(liTwo)
 
     var liThree = document.createElement('p')
