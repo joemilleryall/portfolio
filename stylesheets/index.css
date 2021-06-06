@@ -45,3 +45,9 @@ html {
     width:30%;
     border-bottom: white solid 2px;
 }
+.content-body{
+    height:215px;
+    width:550px;
+    background: #0e0c1f;
+    margin-left:25px;
+}
