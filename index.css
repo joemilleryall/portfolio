@@ -1,0 +1,39 @@
+html {
+    background: #1a1a1a;
+    color: white;
+}
+
+.nav{
+    margin-top:25px;
+    text-align: center;
+    border-bottom: whitesmoke 1px solid;
+}
+.nav a{
+    text-decoration:none;
+    color:white;
+    font-family:sans-serif;
+    padding:8px;
+}
+.home-btn{
+    text-align: left;
+    margin-left:20px;
+}
+.sub-nav a{
+    font-size: 12px;
+    text-decoration:none;
+    color:white;
+    font-family:sans-serif;
+    padding:2px;
+}
+.container{
+
+}
+.content-box{
+    height:300px;
+    width:600px;
+    background: #262626;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:20px;
+    box-shadow: 5px 10px 20px #000000;
+}
