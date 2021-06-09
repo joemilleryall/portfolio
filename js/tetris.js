@@ -4,6 +4,7 @@ const context = canvas.getContext('2d');
 const arena = createArena(12, 20);
 
 // https://github.com/meth-meth-method/tetris did an awesome tutorial here https://www.youtube.com/watch?v=H2aW5V46khA 
+// this is not my original code.
 
 window.addEventListener("keydown", function(e) {
     if(["Space","ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].indexOf(e.code) > -1) {
