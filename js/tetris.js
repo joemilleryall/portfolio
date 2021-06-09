@@ -3,11 +3,14 @@ const context = canvas.getContext('2d');
     context.scale(20, 20);
 const arena = createArena(12, 20);
 
+// https://github.com/meth-meth-method/tetris did an awesome tutorial here https://www.youtube.com/watch?v=H2aW5V46khA 
+
 window.addEventListener("keydown", function(e) {
     if(["Space","ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].indexOf(e.code) > -1) {
         e.preventDefault();
     }
 }, false);
+
 // -------------------------------------Game Board
 function draw() {
     context.fillStyle = '#1a1a1a';
@@ -30,11 +33,8 @@ function drawMatrix(matrix, offset) {
         row.forEach((value, x) => {
             if(value !== 0) {
                 context.fillStyle = colors[value];
-                context.fillRect(
-                                x + offset.x,
-                                y + offset.y, 
-                                1, 1
-                )
+                context.fillRect(x + offset.x, y + offset.y, 1, 1)
+
             }
         });
     });
@@ -97,7 +97,6 @@ function createPiece(type){
         ]
     }
 }
- //----------------------------------------------------------------------->>>bugs on the I rotate.
 
 //--------------------------------------------Game Controls
 
