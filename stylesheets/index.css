@@ -36,7 +36,7 @@ html {
     box-shadow: 5px 10px 20px #000000;
 }
 
-.box-header{
+.content-box h2{
     padding-left:20px;
     margin-left:10px;
     padding-top:10px;
@@ -46,6 +46,6 @@ html {
 .content-body{
     height:215px;
     width:550px;
-    background: #0e0c1f;
+    /* background: #4d4d4d; */
     margin-left:25px;
 }
