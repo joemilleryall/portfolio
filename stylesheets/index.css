@@ -17,7 +17,10 @@ html {
 }
 .home-btn{
     text-align: left;
-    margin-left:20px;
+    margin-left:60px;
+}
+.sub-nav{
+    margin-left:40px;
 }
 .sub-nav a{
     font-size: 12px;
