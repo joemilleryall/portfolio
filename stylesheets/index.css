@@ -58,6 +58,11 @@ html {
     /* background: #4d4d4d; */
     margin-left: 25px;
 }
+.content-body p {
+    margin-left:25px;
+}
+
+
 @media screen and (max-width: 650px) {
     .home-btn {
         text-align: center;
@@ -70,6 +75,6 @@ html {
     }
     .content-box {
         height: 100%;
-        width:100%;
+        width: 100%;
     }
 }

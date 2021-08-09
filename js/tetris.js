@@ -236,7 +236,10 @@ function rowClear() {
 }
 
 function updateScore(){
-    document.getElementById('score').innerText = player.score;
+    document.getElementById('score').innerText = `Score: ${player.score}`;
+    if(player.score > 0){
+        document.getElementById('score').style.display = "block";
+    }
 }
 
 let dropCounter = 0;

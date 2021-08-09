@@ -8,12 +8,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="stylesheets/index.css">
         <link rel="stylesheet" href="stylesheets/tetris.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     </head>
     <body>
-        <canvas id="tetris" width="240" height="400"></canvas>
+        <canvas id="tetris" data-aos="zoom-in" data-aos-delay="900" width="240" height="400"></canvas>
         <div id="score"></div>
 
-        <div class="nav-container">
+        <div class="nav-container" data-aos="zoom-in">
             <div class="nav">
                 <a href="about.html">About</a>
                 <a href="#">Projects</a>
@@ -29,19 +30,28 @@
         </div>
         
         <div class="container">
-            <div class="content-box about">
-                <h2>quick facts</h2>
+            <div class="content-box about" data-aos="zoom-in" data-aos-delay="400">
+                <h2>Hello!</h2>
                 <div class="content-body">
+                    <p data-aos="fade-in" data-aos-delay="600">My name is Joe Miller</p>
 
                 </div>
             </div>
-            <div class="content-box projects">
+            <!-- <div class="content-box projects">
                 <h2>projects</h2>
                 <div class="content-body">
 
                 </div>
-            </div>
+            </div> -->
         </div>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+                <script>
+                    AOS.init({
+                        easing: 'ease',
+                        duration: 200, 
+                        once:true
+                    })
+                </script>
         <script src="js/tetris.js" async defer></script>
     </body>
 </html>
