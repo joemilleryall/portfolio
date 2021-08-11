@@ -11,7 +11,7 @@
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     </head>
     <body>
-        <canvas id="tetris" data-aos="zoom-in" data-aos-delay="900" width="240" height="400"></canvas>
+        <canvas id="tetris" data-aos="zoom-in" data-aos-delay="1100" width="240" height="400"></canvas>
         <div id="score"></div>
 
         <div class="nav-container" data-aos="zoom-in">
@@ -23,18 +23,36 @@
                 <div class="home-btn"><a href="index.html">Joe Miller</a></div>
             </div>
             <div class="sub-nav">
-                <a href="https://github.com/joe-millers-code">Github</a>
-                <a href="https://www.linkedin.com/in/joemilleryall">LinkedIn<a>
-                <a href="mailto:joemiller065@gmail.com">Email</a>
+                <a target="_blank" href="https://github.com/joe-millers-code">Github</a>
+                <a target="_blank" href="https://www.linkedin.com/in/joemilleryall">LinkedIn<a>
+                <a target="_blank" href="mailto:joemiller065@gmail.com">Email</a>
             </div>
         </div>
         
         <div class="container">
-            <div class="content-box about" data-aos="zoom-in" data-aos-delay="400">
+            <div class="content-box about" data-aos="zoom-in" data-aos-delay="600">
                 <h2>Hello!</h2>
                 <div class="content-body">
-                    <p data-aos="fade-in" data-aos-delay="600">My name is Joe Miller</p>
-
+                        <ul>
+                            <li data-aos="zoom-in" data-aos-delay="600" id="name">
+                                I'm Joe Miller
+                            </li>
+                            <li data-aos="zoom-in" data-aos-delay="900">
+                                Based in Brooklyn
+                            </li>
+                            <li data-aos="zoom-in" data-aos-delay="1200">
+                                Web Developer
+                            </li>
+                            <li data-aos="zoom-in" data-aos-delay="1500">
+                                Combat Sports Athlete
+                            </li>
+                            <!-- <li data-aos="zoom-in" data-aos-delay="2100" class="bio-point">
+                                <a href="#">We</a> moved to New York City 3 years ago looking for <a href="#">adventure</a>
+                            </li> -->
+                            <li data-aos="zoom-in" data-aos-delay="1900" class="bio-point">
+                                <span data-aos="zoom-in" data-aos-delay="2100"></span>
+                            </li>
+                        </ul>
                 </div>
             </div>
             <!-- <div class="content-box projects">
@@ -48,7 +66,7 @@
                 <script>
                     AOS.init({
                         easing: 'ease',
-                        duration: 200, 
+                        duration: 300, 
                         once:true
                     })
                 </script>

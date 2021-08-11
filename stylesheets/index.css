@@ -3,6 +3,13 @@ html {
     color: white;
     /* background-image: url('../assets/sunset.jpg') */
 }
+body{
+    font-family: 'Calibri', sans-serif;
+}
+
+a{
+    color:#ff00d4;
+}
 
 .nav {
     margin-top: 25px;
@@ -44,12 +51,14 @@ html {
     box-shadow: 5px 10px 20px #000000;
 }
 
+
 .content-box h2 {
     padding-left: 20px;
     margin-left: 10px;
     padding-top: 10px;
     width: 30%;
     border-bottom: white solid 2px;
+    border-bottom-width: thin;
 }
 
 .content-body {
@@ -61,8 +70,41 @@ html {
 .content-body p {
     margin-left:25px;
 }
+.about{
+    height:400px;
+    width: 600px;
+}
+#name{
+    font-size: 2em;
+    /* letter-spacing: .3px; */
+    font-weight: 900;
+    font-family:'Courier New', Courier, monospace;
+}
+.content-body ul{
+    list-style: none;
+}
+.content-body li{
+    font-size: 1em;
+    letter-spacing: .3px;
+    font-weight: 900;
+    font-family:'Courier New', Courier, monospace;
+}
+.bio-point{
+    margin-left:-30px;
+    margin-top:20px;
+    background: whitesmoke;
+    color: #262626;
+    width:120%;
+    padding:10px;
+    border:5px black solid;
+}
 
+/* utilities */
+/* .big-indent{
+    margin-left: 300px;
+} */
 
+/* Media Queries */
 @media screen and (max-width: 650px) {
     .home-btn {
         text-align: center;
