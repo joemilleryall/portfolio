@@ -15,6 +15,7 @@ a{
     margin-top: 25px;
     text-align: center;
     border-bottom: whitesmoke 1px solid;
+    padding-bottom:10px;
 }
 
 .nav a {
@@ -27,18 +28,6 @@ a{
 .home-btn {
     text-align: left;
     margin-left: 60px;
-}
-
-.sub-nav {
-    margin-left: 40px;
-}
-
-.sub-nav a {
-    font-size: 12px;
-    text-decoration: none;
-    color: white;
-    font-family: sans-serif;
-    padding: 2px;
 }
 
 .content-box {
@@ -98,7 +87,27 @@ a{
     padding:10px;
     border:5px black solid;
 }
+#social-links ul{
+    display: block;
+    list-style-type: none;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+    text-align: center;;
+}
 
+#social-links li {
+    display: inline-block;
+    font-size: 1.5em;
+    color:whitesmoke;
+    padding:8px;
+}
+#social-links a{
+    color:white;
+}
+#social-links a:hover{
+    color:#ff00d4;
+}
 /* utilities */
 /* .big-indent{
     margin-left: 300px;
