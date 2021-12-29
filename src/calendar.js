@@ -9,8 +9,7 @@ class Calendar extends React.Component {
             weekFive: [],
             weekSix: []
         };
-    
-
+        
     componentDidMount() {
         const weekData = {
             monthIndex: new Date().getMonth(),
