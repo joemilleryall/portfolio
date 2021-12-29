@@ -38,8 +38,10 @@ var Calendar = function (_React$Component) {
                 } else {
                     // weekData.today.setHours(19); 
                     // Daylight savings 
-                    var fullDate = new Date(weekData.year, weekData.monthIndex, date).toISOString().split("T")[0];
-                    var dateStr = weekData.today.toISOString().split("T")[0];
+                    // let fullDate = new Date(weekData.year, weekData.monthIndex, date)
+                    //     .toISOString()
+                    //     .split("T")[0];
+                    // let dateStr = weekData.today.toISOString().split("T")[0];
                     weekOneArr.push(React.createElement(
                         "td",
                         null,
@@ -105,40 +107,40 @@ var Calendar = function (_React$Component) {
                                 "thead",
                                 null,
                                 dayLabels
-                            )
-                        ),
-                        React.createElement(
-                            "tbody",
-                            null,
-                            React.createElement(
-                                "tr",
-                                null,
-                                this.state.weekOne
                             ),
                             React.createElement(
-                                "tr",
+                                "tbody",
                                 null,
-                                this.state.weekTwo
-                            ),
-                            React.createElement(
-                                "tr",
-                                null,
-                                this.state.weekThree
-                            ),
-                            React.createElement(
-                                "tr",
-                                null,
-                                this.state.weekFour
-                            ),
-                            React.createElement(
-                                "tr",
-                                null,
-                                this.state.weekFive
-                            ),
-                            React.createElement(
-                                "tr",
-                                null,
-                                this.state.weekSix
+                                React.createElement(
+                                    "tr",
+                                    null,
+                                    this.state.weekOne
+                                ),
+                                React.createElement(
+                                    "tr",
+                                    null,
+                                    this.state.weekTwo
+                                ),
+                                React.createElement(
+                                    "tr",
+                                    null,
+                                    this.state.weekThree
+                                ),
+                                React.createElement(
+                                    "tr",
+                                    null,
+                                    this.state.weekFour
+                                ),
+                                React.createElement(
+                                    "tr",
+                                    null,
+                                    this.state.weekFive
+                                ),
+                                React.createElement(
+                                    "tr",
+                                    null,
+                                    this.state.weekSix
+                                )
                             )
                         )
                     )

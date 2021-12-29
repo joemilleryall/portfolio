@@ -9,7 +9,7 @@ class Calendar extends React.Component {
             weekFive: [],
             weekSix: []
         };
-        
+
     componentDidMount() {
         const weekData = {
             monthIndex: new Date().getMonth(),
@@ -30,10 +30,10 @@ class Calendar extends React.Component {
             } else {
                 // weekData.today.setHours(19); 
                 // Daylight savings 
-                let fullDate = new Date(weekData.year, weekData.monthIndex, date)
-                    .toISOString()
-                    .split("T")[0];
-                let dateStr = weekData.today.toISOString().split("T")[0];
+                // let fullDate = new Date(weekData.year, weekData.monthIndex, date)
+                //     .toISOString()
+                //     .split("T")[0];
+                // let dateStr = weekData.today.toISOString().split("T")[0];
                 weekOneArr.push(
                     <td>{date++}</td>
                 );
@@ -75,15 +75,15 @@ class Calendar extends React.Component {
                         </div>
                         <table>
                             <thead>{dayLabels}</thead>
+                            <tbody>
+                                <tr>{this.state.weekOne}</tr>
+                                <tr>{this.state.weekTwo}</tr>
+                                <tr>{this.state.weekThree}</tr>
+                                <tr>{this.state.weekFour}</tr>
+                                <tr>{this.state.weekFive}</tr>
+                                <tr>{this.state.weekSix}</tr>
+                            </tbody>
                         </table>
-                        <tbody>
-                            <tr>{this.state.weekOne}</tr>
-                            <tr>{this.state.weekTwo}</tr>
-                            <tr>{this.state.weekThree}</tr>
-                            <tr>{this.state.weekFour}</tr>
-                            <tr>{this.state.weekFive}</tr>
-                            <tr>{this.state.weekSix}</tr>
-                        </tbody>
                     </div>
                 </div>
             </div>
