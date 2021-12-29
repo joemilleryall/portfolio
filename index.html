@@ -1,76 +1,84 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Joe Miller</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="stylesheets/index.css">
-        <link rel="stylesheet" href="stylesheets/tetris.css">
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-        <script src="https://kit.fontawesome.com/fe68e294f2.js" crossorigin="anonymous"></script>
-    </head>
-    <body>
-        <!-- <canvas id="tetris" data-aos="zoom-in" data-aos-delay="1100" width="240" height="400"></canvas> -->
-        <div id="score"></div>
 
-        <div class="nav-container" data-aos="fade-down" data-aos-duration="3000">
-            <div class="nav">
-                <!-- <a href="#">About</a>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Joe Miller</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="stylesheets/index.css">
+    <link rel="stylesheet" href="stylesheets/tetris.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css" />
+    <script src="https://kit.fontawesome.com/fe68e294f2.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <!-- <canvas id="tetris" data-aos="zoom-in" data-aos-delay="1100" width="240" height="400"></canvas> -->
+    <div id="score"></div>
+
+    <div class="nav-container" data-aos="fade-down" data-aos-duration="3000">
+        <div class="nav">
+            <!-- <a href="#">About</a>
                 <a href="#">Projects</a>
                 <a href="#">Contact</a> -->
-                <a target="_blank" href="JoeMillerResume.pdf">Resume</a>
-            </div>
-            <div id="social-links">
-                <ul>
-                    <li>
-                        <a class="github" data-aos="fade-down"  target="_blank" href="https://github.com/joe-millers-code">
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="linkedIn" data-aos="fade-down"  target="_blank" href="https://www.linkedin.com/in/joemilleryall">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="email" data-aos="fade-down"  target="_blank" href="mailto:joe@joemiller.co">
-                            <i class="fas fa-envelope-open-text"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+            <a target="_blank" href="JoeMillerResume.pdf">Resume</a>
         </div>
-        
-            <div class="content-box" data-aos="fade-down" data-aos-duration="500">
-                <h2 data-aos="fade-down">Hello!</h2>
-                <div class="content-body">
-                        <ul>
-                            <li data-aos="fade-down"  id="name">
-                                I'm Joe Miller
-                            </li>
-                            <li data-aos="fade-down" >
-                                Web Developer
-                            </li>
-                            <li data-aos="fade-down" >
-                                Combat Sports Athlete
-                            </li>
-                            <li data-aos="fade-down" >
-                                Based in Brooklyn 
-                            </li>
-                        </ul>
+        <div id="social-links">
+            <ul>
+                <li>
+                    <a class="github" data-aos="fade-down" target="_blank" href="https://github.com/joe-millers-code">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+                <li>
+                    <a class="linkedIn" data-aos="fade-down" target="_blank"
+                        href="https://www.linkedin.com/in/joemilleryall">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+                <li>
+                    <a class="email" data-aos="fade-down" target="_blank" href="mailto:joe@joemiller.co">
+                        <i class="fas fa-envelope-open-text"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
 
-                </div>
-            </div>
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-                <script>
-                    AOS.init({
-                        easing: 'ease',
-                        duration: 300, 
-                        once:true
-                    })
-                </script>
-        <script src="js/tetris.js" async defer></script>
-    </body>
+    <div class="content-box" data-aos="fade-down" data-aos-duration="500">
+        <h2 data-aos="fade-down">Hello!</h2>
+        <div class="content-body">
+            <ul>
+                <li data-aos="fade-down" id="name">
+                    I'm Joe Miller
+                </li>
+                <li data-aos="fade-down">
+                    Web Developer
+                </li>
+                <li data-aos="fade-down">
+                    Combat Sports Athlete
+                </li>
+                <li data-aos="fade-down">
+                    Based in Brooklyn
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            easing: 'ease',
+            duration: 300,
+            once: true
+        })
+    </script>
+    <script src="js/tetris.js" async defer></script>
+</body>
+
 </html>
