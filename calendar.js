@@ -30,39 +30,6 @@ var Calendar = function (_React$Component) {
             weekFive: [],
             weekSix: [],
             monthOriginDate: new Date()
-        }, _this.daysInMonth = function (m, y) {
-            return new Date(y, m, 0).getDate();
-        }, _this.buildWeekOne = function (firstDayIndex) {
-            var date = 1;
-            var weekOneArr = [];
-            for (var i = 0; i < 7; i++) {
-                if (i < firstDayIndex) {
-                    weekOneArr.push(React.createElement('td', { key: Math.floor(Math.random() * 9000) + 1000 }));
-                } else {
-                    weekOneArr.push(React.createElement(
-                        'td',
-                        { key: Math.floor(Math.random() * 9000) + 1000 },
-                        date++
-                    ));
-                }
-            }
-            return { tableCells: weekOneArr, endDate: date };
-        }, _this.buildWeek = function (startDate, totalDays, weekData) {
-            var weekArr = [];
-            for (var i = 0; i < 7; i++) {
-                if (startDate > totalDays) {
-                    weekArr.push(React.createElement('td', { key: Math.floor(Math.random() * 9000) + 1000 }));
-                } else {
-                    // weekData.today.setHours(19); Daylight savings 
-
-                    weekArr.push(React.createElement(
-                        'td',
-                        { key: Math.floor(Math.random() * 9000) + 1000 },
-                        startDate++
-                    ));
-                }
-            }
-            return weekArr;
         }, _this.nextMonth = function () {
             var year = _this.state.monthOriginDate.getFullYear();
             var month = _this.state.monthOriginDate.getMonth() + 1;
@@ -74,12 +41,10 @@ var Calendar = function (_React$Component) {
                 year: year,
                 today: new Date()
             };
-            console.log('if');
-
             var totalDays = _this.daysInMonth(weekData.monthIndex + 1, weekData.year);
             var firstDayIndex = new Date(weekData.year, weekData.monthIndex).getDay();
 
-            var initialWeek = _this.buildWeekOne(firstDayIndex);
+            var initialWeek = _this.buildWeekOne(firstDayIndex, weekData);
             var second = _this.buildWeek(initialWeek.endDate, totalDays, weekData);
             var third = _this.buildWeek(initialWeek.endDate + 7, totalDays, weekData);
             var fourth = _this.buildWeek(initialWeek.endDate + 14, totalDays, weekData);
@@ -105,11 +70,96 @@ var Calendar = function (_React$Component) {
                     weekSix: null
                 });
             }
+        }, _this.prevMonth = function () {
+            var year = _this.state.monthOriginDate.getFullYear();
+            var month = _this.state.monthOriginDate.getMonth() - 1;
+
+            _this.setState({ monthOriginDate: new Date(year, month, 1) });
+
+            var weekData = {
+                monthIndex: month,
+                year: year,
+                today: new Date()
+            };
+
+            var totalDays = _this.daysInMonth(weekData.monthIndex + 1, weekData.year);
+            var firstDayIndex = new Date(weekData.year, weekData.monthIndex).getDay();
+
+            var initialWeek = _this.buildWeekOne(firstDayIndex, weekData);
+            var second = _this.buildWeek(initialWeek.endDate, totalDays, weekData);
+            var third = _this.buildWeek(initialWeek.endDate + 7, totalDays, weekData);
+            var fourth = _this.buildWeek(initialWeek.endDate + 14, totalDays, weekData);
+            var fifth = _this.buildWeek(initialWeek.endDate + 21, totalDays, weekData);
+
+            if (initialWeek.endDate + 28 <= totalDays) {
+                var sixth = _this.buildWeek(initialWeek.endDate + 28, totalDays, weekData);
+                _this.setState({
+                    weekOne: initialWeek.tableCells,
+                    weekTwo: second,
+                    weekThree: third,
+                    weekFour: fourth,
+                    weekFive: fifth,
+                    weekSix: sixth
+                });
+            } else {
+                _this.setState({
+                    weekOne: initialWeek.tableCells,
+                    weekTwo: second,
+                    weekThree: third,
+                    weekFour: fourth,
+                    weekFive: fifth,
+                    weekSix: null
+                });
+            }
+        }, _this.daysInMonth = function (m, y) {
+            return new Date(y, m, 0).getDate();
+        }, _this.buildWeekOne = function (firstDayIndex, weekData) {
+            var date = 1;
+            var weekOneArr = [];
+            for (var i = 0; i < 7; i++) {
+                if (i < firstDayIndex) {
+                    weekOneArr.push(React.createElement("td", { className: "empty", key: Math.floor(Math.random() * 9000) + 1000 }));
+                } else {
+                    var fullDate = new Date(weekData.year, weekData.monthIndex, date).toISOString().split("T")[0];
+                    var dateStr = weekData.today.toISOString().split("T")[0];
+                    fullDate === dateStr ? weekOneArr.push(React.createElement(
+                        "td",
+                        { className: "today", key: Math.floor(Math.random() * 9000) + 1000 },
+                        date++
+                    )) : weekOneArr.push(React.createElement(
+                        "td",
+                        { key: Math.floor(Math.random() * 9000) + 1000 },
+                        date++
+                    ));
+                }
+            }
+            return { tableCells: weekOneArr, endDate: date };
+        }, _this.buildWeek = function (startDate, totalDays, weekData) {
+            var weekArr = [];
+            for (var i = 0; i < 7; i++) {
+                if (startDate > totalDays) {
+                    weekArr.push(React.createElement("td", { className: "empty", key: Math.floor(Math.random() * 9000) + 1000 }));
+                } else {
+                    // weekData.today.setHours(19); Daylight savings 
+                    var fullDate = new Date(weekData.year, weekData.monthIndex, startDate).toISOString().split("T")[0];
+                    var dateStr = weekData.today.toISOString().split("T")[0];
+                    fullDate === dateStr ? weekArr.push(React.createElement(
+                        "td",
+                        { className: "today", key: Math.floor(Math.random() * 9000) + 1000 },
+                        startDate++
+                    )) : weekArr.push(React.createElement(
+                        "td",
+                        { key: Math.floor(Math.random() * 9000) + 1000 },
+                        startDate++
+                    ));
+                }
+            }
+            return weekArr;
         }, _temp), _possibleConstructorReturn(_this, _ret);
     }
 
     _createClass(Calendar, [{
-        key: 'componentDidMount',
+        key: "componentDidMount",
         value: function componentDidMount() {
             var year = this.state.monthOriginDate.getFullYear();
             var monthInd = this.state.monthOriginDate.getMonth();
@@ -123,7 +173,7 @@ var Calendar = function (_React$Component) {
             var totalDays = this.daysInMonth(weekData.monthIndex + 1, weekData.year);
             var firstDayIndex = new Date(weekData.year, weekData.monthIndex).getDay();
 
-            var initialWeek = this.buildWeekOne(firstDayIndex);
+            var initialWeek = this.buildWeekOne(firstDayIndex, weekData);
             var second = this.buildWeek(initialWeek.endDate, totalDays, weekData);
             var third = this.buildWeek(initialWeek.endDate + 7, totalDays, weekData);
             var fourth = this.buildWeek(initialWeek.endDate + 14, totalDays, weekData);
@@ -150,14 +200,14 @@ var Calendar = function (_React$Component) {
             }
         }
     }, {
-        key: 'render',
+        key: "render",
         value: function render() {
             var _this2 = this;
 
             var abrevDays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
             var dayLabels = abrevDays.map(function (day) {
                 return React.createElement(
-                    'th',
+                    "th",
                     { key: day },
                     day
                 );
@@ -165,76 +215,83 @@ var Calendar = function (_React$Component) {
             var monthLabels = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
             return React.createElement(
-                'div',
-                { className: 'calendar-container' },
+                "div",
+                { className: "calendar-container" },
                 React.createElement(
-                    'div',
-                    { className: 'calendar' },
+                    "div",
+                    { className: "calendar" },
                     React.createElement(
-                        'div',
-                        { className: 'month' },
+                        "div",
+                        { className: "month" },
                         React.createElement(
-                            'div',
-                            { className: 'month-header' },
+                            "div",
+                            { className: "month-header" },
                             React.createElement(
-                                'p',
+                                "button",
+                                { className: "btn", onClick: function onClick() {
+                                        return _this2.prevMonth();
+                                    } },
+                                "\u2039"
+                            ),
+                            React.createElement(
+                                "p",
                                 null,
                                 monthLabels[this.state.monthOriginDate.getMonth()]
+                            ),
+                            React.createElement(
+                                "button",
+                                { className: "btn", onClick: function onClick() {
+                                        return _this2.nextMonth();
+                                    } },
+                                "\u203A"
                             )
                         ),
                         React.createElement(
-                            'table',
+                            "table",
                             null,
                             React.createElement(
-                                'thead',
+                                "thead",
                                 null,
                                 React.createElement(
-                                    'tr',
+                                    "tr",
                                     null,
                                     dayLabels
                                 )
                             ),
                             React.createElement(
-                                'tbody',
+                                "tbody",
                                 null,
                                 React.createElement(
-                                    'tr',
+                                    "tr",
                                     null,
                                     this.state.weekOne
                                 ),
                                 React.createElement(
-                                    'tr',
+                                    "tr",
                                     null,
                                     this.state.weekTwo
                                 ),
                                 React.createElement(
-                                    'tr',
+                                    "tr",
                                     null,
                                     this.state.weekThree
                                 ),
                                 React.createElement(
-                                    'tr',
+                                    "tr",
                                     null,
                                     this.state.weekFour
                                 ),
                                 React.createElement(
-                                    'tr',
+                                    "tr",
                                     null,
                                     this.state.weekFive
                                 ),
                                 React.createElement(
-                                    'tr',
+                                    "tr",
                                     null,
                                     this.state.weekSix
                                 )
                             )
-                        ),
-                        React.createElement(
-                            'button',
-                            { onClick: function onClick() {
-                                    return _this2.nextMonth();
-                                } },
-                            'next'
                         )
                     )
                 )

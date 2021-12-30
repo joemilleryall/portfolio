@@ -24,7 +24,7 @@ class Calendar extends React.Component {
         const totalDays = this.daysInMonth(weekData.monthIndex + 1, weekData.year);
         const firstDayIndex = new Date(weekData.year, weekData.monthIndex).getDay();
 
-        const initialWeek = this.buildWeekOne(firstDayIndex);
+        const initialWeek = this.buildWeekOne(firstDayIndex, weekData);
         const second = this.buildWeek(initialWeek.endDate, totalDays, weekData)
         const third = this.buildWeek(initialWeek.endDate + 7, totalDays, weekData)
         const fourth = this.buildWeek(initialWeek.endDate + 14, totalDays, weekData)
@@ -51,38 +51,6 @@ class Calendar extends React.Component {
         }
     }
 
-    daysInMonth = (m, y) => {
-        return new Date(y, m, 0).getDate();
-    };
-
-    buildWeekOne = (firstDayIndex) => {
-        let date = 1;
-        let weekOneArr = [];
-        for (let i = 0; i < 7; i++) {
-            if (i < firstDayIndex) {
-                weekOneArr.push(<td key={Math.floor(Math.random() * 9000) + 1000}></td>);
-            } else {
-                weekOneArr.push(
-                    <td key={Math.floor(Math.random() * 9000) + 1000}>{date++}</td>
-                );
-            }
-        }
-        return { tableCells: weekOneArr, endDate: date };
-    }
-
-    buildWeek = (startDate, totalDays, weekData) => {
-        let weekArr = [];
-        for (let i = 0; i < 7; i++) {
-            if (startDate > totalDays) {
-                weekArr.push(<td key={Math.floor(Math.random() * 9000) + 1000}></td>);
-            } else {
-                // weekData.today.setHours(19); Daylight savings 
-                
-                weekArr.push(<td key={Math.floor(Math.random() * 9000) + 1000}>{startDate++}</td>);
-            }
-        }
-        return (weekArr);
-    }
     nextMonth = () => {
         const year = this.state.monthOriginDate.getFullYear();
         const month = this.state.monthOriginDate.getMonth()+1;
@@ -94,12 +62,10 @@ class Calendar extends React.Component {
             year: year,
             today: new Date(),
         };
-            console.log('if')
-
         const totalDays = this.daysInMonth(weekData.monthIndex + 1, weekData.year);
         const firstDayIndex = new Date(weekData.year, weekData.monthIndex).getDay();
 
-        const initialWeek = this.buildWeekOne(firstDayIndex);
+        const initialWeek = this.buildWeekOne(firstDayIndex, weekData);
         const second = this.buildWeek(initialWeek.endDate, totalDays, weekData)
         const third = this.buildWeek(initialWeek.endDate + 7, totalDays, weekData)
         const fourth = this.buildWeek(initialWeek.endDate + 14, totalDays, weekData)
@@ -126,6 +92,89 @@ class Calendar extends React.Component {
             })
         }
     }
+    prevMonth = () => {
+        const year = this.state.monthOriginDate.getFullYear();
+        const month = this.state.monthOriginDate.getMonth()-1;
+
+        this.setState({monthOriginDate: new Date(year, month, 1 )})
+
+        const weekData = {
+            monthIndex: month,
+            year: year,
+            today: new Date(),
+        };
+
+        const totalDays = this.daysInMonth(weekData.monthIndex + 1, weekData.year);
+        const firstDayIndex = new Date(weekData.year, weekData.monthIndex).getDay();
+
+        const initialWeek = this.buildWeekOne(firstDayIndex, weekData);
+        const second = this.buildWeek(initialWeek.endDate, totalDays, weekData)
+        const third = this.buildWeek(initialWeek.endDate + 7, totalDays, weekData)
+        const fourth = this.buildWeek(initialWeek.endDate + 14, totalDays, weekData)
+        const fifth = this.buildWeek(initialWeek.endDate + 21, totalDays, weekData)
+
+        if (initialWeek.endDate + 28 <= totalDays) {
+            const sixth = this.buildWeek(initialWeek.endDate + 28, totalDays, weekData)
+            this.setState({
+                weekOne: initialWeek.tableCells,
+                weekTwo: second, 
+                weekThree: third,
+                weekFour: fourth,
+                weekFive: fifth,
+                weekSix: sixth
+            })
+        } else {
+            this.setState({
+                weekOne: initialWeek.tableCells,
+                weekTwo: second, 
+                weekThree: third,
+                weekFour: fourth,
+                weekFive: fifth,
+                weekSix: null
+            })
+        }
+    }
+
+    daysInMonth = (m, y) => {
+        return new Date(y, m, 0).getDate();
+    };
+
+    buildWeekOne = (firstDayIndex, weekData) => {
+        let date = 1;
+        let weekOneArr = [];
+        for (let i = 0; i < 7; i++) {
+            if (i < firstDayIndex) {
+                weekOneArr.push(<td className="empty" key={Math.floor(Math.random() * 9000) + 1000}></td>);
+            } else {
+                let fullDate = new Date(weekData.year, weekData.monthIndex, date).toISOString().split("T")[0]
+                let dateStr = weekData.today.toISOString().split("T")[0]
+                fullDate === dateStr
+                    ? weekOneArr.push(<td className="today" key={Math.floor(Math.random() * 9000) + 1000}>{date++}</td>)
+                    : weekOneArr.push(<td key={Math.floor(Math.random() * 9000) + 1000}>{date++}</td>)
+                
+            }
+        }
+        return { tableCells: weekOneArr, endDate: date };
+    }
+
+    buildWeek = (startDate, totalDays, weekData) => {
+        let weekArr = [];
+        for (let i = 0; i < 7; i++) {
+            if (startDate > totalDays) {
+                weekArr.push(<td className="empty" key={Math.floor(Math.random() * 9000) + 1000}></td>);
+            } else {
+                // weekData.today.setHours(19); Daylight savings 
+                let fullDate = new Date(weekData.year, weekData.monthIndex, startDate).toISOString().split("T")[0]
+                let dateStr = weekData.today.toISOString().split("T")[0]
+                fullDate === dateStr
+                    ? weekArr.push(<td className="today" key={Math.floor(Math.random() * 9000) + 1000}>{startDate++}</td>)
+                    : weekArr.push(<td key={Math.floor(Math.random() * 9000) + 1000}>{startDate++}</td>)
+
+            }
+        }
+        return (weekArr);
+    }
+
     render() {
 
         const abrevDays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -152,7 +201,9 @@ class Calendar extends React.Component {
                 <div className="calendar">
                     <div className="month">
                         <div className="month-header">
+                            <button className="btn" onClick={()=>this.prevMonth()}>&#8249;</button>
                             <p>{monthLabels[this.state.monthOriginDate.getMonth()]}</p>
+                            <button className="btn" onClick={()=>this.nextMonth()}>&#8250;</button>
                         </div>
                         <table>
                             <thead><tr>{dayLabels}</tr></thead>
@@ -165,7 +216,6 @@ class Calendar extends React.Component {
                                 <tr>{this.state.weekSix}</tr>
                             </tbody>
                         </table>
-                        <button onClick={()=>this.nextMonth()}>next</button>
                     </div>
                 </div>
             </div>
