@@ -14,7 +14,6 @@ a {
 }
 .nav {
     padding-top: 25px;
-    text-align: center;
     border-bottom: whitesmoke 1px solid;
     padding-bottom: 10px;
 }
@@ -28,7 +27,8 @@ a {
     color: #ff00d4;
 }
 #social-links ul {
-    display: block;
+    display: flex;
+    justify-content: center;
     list-style-type: none;
     margin-block-start: 0;
     margin-block-end: 0;
@@ -61,6 +61,41 @@ h2 {
     margin-right:auto;
     width:400px;
 }
+
+/* FLIP CARD======================================== */
+.card{
+    background-color: transparent;
+    width: 400px;
+    height: 200px;
+    perspective: 1000px;
+}
+.inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+.card:hover .inner{
+    transform: rotateY(180deg);
+}
+
+.front, .back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+.back {
+    background-color: black;
+    color: white;
+    transform: rotateY(180deg);
+
+    text-align: center;
+} 
+
+
 #name {
     font-size: 2em;
     font-weight: 900;

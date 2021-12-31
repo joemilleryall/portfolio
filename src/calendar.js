@@ -8,7 +8,6 @@
 
 class Month extends React.Component {
     state = { 
-            initialWeekEndDate: '',
             weekOne: [], 
             weekTwo: [],
             weekThree: [], 
@@ -61,7 +60,6 @@ class Month extends React.Component {
                 weekFive: fifth,
             })
         }
-        console.log(this.state)
     }
     
     nextMonth = () => {
