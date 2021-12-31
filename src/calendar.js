@@ -1,59 +1,14 @@
 'use strict';
 
-// class Day extends React.Component {
-//     render(){
 
-//     }
-// }
-// class Week extends React.Component {
-//     constructor(props){
-//         super(props)
-//         this.state = {
-//             weekArr: [],
-//             // monthOriginDate: this.props.monthOriginDate, 
-//             // startDate: this.props.startDate, 
-//         }
-//     }
-//     componentDidMount(){
-//         const year = this.props.monthOriginDate.getFullYear();
-//         const monthInd = this.props.monthOriginDate.getMonth();
 
-//         const weekData = {
-//             monthIndex: monthInd,
-//             year: year,
-//             today: new Date(),
-//         };
+// =================================///////////////////////////////////=====================================
 
-//         const totalDays = this.daysInMonth(weekData.monthIndex + 1, weekData.year);
 
-//         const week = this.buildWeek(initialWeek.endDate, totalDays, weekData)
-//         this.setState({ weekArr : week })
-//     }
 
-//     buildWeek = (startDate, totalDays, weekDate) => {
-//         let weekArr = [];
-//         for (let i = 0; i < 7; i++) {
-//             if (startDate > totalDays) {
-//                 weekArr.push(<td className="empty" key={Math.floor(Math.random() * 9000) + 1000}></td>);
-//             } else {
-//                 // weekData.today.setHours(19); Daylight savings 
-//                 let fullDate = new Date(weekData.year, weekData.monthIndex, startDate).toISOString().split("T")[0]
-//                 let dateStr = weekData.today.toISOString().split("T")[0]
-//                 fullDate === dateStr
-//                     ? weekArr.push(<td className="today" key={Math.floor(Math.random() * 9000) + 1000}>{startDate++}</td>)
-//                     : weekArr.push(<td key={Math.floor(Math.random() * 9000) + 1000}>{startDate++}</td>)
-
-//             }
-//         }
-//         return (weekArr);
-//     }
-
-//     render(){
-//         return (<tr>{weekArr}</tr>)
-//     }
-// }
 class Month extends React.Component {
     state = { 
+            initialWeekEndDate: '',
             weekOne: [], 
             weekTwo: [],
             weekThree: [], 
@@ -64,19 +19,22 @@ class Month extends React.Component {
         };
 
     componentDidMount() {
+        
         const year = this.state.monthOriginDate.getFullYear();
         const monthInd = this.state.monthOriginDate.getMonth();
-
+        
         const weekData = {
             monthIndex: monthInd,
             year: year,
             today: new Date(),
         };
-
+        
         const totalDays = this.daysInMonth(weekData.monthIndex + 1, weekData.year);
         const firstDayIndex = new Date(weekData.year, weekData.monthIndex).getDay();
-
+        
         const initialWeek = this.buildWeekOne(firstDayIndex, weekData);
+    
+
         const second = this.buildWeek(initialWeek.endDate, totalDays, weekData)
         const third = this.buildWeek(initialWeek.endDate + 7, totalDays, weekData)
         const fourth = this.buildWeek(initialWeek.endDate + 14, totalDays, weekData)
@@ -85,6 +43,7 @@ class Month extends React.Component {
         if (initialWeek.endDate + 28 <= totalDays) {
             const sixth = this.buildWeek(initialWeek.endDate + 28, totalDays, weekData)
             this.setState({
+                initialWeekEndDate: initialWeek.endDate,
                 weekOne: initialWeek.tableCells,
                 weekTwo: second, 
                 weekThree: third,
@@ -94,6 +53,7 @@ class Month extends React.Component {
             })
         } else {
             this.setState({
+                initialWeekEndDate: initialWeek.endDate,
                 weekOne: initialWeek.tableCells,
                 weekTwo: second, 
                 weekThree: third,
@@ -101,6 +61,7 @@ class Month extends React.Component {
                 weekFive: fifth,
             })
         }
+        console.log(this.state)
     }
     
     nextMonth = () => {
@@ -282,15 +243,5 @@ class Calendar extends React.Component {
         );
     }
 }
-
-// const Calendar = () => {
-
-//     return(
-//         <p>test passed</p>
-//     )
-// };
-
-
-
 
 ReactDOM.render(<Calendar />, document.querySelector('#calendar'));

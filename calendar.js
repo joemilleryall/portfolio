@@ -1,57 +1,7 @@
 'use strict';
 
-// class Day extends React.Component {
-//     render(){
+// =================================///////////////////////////////////=====================================
 
-//     }
-// }
-// class Week extends React.Component {
-//     constructor(props){
-//         super(props)
-//         this.state = {
-//             weekArr: [],
-//             // monthOriginDate: this.props.monthOriginDate, 
-//             // startDate: this.props.startDate, 
-//         }
-//     }
-//     componentDidMount(){
-//         const year = this.props.monthOriginDate.getFullYear();
-//         const monthInd = this.props.monthOriginDate.getMonth();
-
-//         const weekData = {
-//             monthIndex: monthInd,
-//             year: year,
-//             today: new Date(),
-//         };
-
-//         const totalDays = this.daysInMonth(weekData.monthIndex + 1, weekData.year);
-
-//         const week = this.buildWeek(initialWeek.endDate, totalDays, weekData)
-//         this.setState({ weekArr : week })
-//     }
-
-//     buildWeek = (startDate, totalDays, weekDate) => {
-//         let weekArr = [];
-//         for (let i = 0; i < 7; i++) {
-//             if (startDate > totalDays) {
-//                 weekArr.push(<td className="empty" key={Math.floor(Math.random() * 9000) + 1000}></td>);
-//             } else {
-//                 // weekData.today.setHours(19); Daylight savings 
-//                 let fullDate = new Date(weekData.year, weekData.monthIndex, startDate).toISOString().split("T")[0]
-//                 let dateStr = weekData.today.toISOString().split("T")[0]
-//                 fullDate === dateStr
-//                     ? weekArr.push(<td className="today" key={Math.floor(Math.random() * 9000) + 1000}>{startDate++}</td>)
-//                     : weekArr.push(<td key={Math.floor(Math.random() * 9000) + 1000}>{startDate++}</td>)
-
-//             }
-//         }
-//         return (weekArr);
-//     }
-
-//     render(){
-//         return (<tr>{weekArr}</tr>)
-//     }
-// }
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -76,6 +26,7 @@ var Month = function (_React$Component) {
         }
 
         return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Month.__proto__ || Object.getPrototypeOf(Month)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+            initialWeekEndDate: '',
             weekOne: [],
             weekTwo: [],
             weekThree: [],
@@ -171,16 +122,16 @@ var Month = function (_React$Component) {
             var weekOneArr = [];
             for (var i = 0; i < 7; i++) {
                 if (i < firstDayIndex) {
-                    weekOneArr.push(React.createElement("td", { className: "empty", key: Math.floor(Math.random() * 9000) + 1000 }));
+                    weekOneArr.push(React.createElement('td', { className: 'empty', key: Math.floor(Math.random() * 9000) + 1000 }));
                 } else {
                     var fullDate = new Date(weekData.year, weekData.monthIndex, date).toISOString().split("T")[0];
                     var dateStr = weekData.today.toISOString().split("T")[0];
                     fullDate === dateStr ? weekOneArr.push(React.createElement(
-                        "td",
-                        { className: "today", key: Math.floor(Math.random() * 9000) + 1000 },
+                        'td',
+                        { className: 'today', key: Math.floor(Math.random() * 9000) + 1000 },
                         date++
                     )) : weekOneArr.push(React.createElement(
-                        "td",
+                        'td',
                         { key: Math.floor(Math.random() * 9000) + 1000 },
                         date++
                     ));
@@ -191,17 +142,17 @@ var Month = function (_React$Component) {
             var weekArr = [];
             for (var i = 0; i < 7; i++) {
                 if (startDate > totalDays) {
-                    weekArr.push(React.createElement("td", { className: "empty", key: Math.floor(Math.random() * 9000) + 1000 }));
+                    weekArr.push(React.createElement('td', { className: 'empty', key: Math.floor(Math.random() * 9000) + 1000 }));
                 } else {
                     // weekData.today.setHours(19); Daylight savings 
                     var fullDate = new Date(weekData.year, weekData.monthIndex, startDate).toISOString().split("T")[0];
                     var dateStr = weekData.today.toISOString().split("T")[0];
                     fullDate === dateStr ? weekArr.push(React.createElement(
-                        "td",
-                        { className: "today", key: Math.floor(Math.random() * 9000) + 1000 },
+                        'td',
+                        { className: 'today', key: Math.floor(Math.random() * 9000) + 1000 },
                         startDate++
                     )) : weekArr.push(React.createElement(
-                        "td",
+                        'td',
                         { key: Math.floor(Math.random() * 9000) + 1000 },
                         startDate++
                     ));
@@ -212,8 +163,9 @@ var Month = function (_React$Component) {
     }
 
     _createClass(Month, [{
-        key: "componentDidMount",
+        key: 'componentDidMount',
         value: function componentDidMount() {
+
             var year = this.state.monthOriginDate.getFullYear();
             var monthInd = this.state.monthOriginDate.getMonth();
 
@@ -227,6 +179,7 @@ var Month = function (_React$Component) {
             var firstDayIndex = new Date(weekData.year, weekData.monthIndex).getDay();
 
             var initialWeek = this.buildWeekOne(firstDayIndex, weekData);
+
             var second = this.buildWeek(initialWeek.endDate, totalDays, weekData);
             var third = this.buildWeek(initialWeek.endDate + 7, totalDays, weekData);
             var fourth = this.buildWeek(initialWeek.endDate + 14, totalDays, weekData);
@@ -235,6 +188,7 @@ var Month = function (_React$Component) {
             if (initialWeek.endDate + 28 <= totalDays) {
                 var sixth = this.buildWeek(initialWeek.endDate + 28, totalDays, weekData);
                 this.setState({
+                    initialWeekEndDate: initialWeek.endDate,
                     weekOne: initialWeek.tableCells,
                     weekTwo: second,
                     weekThree: third,
@@ -244,6 +198,7 @@ var Month = function (_React$Component) {
                 });
             } else {
                 this.setState({
+                    initialWeekEndDate: initialWeek.endDate,
                     weekOne: initialWeek.tableCells,
                     weekTwo: second,
                     weekThree: third,
@@ -251,16 +206,17 @@ var Month = function (_React$Component) {
                     weekFive: fifth
                 });
             }
+            console.log(this.state);
         }
     }, {
-        key: "render",
+        key: 'render',
         value: function render() {
             var _this2 = this;
 
             var abrevDays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
             var dayLabels = abrevDays.map(function (day) {
                 return React.createElement(
-                    "th",
+                    'th',
                     { key: day },
                     day
                 );
@@ -268,73 +224,73 @@ var Month = function (_React$Component) {
             var monthLabels = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
             return React.createElement(
-                "div",
-                { className: "month" },
+                'div',
+                { className: 'month' },
                 React.createElement(
-                    "div",
-                    { className: "month-header" },
+                    'div',
+                    { className: 'month-header' },
                     React.createElement(
-                        "button",
-                        { className: "btn", onClick: function onClick() {
+                        'button',
+                        { className: 'btn', onClick: function onClick() {
                                 return _this2.prevMonth();
                             } },
-                        "\u2039"
+                        '\u2039'
                     ),
                     React.createElement(
-                        "p",
+                        'p',
                         null,
                         monthLabels[this.state.monthOriginDate.getMonth()]
                     ),
                     React.createElement(
-                        "button",
-                        { className: "btn", onClick: function onClick() {
+                        'button',
+                        { className: 'btn', onClick: function onClick() {
                                 return _this2.nextMonth();
                             } },
-                        "\u203A"
+                        '\u203A'
                     )
                 ),
                 React.createElement(
-                    "table",
+                    'table',
                     null,
                     React.createElement(
-                        "thead",
+                        'thead',
                         null,
                         React.createElement(
-                            "tr",
+                            'tr',
                             null,
                             dayLabels
                         )
                     ),
                     React.createElement(
-                        "tbody",
+                        'tbody',
                         null,
                         React.createElement(
-                            "tr",
+                            'tr',
                             null,
                             this.state.weekOne
                         ),
                         React.createElement(
-                            "tr",
+                            'tr',
                             null,
                             this.state.weekTwo
                         ),
                         React.createElement(
-                            "tr",
+                            'tr',
                             null,
                             this.state.weekThree
                         ),
                         React.createElement(
-                            "tr",
+                            'tr',
                             null,
                             this.state.weekFour
                         ),
                         React.createElement(
-                            "tr",
+                            'tr',
                             null,
                             this.state.weekFive
                         ),
                         React.createElement(
-                            "tr",
+                            'tr',
                             null,
                             this.state.weekSix
                         )
@@ -357,14 +313,14 @@ var Calendar = function (_React$Component2) {
     }
 
     _createClass(Calendar, [{
-        key: "render",
+        key: 'render',
         value: function render() {
             return React.createElement(
-                "div",
-                { className: "calendar-container" },
+                'div',
+                { className: 'calendar-container' },
                 React.createElement(
-                    "div",
-                    { className: "calendar" },
+                    'div',
+                    { className: 'calendar' },
                     React.createElement(Month, null)
                 )
             );
@@ -373,13 +329,5 @@ var Calendar = function (_React$Component2) {
 
     return Calendar;
 }(React.Component);
-
-// const Calendar = () => {
-
-//     return(
-//         <p>test passed</p>
-//     )
-// };
-
 
 ReactDOM.render(React.createElement(Calendar, null), document.querySelector('#calendar'));
