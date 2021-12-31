@@ -1,6 +1,58 @@
 'use strict';
 
-class Calendar extends React.Component {
+// class Day extends React.Component {
+//     render(){
+
+//     }
+// }
+// class Week extends React.Component {
+//     constructor(props){
+//         super(props)
+//         this.state = {
+//             weekArr: [],
+//             // monthOriginDate: this.props.monthOriginDate, 
+//             // startDate: this.props.startDate, 
+//         }
+//     }
+//     componentDidMount(){
+//         const year = this.props.monthOriginDate.getFullYear();
+//         const monthInd = this.props.monthOriginDate.getMonth();
+
+//         const weekData = {
+//             monthIndex: monthInd,
+//             year: year,
+//             today: new Date(),
+//         };
+
+//         const totalDays = this.daysInMonth(weekData.monthIndex + 1, weekData.year);
+
+//         const week = this.buildWeek(initialWeek.endDate, totalDays, weekData)
+//         this.setState({ weekArr : week })
+//     }
+
+//     buildWeek = (startDate, totalDays, weekDate) => {
+//         let weekArr = [];
+//         for (let i = 0; i < 7; i++) {
+//             if (startDate > totalDays) {
+//                 weekArr.push(<td className="empty" key={Math.floor(Math.random() * 9000) + 1000}></td>);
+//             } else {
+//                 // weekData.today.setHours(19); Daylight savings 
+//                 let fullDate = new Date(weekData.year, weekData.monthIndex, startDate).toISOString().split("T")[0]
+//                 let dateStr = weekData.today.toISOString().split("T")[0]
+//                 fullDate === dateStr
+//                     ? weekArr.push(<td className="today" key={Math.floor(Math.random() * 9000) + 1000}>{startDate++}</td>)
+//                     : weekArr.push(<td key={Math.floor(Math.random() * 9000) + 1000}>{startDate++}</td>)
+
+//             }
+//         }
+//         return (weekArr);
+//     }
+
+//     render(){
+//         return (<tr>{weekArr}</tr>)
+//     }
+// }
+class Month extends React.Component {
     state = { 
             weekOne: [], 
             weekTwo: [],
@@ -50,7 +102,7 @@ class Calendar extends React.Component {
             })
         }
     }
-
+    
     nextMonth = () => {
         const year = this.state.monthOriginDate.getFullYear();
         const month = this.state.monthOriginDate.getMonth()+1;
@@ -197,26 +249,34 @@ class Calendar extends React.Component {
         ];
 
         return (
+            <div className="month">
+                <div className="month-header">
+                    <button className="btn" onClick={()=>this.prevMonth()}>&#8249;</button>
+                    <p>{monthLabels[this.state.monthOriginDate.getMonth()]}</p>
+                    <button className="btn" onClick={()=>this.nextMonth()}>&#8250;</button>
+                </div>
+                <table>
+                    <thead><tr>{dayLabels}</tr></thead>
+                    <tbody>
+                        <tr>{this.state.weekOne}</tr>
+                        <tr>{this.state.weekTwo}</tr>
+                        <tr>{this.state.weekThree}</tr>
+                        <tr>{this.state.weekFour}</tr>
+                        <tr>{this.state.weekFive}</tr>
+                        <tr>{this.state.weekSix}</tr>
+                    </tbody>
+                </table>
+            </div>
+        );
+    }
+}
+
+class Calendar extends React.Component {
+    render() {
+        return (
             <div className="calendar-container">
                 <div className="calendar">
-                    <div className="month">
-                        <div className="month-header">
-                            <button className="btn" onClick={()=>this.prevMonth()}>&#8249;</button>
-                            <p>{monthLabels[this.state.monthOriginDate.getMonth()]}</p>
-                            <button className="btn" onClick={()=>this.nextMonth()}>&#8250;</button>
-                        </div>
-                        <table>
-                            <thead><tr>{dayLabels}</tr></thead>
-                            <tbody>
-                                <tr>{this.state.weekOne}</tr>
-                                <tr>{this.state.weekTwo}</tr>
-                                <tr>{this.state.weekThree}</tr>
-                                <tr>{this.state.weekFour}</tr>
-                                <tr>{this.state.weekFive}</tr>
-                                <tr>{this.state.weekSix}</tr>
-                            </tbody>
-                        </table>
-                    </div>
+                    <Month />
                 </div>
             </div>
         );

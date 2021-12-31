@@ -1,5 +1,58 @@
 'use strict';
 
+// class Day extends React.Component {
+//     render(){
+
+//     }
+// }
+// class Week extends React.Component {
+//     constructor(props){
+//         super(props)
+//         this.state = {
+//             weekArr: [],
+//             // monthOriginDate: this.props.monthOriginDate, 
+//             // startDate: this.props.startDate, 
+//         }
+//     }
+//     componentDidMount(){
+//         const year = this.props.monthOriginDate.getFullYear();
+//         const monthInd = this.props.monthOriginDate.getMonth();
+
+//         const weekData = {
+//             monthIndex: monthInd,
+//             year: year,
+//             today: new Date(),
+//         };
+
+//         const totalDays = this.daysInMonth(weekData.monthIndex + 1, weekData.year);
+
+//         const week = this.buildWeek(initialWeek.endDate, totalDays, weekData)
+//         this.setState({ weekArr : week })
+//     }
+
+//     buildWeek = (startDate, totalDays, weekDate) => {
+//         let weekArr = [];
+//         for (let i = 0; i < 7; i++) {
+//             if (startDate > totalDays) {
+//                 weekArr.push(<td className="empty" key={Math.floor(Math.random() * 9000) + 1000}></td>);
+//             } else {
+//                 // weekData.today.setHours(19); Daylight savings 
+//                 let fullDate = new Date(weekData.year, weekData.monthIndex, startDate).toISOString().split("T")[0]
+//                 let dateStr = weekData.today.toISOString().split("T")[0]
+//                 fullDate === dateStr
+//                     ? weekArr.push(<td className="today" key={Math.floor(Math.random() * 9000) + 1000}>{startDate++}</td>)
+//                     : weekArr.push(<td key={Math.floor(Math.random() * 9000) + 1000}>{startDate++}</td>)
+
+//             }
+//         }
+//         return (weekArr);
+//     }
+
+//     render(){
+//         return (<tr>{weekArr}</tr>)
+//     }
+// }
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -8,21 +61,21 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Calendar = function (_React$Component) {
-    _inherits(Calendar, _React$Component);
+var Month = function (_React$Component) {
+    _inherits(Month, _React$Component);
 
-    function Calendar() {
+    function Month() {
         var _ref;
 
         var _temp, _this, _ret;
 
-        _classCallCheck(this, Calendar);
+        _classCallCheck(this, Month);
 
         for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
             args[_key] = arguments[_key];
         }
 
-        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Calendar.__proto__ || Object.getPrototypeOf(Calendar)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Month.__proto__ || Object.getPrototypeOf(Month)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
             weekOne: [],
             weekTwo: [],
             weekThree: [],
@@ -158,7 +211,7 @@ var Calendar = function (_React$Component) {
         }, _temp), _possibleConstructorReturn(_this, _ret);
     }
 
-    _createClass(Calendar, [{
+    _createClass(Month, [{
         key: "componentDidMount",
         value: function componentDidMount() {
             var year = this.state.monthOriginDate.getFullYear();
@@ -216,84 +269,103 @@ var Calendar = function (_React$Component) {
 
             return React.createElement(
                 "div",
+                { className: "month" },
+                React.createElement(
+                    "div",
+                    { className: "month-header" },
+                    React.createElement(
+                        "button",
+                        { className: "btn", onClick: function onClick() {
+                                return _this2.prevMonth();
+                            } },
+                        "\u2039"
+                    ),
+                    React.createElement(
+                        "p",
+                        null,
+                        monthLabels[this.state.monthOriginDate.getMonth()]
+                    ),
+                    React.createElement(
+                        "button",
+                        { className: "btn", onClick: function onClick() {
+                                return _this2.nextMonth();
+                            } },
+                        "\u203A"
+                    )
+                ),
+                React.createElement(
+                    "table",
+                    null,
+                    React.createElement(
+                        "thead",
+                        null,
+                        React.createElement(
+                            "tr",
+                            null,
+                            dayLabels
+                        )
+                    ),
+                    React.createElement(
+                        "tbody",
+                        null,
+                        React.createElement(
+                            "tr",
+                            null,
+                            this.state.weekOne
+                        ),
+                        React.createElement(
+                            "tr",
+                            null,
+                            this.state.weekTwo
+                        ),
+                        React.createElement(
+                            "tr",
+                            null,
+                            this.state.weekThree
+                        ),
+                        React.createElement(
+                            "tr",
+                            null,
+                            this.state.weekFour
+                        ),
+                        React.createElement(
+                            "tr",
+                            null,
+                            this.state.weekFive
+                        ),
+                        React.createElement(
+                            "tr",
+                            null,
+                            this.state.weekSix
+                        )
+                    )
+                )
+            );
+        }
+    }]);
+
+    return Month;
+}(React.Component);
+
+var Calendar = function (_React$Component2) {
+    _inherits(Calendar, _React$Component2);
+
+    function Calendar() {
+        _classCallCheck(this, Calendar);
+
+        return _possibleConstructorReturn(this, (Calendar.__proto__ || Object.getPrototypeOf(Calendar)).apply(this, arguments));
+    }
+
+    _createClass(Calendar, [{
+        key: "render",
+        value: function render() {
+            return React.createElement(
+                "div",
                 { className: "calendar-container" },
                 React.createElement(
                     "div",
                     { className: "calendar" },
-                    React.createElement(
-                        "div",
-                        { className: "month" },
-                        React.createElement(
-                            "div",
-                            { className: "month-header" },
-                            React.createElement(
-                                "button",
-                                { className: "btn", onClick: function onClick() {
-                                        return _this2.prevMonth();
-                                    } },
-                                "\u2039"
-                            ),
-                            React.createElement(
-                                "p",
-                                null,
-                                monthLabels[this.state.monthOriginDate.getMonth()]
-                            ),
-                            React.createElement(
-                                "button",
-                                { className: "btn", onClick: function onClick() {
-                                        return _this2.nextMonth();
-                                    } },
-                                "\u203A"
-                            )
-                        ),
-                        React.createElement(
-                            "table",
-                            null,
-                            React.createElement(
-                                "thead",
-                                null,
-                                React.createElement(
-                                    "tr",
-                                    null,
-                                    dayLabels
-                                )
-                            ),
-                            React.createElement(
-                                "tbody",
-                                null,
-                                React.createElement(
-                                    "tr",
-                                    null,
-                                    this.state.weekOne
-                                ),
-                                React.createElement(
-                                    "tr",
-                                    null,
-                                    this.state.weekTwo
-                                ),
-                                React.createElement(
-                                    "tr",
-                                    null,
-                                    this.state.weekThree
-                                ),
-                                React.createElement(
-                                    "tr",
-                                    null,
-                                    this.state.weekFour
-                                ),
-                                React.createElement(
-                                    "tr",
-                                    null,
-                                    this.state.weekFive
-                                ),
-                                React.createElement(
-                                    "tr",
-                                    null,
-                                    this.state.weekSix
-                                )
-                            )
-                        )
-                    )
+                    React.createElement(Month, null)
                 )
             );
         }
