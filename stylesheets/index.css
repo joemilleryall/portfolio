@@ -62,6 +62,30 @@ h2 {
     width:400px;
 }
 
+#name {
+    font-size: 2em;
+    font-weight: 900;
+    font-family: 'Courier New', Courier, monospace;
+}
+.content-body ul {
+    list-style: none;
+}
+.content-body li {
+    font-size: 1em;
+    font-family: 'Courier New', Courier, monospace;
+}
+.bio-points {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.1em !important;
+    background-color: rgb(0, 255, 255);
+    border: rgb(1, 106, 106) 5px solid;
+    color: rgb(1, 106, 106);
+}
+.bio-points li {
+    padding: 5px;
+    font-weight: 900;
+}
 /* FLIP CARD======================================== */
 .card{
     margin-top:20px;
@@ -97,103 +121,11 @@ h2 {
     text-align: center;
 } 
 
-
-#name {
-    font-size: 2em;
-    font-weight: 900;
-    font-family: 'Courier New', Courier, monospace;
+.back-info{
+    position: relative;
+    top:15px;
 }
-.content-body p {
-    margin-left: 25px;
-}
-.content-body ul {
-    list-style: none;
-}
-.content-body li {
-    font-size: 1em;
-    font-family: 'Courier New', Courier, monospace;
-}
-.bio-points {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 1.1em !important;
-    background-color: rgb(0, 255, 255);
-    border: rgb(1, 106, 106) 5px solid;
-    color: rgb(1, 106, 106);
-}
-.bio-points li {
-    padding: 5px;
-    font-weight: 900;
+.back-info h3 {
+    margin:0;
 }
 /* =====PROJECTS===== */
-
-
-.portfolio-item-container{
-    padding:5em 5em 0em;
-    margin-bottom: 5rem;
-    width:60%;
-}
-.portfolio-item {
-    
-}
-/* .portfolio-img {
-    width: 30rem;
-    flex: 1;
-} */
-.portfolio-img img{
-    width:60%;
-}
-.portfolio-description h1 {
-    font-size: 3rem;
-    font-weight: 300;
-    margin: 1rem 0;
-}
-
-/* .portfolio-description h6 {
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    font-weight: 300;
-    opacity: 0.3;
-} */
-
-.portfolio-description .cta {
-    display: inline-flex;
-    flex-wrap: nowrap;
-    margin: .5em;
-    margin-top: 2.5rem;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    color: #3883ff;
-    transition: color 650ms;
-}
-
-.portfolio-description .cta:hover {
-    color: #aad2fa;
-}
-.makeSmall {
-    font-size: 1.2em;
-}
-
-.project-skills {
-    justify-content: center;
-    display: flex;
-    margin-top: 2em;
-}
-
-.project-skills p {
-    font-size: 0.5em;
-}
-
-.project-skills i{
-    font-size: 2em;
-    align-items: center;
-    margin:0 1rem;
-    text-align: center;
-}
-
-
-
-/* Media Queries */
-@media screen and (max-width: 650px) {
-
-}

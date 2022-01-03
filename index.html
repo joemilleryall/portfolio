@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="stylesheets/index.css">
     <link rel="stylesheet" href="stylesheets/calendar.css">
+    <link rel="stylesheet" href="stylesheets/animations.css">
     <!-- <link rel="stylesheet" href="stylesheets/tetris.css"> -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet"
@@ -71,10 +72,16 @@
                             </li>
                         </ul>
                     </div>
+                    <div class="flip-prompt" data-aos="zoom-in" data-aos-duration="4000">
+                        <div class="flip-prompt-arrow-container">
+                            <div class="flip-prompt-arrow"><div></div></div>
+                        </div>
+                    </div>
                 </div>
                 <div class="back">
-                    <div class="content-body">
-                        You can find my content above
+                    <div class="back-info">
+                        <h3>Thank You!</h3>
+                        <p>For taking the time to check out my work</p>
                     </div>
                 </div>
             </div>
@@ -91,12 +98,11 @@
             once: true
         })
     </script>
-    <script src="js/tetris.js" async defer></script>
     <!-- <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script> -->
     <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
-    <script src="calendar.js"></script>
+    <script src="Calendar/calendar.js"></script>
 </body>
 
 </html>
