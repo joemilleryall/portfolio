@@ -1,10 +1,10 @@
-
+import { useState } from "react";
 export const Calendar = () => {
-    const [viewState, setViewState] = React.useState('false');
+    const [viewState, setViewState] = useState('false');
     return (
         <div className="calendar-container">
-            {viewState} - test - this
-            
+            {viewState} --
+
         </div>
     );
 };
