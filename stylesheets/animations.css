@@ -14,11 +14,13 @@
     animation-name: bounce;
     animation-duration: 1.5s;
     animation-iteration-count: infinite;
+    /* animation-delay: 2s; */
 }
 .flip-prompt-arrow {
     animation-name: opacity;
     animation-duration: 1.5s;
     animation-iteration-count: infinite;
+    /* animation-delay: 2s; */
 }
 
 .flip-prompt-arrow > div {
@@ -26,7 +28,7 @@
     height: 16px;
     border-top: 4px solid #bebebe;
     border-right: 4px solid #bebebe;
-    transform: rotate(45deg) translateZ(1px);
+    transform: rotate(45deg);
 }
 
 @keyframes opacity {

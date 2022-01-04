@@ -5,12 +5,14 @@ html {
 body {
     font-family: 'Calibri', sans-serif;
     font-size: 1em;
+    height: 1000px;
 }
 a {
     color: #ff00d4;
 }
 .nav-container{
     text-align: center;
+    /* position:fixed; */
 }
 .nav {
     padding-top: 25px;

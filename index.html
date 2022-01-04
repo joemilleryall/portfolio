@@ -22,7 +22,7 @@
     <!-- <canvas id="tetris" data-aos="zoom-in" data-aos-delay="1100" width="240" height="400"></canvas> -->
     <div id="score"></div>
 
-    <div class="nav-container" data-aos="fade-down" data-aos-duration="3000">
+    <div class="nav-container" data-aos="fade-down" data-aos-duration="2000">
         <div class="nav">
             <!-- <a href="#">About</a>
                 <a href="#">Projects</a>
@@ -51,8 +51,8 @@
         </div>
     </div>
 
-    <div class="content-box" data-aos="fade-down" data-aos-duration="900">
-        <div class="card">
+    <div class="content-box" data-aos="fade-down" data-aos-duration="600">
+        <div class="card" data-aos="fade-down" data-aos-duration="600">
             <div class="inner">
                 <div class="front">
                     <h2 data-aos="fade-down">Hello!</h2>
@@ -72,16 +72,20 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="flip-prompt" data-aos="zoom-in" data-aos-duration="4000">
-                        <div class="flip-prompt-arrow-container">
-                            <div class="flip-prompt-arrow"><div></div></div>
+                    <div class="flip-prompt" data-aos="fade-in" data-aos-duration="1800" data-aos-delay="1400">
+                        <div  class="flip-prompt-arrow-container">
+                            <div class="flip-prompt-arrow">
+                                <div></div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="back">
                     <div class="back-info">
-                        <h3>Thank You!</h3>
-                        <p>For taking the time to check out my work</p>
+                        <h3>Welcome!</h3>
+                        <p>Thank you for taking the time to check out my work.</p>
+                        <p>Below you can find a few React components</p>
+                        <p>You can check out my links above<br> for more information</p>
                     </div>
                 </div>
             </div>
@@ -94,10 +98,11 @@
     <script>
         AOS.init({
             easing: 'ease',
-            duration: 300,
+            duration: 100,
             once: true
         })
     </script>
+
     <!-- <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script> -->
     <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
