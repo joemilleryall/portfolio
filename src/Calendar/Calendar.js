@@ -1,17 +1,43 @@
 import { useState } from "react";
+import { Month, DayModal } from '../components.js';
+import "../../stylesheets/calendar.css";
+
 export const Calendar = () => {
-    const [viewState, setViewState] = useState('false');
+    const [viewState, setViewState] = useState(false);
+    const [modalDate, setModalDate] = useState("");
+    const [monthOriginDate, setMonthOriginDate] = useState(new Date());
+
+    const [logs, setLogs] = useState({});
+
+    const viewSwitch = e => {
+        setViewState(!viewState)
+        if (e === undefined) return
+        if (e.target.innerHTML === "x") return
+        if (e.target.className === "dimmed-bg") return
+        setModalDate(e.target.attributes.fulldate.value)
+    }
+
+    const year = new Date().getFullYear();
+    const currentMonthIndex = new Date().getMonth();
+
+    const nextMonth = () => {
+        
+    }
+
     return (
         <div className="calendar-container">
-            {viewState} --
-
+            {/* <div className="calendar"><p className="loading">Loading</p></div> : */}
+                <div className="calendar">
+                    {/* <h5>Recent Logs</h5> */}
+                    <Month viewSwitch={viewSwitch} monthOriginDate={monthOriginDate} logs={logs} />
+                </div>
+            
+            {viewState === true &&
+                <div className="modal-container">
+                    <DayModal viewSwitch={viewSwitch} />
+                </div>
+            }
         </div>
     );
 };
 
-// ReactDOM.render(<Calendar />, document.querySelector('#calendar')); 
-
-// If i were to add all the components, I would need to add all those scripts tags to the body in the HTML. 
-// this doesnt deem ideal with all those tags. 
-
-// could I make the calendar is own repo like chase suggested - and just copy the build folder here to make it simple? is that possible?

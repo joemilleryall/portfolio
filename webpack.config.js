@@ -8,7 +8,6 @@ module.exports = {
         filename: 'main.js',
         path: path.resolve(__dirname, 'docs'),
     },
-
     devServer: {
         port: 8080,
         static: path.join(__dirname, 'docs'),

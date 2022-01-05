@@ -10,6 +10,14 @@ body {
 a {
     color: #ff00d4;
 }
+h2 {
+    padding-left: 20px;
+    margin-left: 10px;
+    padding-top: 10px;
+    width: 30%;
+    border-bottom: white solid 2px;
+    border-bottom-width: thin;
+}
 .nav-container{
     text-align: center;
     /* position:fixed; */
@@ -50,14 +58,6 @@ a {
 #social-links a:hover {
     color: #ff00d4;
 }
-h2 {
-    padding-left: 20px;
-    margin-left: 10px;
-    padding-top: 10px;
-    width: 30%;
-    border-bottom: white solid 2px;
-    border-bottom-width: thin;
-}
 .content-box{
     margin-left:auto;
     margin-right:auto;
@@ -76,58 +76,6 @@ h2 {
     font-size: 1em;
     font-family: 'Courier New', Courier, monospace;
 }
-.bio-points {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 1.1em !important;
-    background-color: rgb(0, 255, 255);
-    border: rgb(1, 106, 106) 5px solid;
-    color: rgb(1, 106, 106);
-}
-.bio-points li {
-    padding: 5px;
-    font-weight: 900;
-}
-/* FLIP CARD======================================== */
-.card{
-    margin-top:20px;
-    background-color: transparent;
-    width: 400px;
-    height: 200px;
-    perspective: 1000px;
-    color: rgb(168, 168, 168);
-}
-.inner{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-}
-.card:hover .inner{
-    transform: rotateY(180deg);
-}
 
-.front, .back{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden; /* Safari */
-    backface-visibility: hidden;
-    background-color: rgb(14, 14, 14);
-    border-radius: 20px;
-    border: 2px solid rgb(49, 49, 49);
-}
-.back {
-    transform: rotateY(180deg);
-    text-align: center;
-} 
 
-.back-info{
-    position: relative;
-    top:15px;
-}
-.back-info h3 {
-    margin:0;
-}
 /* =====PROJECTS===== */
