@@ -4,7 +4,6 @@
 	box-sizing: border-box;
 }
 
-/* FLIP CARD======================================== */
 .card{
     margin-top:20px;
     background-color: transparent;
@@ -37,7 +36,6 @@
 .back {
     transform: rotateY(180deg);
     text-align: center;
-    z-index: 999999999;
 } 
 
 .back-info{
@@ -52,15 +50,19 @@
     background-color: black;
     font-size: .7em;
     padding:1em;
-    color: white;
-    border: none;
+	color: rgb(168, 168, 168);
+	border: 1px solid rgb(88, 49, 49);
     text-align: center;
     border-radius: 10px;
-    width:120px;
-    float: left;
+}
+
+.btns{
+	display:flex;
+	justify-content: space-evenly;
 }
 .back-info button:hover{
     background-color: rgb(68, 68, 68);
+	border: 1px solid rgb(255, 255, 255);
     cursor: pointer;
 
 }
