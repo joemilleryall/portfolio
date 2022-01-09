@@ -6,7 +6,21 @@
     height: 200px;
     perspective: 1000px;
     color: rgb(168, 168, 168);
+	
 }
+.shrinkingCard {
+	animation-name: shrink;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+.shrinkingCardReverse {
+	animation-name: grow;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
 .inner{
     position: relative;
     width: 100%;
@@ -190,4 +204,79 @@
 	100% {
 		transform: translateX(30px);
 	}
+}
+
+@keyframes shrink {
+	0% {
+		transform: scale(1) translateY(-10px);
+	}
+	10% {
+		transform: scale(0.95) translateY(-10px);
+	}
+	20% {
+		transform: scale(0.9) translateY(-20px);
+	}
+	30% {
+		transform: scale(0.85) translateY(-30px);
+	}
+	40% {
+		transform: scale(0.8) translateY(-40px);
+	}
+	50% {
+		transform: scale(0.75) translateY(-50px);
+	}
+	60% {
+		transform: scale(0.7) translateY(-60px);
+	}
+	70% {
+		transform: scale(0.65) translateY(-70px);
+	}
+	80% {
+		transform: scale(0.6) translateY(-80px);
+	}
+	90% {
+		transform: scale(0.55) translateY(-90px);
+	}
+	100%{
+		transform: scale(0.5) translateY(-100px);
+	}
+
+}
+
+@keyframes grow {
+	/* this should grow the div back to original size÷ */
+	/* 0% {
+		transform: scale(0.5) translateY(-100px);
+	}
+	10% {
+		transform: scale(0.95) translateY(-10px);
+	}
+	20% {
+		transform: scale(0.9) translateY(-20px);
+	}
+	30% {
+		transform: scale(0.85) translateY(-30px);
+	}
+	40% {
+		transform: scale(0.8) translateY(-40px);
+	}
+	50% {
+		transform: scale(0.75) translateY(-50px);
+	}
+	60% {
+		transform: scale(0.7) translateY(-60px);
+	}
+	70% {
+		transform: scale(0.65) translateY(-70px);
+	}
+	80% {
+		transform: scale(0.6) translateY(-80px);
+	}
+	90% {
+		transform: scale(0.55) translateY(-90px);
+	}
+	100%{
+		transform: scale(0.5) translateY(-100px);
+	} */
+
 }

@@ -39,10 +39,6 @@ td:hover{
     position: relative;
 }
 
-.month{
-    /* margin-top:40px; */
-    /* box-shadow: 5px 10px 20px #ffffff; */
-}
 
 .month-header {
     display: flex;

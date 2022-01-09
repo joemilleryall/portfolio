@@ -24,19 +24,28 @@ calBtn.onclick = () => {
         calendarDiv.classList.remove('aos-animate')
         setTimeout(() => {
             calendarDiv.classList.add('aos-animate')
-            window.scrollBy({ 
-                top: 400, // could be negative value
-                left: 0, 
-                behavior: 'smooth' 
-            });
+            // window.scrollBy({ 
+            //     top: 200, // could be negative value
+            //     left: 0, 
+            //     behavior: 'smooth' 
+            // });
         }, 100);
+
+
+        const card = document.querySelector('.card')
+        card.classList.add('shrinkingCard')
+
 
     } else {
         calendarDiv.classList.remove('aos-animate')
+        const card = document.querySelector('.card')
+        card.classList.remove('shrinkingCard')
+        card.classList.add('shrinkingCardReverse')
+
         setTimeout(() => {
             calendarDiv.style.display = "none"
             calendarDiv.classList.add('aos-animate')
-        }, 500);
+        }, 800);
     }
 }
 
