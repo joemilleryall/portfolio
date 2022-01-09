@@ -1,4 +1,7 @@
 
+#calendar{
+    display:none;
+}
 thead {
     background-color: black;
     color: white;

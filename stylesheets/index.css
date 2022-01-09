@@ -1,6 +1,7 @@
 html {
     background: black;
     color: white;
+    scroll-behavior: smooth;
 }
 body {
     font-family: 'Calibri', sans-serif;

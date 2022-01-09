@@ -29,9 +29,11 @@ module.exports = {
                 test: /\.css$/i,
                 use: ["style-loader", "css-loader"],
             },
-            
+            // {
+            //     test: /\.pdf$/i,
+            //     include: path.resolve(__dirname, 'assets'),
+            //     use: ["file-loader"],
+            // },
         ]
     }
 };
-
-// currently, the files are not compiling correctly - I think jsx needs to be added to the regex?

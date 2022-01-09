@@ -1,3 +1,12 @@
+<!-- ========///////////////============
+
+    so much of this porfolio is now REACT - should it all be? come back to this once its MVP
+    the flip card is just CSS animations and doesnt need react state
+    so I would really just be copy/pasting and changing format to fit -should I?
+    
+========///////////////============ -->
+
+
 <!DOCTYPE html>
 <html>
 
@@ -14,10 +23,9 @@
 </head>
 
 <body>
-
     <div class="nav-container" data-aos="fade-down" data-aos-duration="2000">
         <div class="nav">
-            <a target="_blank" href="../JoeMillerResume.pdf">Resume</a>
+            <a target="_blank" href="../assets/JoeMillerResume.pdf">Resume</a>
         </div>
         <div id="social-links">
             <ul>
@@ -63,7 +71,7 @@
                         </ul>
                     </div>
                     <div class="flip-prompt" data-aos="fade-in" data-aos-duration="1800" data-aos-delay="1400">
-                        <div  class="flip-prompt-arrow-container">
+                        <div class="flip-prompt-arrow-container">
                             <div class="flip-prompt-arrow">
                                 <div></div>
                             </div>
@@ -73,12 +81,15 @@
                 <div class="back">
                     <div class="back-info">
                         <h3>Welcome!</h3>
-                        <p>Thank you for taking the time to check out my work.</p>
-                        <p>Below are some bite-sized React components<br>to peruse</p>
+                        <p>
+                            Thank you for taking the time to check out my site.<br>
+                            Currently, just a simple digital buiness card. 
+                        </p>
+                        <p>Below I have added a simple Calendar component created with React.</p>
                         <div class="btns">
-                            <button>MORE ABOUT ME</button>
-                            <button>CALENDAR</button>
-                            <button>THING-A-MAJIG</button>
+                            <!-- <button>MORE ABOUT ME</button> -->
+                            <button id="cal-btn">VIEW CALENDAR</button>
+                            <!-- <button class="coming-soon">THING-A-MAJIG</button> -->
                         </div>
                     </div>
                 </div>
@@ -86,16 +97,9 @@
         </div>
     </div>
 
-    <div id="calendar"></div>
+    <div data-aos="fade-down" data-aos-duration="1600" id="calendar"></div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            easing: 'ease',
-            duration: 100,
-            once: true
-        })
-    </script>
 
     <!-- <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script> -->
