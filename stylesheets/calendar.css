@@ -7,6 +7,21 @@ thead {
     color: white;
 }
 
+.month-btn{
+    color:white;
+    background-color:black;
+    border: none;
+    cursor: pointer;
+    font-size:30px;
+    border-radius: 3px;
+    height:40px;
+    position: relative;
+    top:10px;
+}
+.month-btn:hover{
+    background-color: rgb(87, 87, 87);
+}
+
 td {
     /* border: 2px solid black; */
     height: 50px;

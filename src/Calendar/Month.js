@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from "react";
 import { Week, Day } from '../components.js';
 import uniqid from "uniqid";
 
-export const Month = ({ viewSwitch, monthOriginDate, logs }) => {
+export const Month = ({ nextMonth, prevMonth, monthOriginDate }) => {
     const [firstWeek, setFirstWeek] = useState([]);
     const [initialWeekEndDate, setInitialWeekEndDate] = useState(0);
 
@@ -30,8 +30,6 @@ export const Month = ({ viewSwitch, monthOriginDate, logs }) => {
                     let dateStr = weekData.today.toISOString().split("T")[0];
                     weekOneArr.push(
                         <Day
-                            viewSwitch={viewSwitch}
-                            logs={weekData.logs[fullDate]}
                             date={date++}
                             fullDate={fullDate}
                             key={uniqid()}
@@ -42,7 +40,7 @@ export const Month = ({ viewSwitch, monthOriginDate, logs }) => {
             }
             return { tableCells: weekOneArr, endDate: date };
         },
-        [viewSwitch]
+        []
     );
 
     useEffect(() => {
@@ -50,15 +48,13 @@ export const Month = ({ viewSwitch, monthOriginDate, logs }) => {
             monthIndex: monthIndex,
             year: year,
             today: new Date(),
-            logs: logs,
         };
         const initialWeek = buildWeekOne(firstDayIndex, weekData);
         setInitialWeekEndDate(initialWeek.endDate)
         setFirstWeek(initialWeek.tableCells);
     }, 
-        [firstDayIndex, monthIndex, year, logs, buildWeekOne]
+        [firstDayIndex, monthIndex, year, buildWeekOne]
     );
-
 
     //Labels
     const abrevDays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -83,7 +79,9 @@ export const Month = ({ viewSwitch, monthOriginDate, logs }) => {
     return (
         <div className="month">
             <div className="month-header">
+                <button onClick={prevMonth} className="month-btn">&#8672;</button>
                 <p>{monthLabels[monthIndex]}</p>
+                <button onClick={nextMonth} className="month-btn">&#8674;</button>
             </div>
             <table>
                 <thead>
@@ -93,12 +91,12 @@ export const Month = ({ viewSwitch, monthOriginDate, logs }) => {
                     (initialWeekEndDate) ? 
                         <tbody>
                             <tr>{firstWeek}</tr> 
-                            <Week monthOriginDate={monthOriginDate} startDate={initialWeekEndDate} viewSwitch={viewSwitch} logs={logs}/>
-                            <Week monthOriginDate={monthOriginDate} startDate={initialWeekEndDate + 7} viewSwitch={viewSwitch} logs={logs}/>
-                            <Week monthOriginDate={monthOriginDate} startDate={initialWeekEndDate + 14} viewSwitch={viewSwitch} logs={logs}/>
-                            <Week monthOriginDate={monthOriginDate} startDate={initialWeekEndDate + 21} totalDays={totalDays} viewSwitch={viewSwitch} logs={logs}/>
+                            <Week monthOriginDate={monthOriginDate} startDate={initialWeekEndDate} />
+                            <Week monthOriginDate={monthOriginDate} startDate={initialWeekEndDate + 7} />
+                            <Week monthOriginDate={monthOriginDate} startDate={initialWeekEndDate + 14} />
+                            <Week monthOriginDate={monthOriginDate} startDate={initialWeekEndDate + 21} totalDays={totalDays} />
                             {(initialWeekEndDate + 28 <= totalDays) ?
-                                <Week monthOriginDate={monthOriginDate} startDate={initialWeekEndDate + 28} totalDays={totalDays} viewSwitch={viewSwitch} logs={logs}/>
+                                <Week monthOriginDate={monthOriginDate} startDate={initialWeekEndDate + 28} totalDays={totalDays} />
                             : null}
                         </tbody> 
                     : null

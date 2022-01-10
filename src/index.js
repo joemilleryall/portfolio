@@ -33,14 +33,14 @@ calBtn.onclick = () => {
 
 
         const card = document.querySelector('.card')
-        card.classList.add('shrinkingCard')
+        // card.classList.add('shrinkingCard')
 
 
     } else {
         calendarDiv.classList.remove('aos-animate')
         const card = document.querySelector('.card')
-        card.classList.remove('shrinkingCard')
-        card.classList.add('shrinkingCardReverse')
+        // card.classList.remove('shrinkingCard')
+        // card.classList.add('shrinkingCardReverse')
 
         setTimeout(() => {
             calendarDiv.style.display = "none"
