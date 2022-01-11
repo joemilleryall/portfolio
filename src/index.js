@@ -30,8 +30,9 @@ calBtn.onclick = () => {
             //     behavior: 'smooth' 
             // });
         }, 100);
-
-
+        
+        calBtn.innerText = "CLOSE CALENDAR"
+        
         const card = document.querySelector('.card')
         // card.classList.add('shrinkingCard')
 
@@ -41,6 +42,7 @@ calBtn.onclick = () => {
         const card = document.querySelector('.card')
         // card.classList.remove('shrinkingCard')
         // card.classList.add('shrinkingCardReverse')
+        calBtn.innerText = "VIEW CALENDAR"
 
         setTimeout(() => {
             calendarDiv.style.display = "none"

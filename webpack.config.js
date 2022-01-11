@@ -29,11 +29,11 @@ module.exports = {
                 test: /\.css$/i,
                 use: ["style-loader", "css-loader"],
             },
-            // {
-            //     test: /\.pdf$/i,
-            //     include: path.resolve(__dirname, 'assets'),
-            //     use: ["file-loader"],
-            // },
+            {
+                test: /\.pdf$/i,
+                include: path.resolve(__dirname, 'assets'),
+                use: ["file-loader"],
+            },
         ]
     }
 };
