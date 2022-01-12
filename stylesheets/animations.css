@@ -47,7 +47,6 @@
     transform: rotateY(180deg);
     text-align: center;
 } 
-
 .back-info{
     position: relative;
     top:15px;
@@ -55,7 +54,10 @@
 .back-info h3 {
     margin:0;
 }
-.back-info button{
+.back-info2 {
+	display:none;
+}
+.cal-btn{
     background-color: black;
     font-size: .7em;
     padding:1em;
@@ -64,29 +66,28 @@
     text-align: center;
     border-radius: 10px;
 }
+.cal-btn a {
+	color: rgb(168, 168, 168);
+	text-decoration: none;
+}
 .back-info p {
 	margin-left:10px;
 	margin-right:10px;
 }
-#cal-btn a {
-    color: rgb(168, 168, 168);
-	text-decoration: none;
+.cal-btn:hover{
+	background-color: rgb(68, 68, 68);
+	border: 1px solid rgb(255, 255, 255);
+    cursor: pointer;
+	
+}
+.cal-btn:hover + .flip-prompt{
+	display:none;
 }
 
 .btns{
 	display:flex;
 	justify-content: space-evenly;
 }
-.back-info button:hover{
-    background-color: rgb(68, 68, 68);
-	border: 1px solid rgb(255, 255, 255);
-    cursor: pointer;
-
-}
-.back-info button:hover + .flip-prompt{
-	display:none;
-}
-
 .flip-prompt {
     width:10%;
     position: relative;

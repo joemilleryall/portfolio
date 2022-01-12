@@ -16,39 +16,41 @@ AOS.init({
 
 const calendarDiv = document.querySelector('#calendar');
 const calBtn = document.querySelector('#cal-btn');
+const calBtnClose = document.querySelector('#cal-btn-close');
+const back = document.querySelector('.back-info')
+const back2 = document.querySelector('.back-info2')
 
 calBtn.onclick = () => {
+    calendarDiv.style.display = "block"
 
-    if (calendarDiv.style.display === "none" || !calendarDiv.style.display) {
-        calendarDiv.style.display = "block"
-        calendarDiv.classList.remove('aos-animate')
-        setTimeout(() => {
-            calendarDiv.classList.add('aos-animate')
-            // window.scrollBy({ 
-            //     top: 200, // could be negative value
-            //     left: 0, 
-            //     behavior: 'smooth' 
-            // });
-        }, 100);
-        
-        calBtn.innerText = "CLOSE CALENDAR"
-        
-        const card = document.querySelector('.card')
-        // card.classList.add('shrinkingCard')
+    calendarDiv.classList.remove('aos-animate')
+    setTimeout(() => {
+        calendarDiv.classList.add('aos-animate')
+    }, 100);
 
+    back.style.display = 'none'
+    back2.style.display = 'block'
 
-    } else {
-        calendarDiv.classList.remove('aos-animate')
-        const card = document.querySelector('.card')
-        // card.classList.remove('shrinkingCard')
-        // card.classList.add('shrinkingCardReverse')
-        calBtn.innerText = "VIEW CALENDAR"
+    back2.classList.remove('aos-animate')
+    setTimeout(() => {
+        back2.classList.add('aos-animate')
+    }, 100);
+}
 
-        setTimeout(() => {
-            calendarDiv.style.display = "none"
-            calendarDiv.classList.add('aos-animate')
-        }, 800);
-    }
+calBtnClose.onclick = () => {
+    back2.style.display = 'none'
+    back.style.display = 'block'
+
+    back.classList.remove('aos-animate')
+    setTimeout(() => {
+        back.classList.add('aos-animate')
+    }, 100);
+
+    calendarDiv.classList.remove('aos-animate')
+    setTimeout(() => {
+        calendarDiv.style.display = "none"
+        calendarDiv.classList.add('aos-animate')
+    }, 800);
 }
 
 ReactDOM.render(
