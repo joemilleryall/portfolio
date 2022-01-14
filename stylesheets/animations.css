@@ -74,9 +74,13 @@
 	margin-left:10px;
 	margin-right:10px;
 }
+.back-info2{
+	position: relative;
+	bottom:10px;
+}
 .back-info2 p {
-	margin-left:10px;
-	margin-right:10px;
+	margin-left:15px;
+	margin-right:15px;
 	margin-top:-10px;
 }
 .cal-btn:hover{
@@ -87,6 +91,13 @@
 }
 .cal-btn:hover + .flip-prompt{
 	display:none;
+}
+#cal-btn-close{
+	position:relative;
+	left:140px;
+	bottom: 15px;
+	font-size:.3em;
+	padding:1.3em;
 }
 
 .btns{
