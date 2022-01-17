@@ -110,7 +110,7 @@ h2 {
     transition: transform 0.8s;
     transform-style: preserve-3d;
 }
-.card:hover .inner{
+.card:hover .inner, .card:active{
     transform: rotateY(180deg);
 }
 
@@ -137,6 +137,10 @@ h2 {
 }
 .back-info2 {
 	display:none;
+}
+.back-info2 span{
+    position: relative;
+    top:10px;
 }
 .btns{
 	display:flex;

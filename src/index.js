@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import "../stylesheets/calendar.css";
 import "../stylesheets/index.css";
+import resume  from "../assets/nuresume.pdf";
 import { Calendar } from './Calendar/Calendar.js';
 
 import AOS from 'aos';
@@ -13,11 +14,17 @@ AOS.init({
     once: true
 })
 
+console.log(resume)
+
+const resumeLink = document.querySelector("#resume-link")
+resumeLink.setAttribute('href', resume)
+
 const calendarDiv = document.querySelector('#calendar');
 const calBtn = document.querySelector('#cal-btn');
 const calBtnClose = document.querySelector('#cal-btn-close');
 const back = document.querySelector('.back-info')
 const back2 = document.querySelector('.back-info2')
+
 
 calBtn.onclick = () => {
     calendarDiv.style.display = "block"
