@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import AOS from 'aos';
+import { Calendar } from './Calendar/Calendar.js';
+import { Bio } from './Bio/Bio.js';
+import 'aos/dist/aos.css';
 import "../stylesheets/calendar.css";
 import "../stylesheets/index.css";
 import resume  from "../assets/nuresume.pdf";
-import { Calendar } from './Calendar/Calendar.js';
 
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+
 
 AOS.init({
     easing: 'ease-in-out',
@@ -64,4 +66,14 @@ ReactDOM.render(
         <Calendar />
     </React.StrictMode>,
     calendarDiv 
+); 
+
+
+const bioDiv = document.querySelector("#bio")
+
+ReactDOM.render(
+    <React.StrictMode>
+        <Bio />
+    </React.StrictMode>,
+    bioDiv 
 ); 

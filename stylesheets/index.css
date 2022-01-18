@@ -132,11 +132,19 @@ h2 {
     position: relative;
     top:10px;
 }
+.back-info button{
+    position: relative;
+    bottom:10px;
+}
 .back-info h3 {
     margin:0;
 }
 .back-info2 {
 	display:none;
+}
+.back-info2 .btns {
+    position: relative;
+    top:20px;
 }
 .back-info2 span{
     position: relative;
@@ -146,11 +154,11 @@ h2 {
 	display:flex;
 	justify-content: space-evenly;
 }
-#cal-btn{
+/* #cal-btn{
     position: relative;
     bottom:5px;
-}
-.cal-btn{
+} */
+.port-btn{
     background-color: black;
     font-size: .6em;
     /* line-height: 1em; */
@@ -175,7 +183,7 @@ h2 {
 	margin-top:-10px;
 }
 
-.cal-btn:hover{
+.port-btn:hover{
 	background-color: rgb(68, 68, 68);
 	border: 1px solid rgb(255, 255, 255);
     cursor: pointer;
