@@ -4,10 +4,10 @@ import AOS from 'aos';
 import { Calendar } from './Calendar/Calendar.js';
 import { Bio } from './Bio/Bio.js';
 import 'aos/dist/aos.css';
+import "../stylesheets/bio.css";
 import "../stylesheets/calendar.css";
 import "../stylesheets/index.css";
 import resume  from "../assets/nuresume.pdf";
-
 
 
 AOS.init({
@@ -68,8 +68,36 @@ ReactDOM.render(
     calendarDiv 
 ); 
 
+// ---------------------------------Bio Component----------------------
 
 const bioDiv = document.querySelector("#bio")
+const bioBtn = document.querySelector("#bio-btn")
+const moreTxt = document.querySelector("#more-txt")
+const closeBioTxt = document.querySelector("#close-bio-txt")
+
+
+
+bioBtn.onclick = () =>{
+    bioDiv.style.display = 'block'
+
+
+    bioDiv.classList.remove('aos-animate')
+    moreTxt.classList.remove('aos-animate')
+    closeBioTxt.classList.remove('aos-animate')
+
+    
+    setTimeout(() => {
+        bioDiv.classList.add('aos-animate')
+    }, 100);
+    setTimeout(() => {
+        closeBioTxt.style.display = 'block';
+        moreTxt.style.display = 'none';
+    }, 200);
+    setTimeout(() => {
+        closeBioTxt.classList.add('aos-animate')
+    }, 300);
+}
+
 
 ReactDOM.render(
     <React.StrictMode>

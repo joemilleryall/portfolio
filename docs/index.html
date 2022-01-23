@@ -2,12 +2,12 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Joe Miller</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet"
         href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css" />
     <script src="https://kit.fontawesome.com/fe68e294f2.js" crossorigin="anonymous"></script>
@@ -47,18 +47,10 @@
                     <h2 data-aos="fade-down">Hello!</h2>
                     <div class="content-body">
                         <ul>
-                            <li data-aos="fade-down" id="name">
-                                I'm Joe Miller
-                            </li>
-                            <li data-aos="fade-down">
-                                Web Developer
-                            </li>
-                            <li data-aos="fade-down">
-                                Combat Sports Athlete
-                            </li>
-                            <li data-aos="fade-down">
-                                Based in Brooklyn
-                            </li>
+                            <li data-aos="fade-down" id="name">I'm Joe Miller</li>
+                            <li data-aos="fade-down">Web Developer</li>
+                            <li data-aos="fade-down">Combat Sports Athlete</li>
+                            <li data-aos="fade-down">Based in Brooklyn</li>
                         </ul>
                     </div>
                     <div class="flip-prompt" data-aos="fade-in" data-aos-duration="1800" data-aos-delay="1400">
@@ -72,12 +64,17 @@
                 <div class="back">
                     <div class="back-info" data-aos="fade-in" data-aos-duration="400">
                         <h3>Welcome!</h3>
+                        <p>Thank you for taking the time to check out my site.<br /></p>
                         <p>
-                            Thank you for taking the time to check out my site.<br>
+                            Below, there is a Calendar component created with React and the
+                            good ole' JS Date Object along with a Bio component I created to
+                            share a little more about myself.
                         </p>
-                        <p>Below, there is a Calendar component created with React and the good ole' JS Date Object along with a Bio component I created to share a little more about myself.</p>
                         <div class="btns">
-                            <button class="port-btn">MORE ABOUT ME</button>
+                            <button id="bio-btn" class="port-btn">
+                                <span data-aos="fade-in" data-aos-duration="600" id="close-bio-txt">CLOSE BIO</span>
+                                <span data-aos="fade-in" data-aos-duration="200" id="more-txt">MORE ABOUT ME</span>
+                            </button>
                             <button id="cal-btn" class="port-btn">VIEW CALENDAR</button>
                             <!-- <button class="coming-soon">THING-A-MAJIG</button> -->
                         </div>
@@ -85,13 +82,19 @@
                     <div class="back-info2" data-aos="fade-in" data-aos-duration="400">
                         <h4>The Calendar</h4>
                         <p>
-                            This component was built without libraries for fun.<br>
-                            <span>Built for a personal project that retrieves my workouts from the Strava API and displays them over time. Featured here as a teaser without the API call to show some React skills at a glance.</span> 
+                            This component was built without libraries for fun.<br />
+                            <span>Built for a personal project that retrieves my workouts from
+                                the Strava API and displays them over time. Featured here as a
+                                teaser without the API call to show some React skills at a
+                                glance.</span>
                         </p>
                         <div class="btns">
-                            <a id="cal-btn-close" class="port-btn">CLOSE CALENDAR</a>
-                            <a target="_blank" href="https://github.com/joe-millers-code/portfolio/tree/master/src/Calendar" class="port-btn">CALENDAR CODE</a>
-                            <a target="_blank" href="https://github.com/joe-millers-code/dashboard" class="port-btn">PERSONAL PROJECT REPO</a>
+                            <a id="cal-btn-close" class="port-btn calendarBtn">CLOSE CALENDAR</a>
+                            <a target="_blank"
+                                href="https://github.com/joe-millers-code/portfolio/tree/master/src/Calendar"
+                                class="port-btn">CALENDAR CODE</a>
+                            <a target="_blank" href="https://github.com/joe-millers-code/dashboard"
+                                class="port-btn calendarBtn">PERSONAL PROJECT REPO</a>
                         </div>
                     </div>
                 </div>
