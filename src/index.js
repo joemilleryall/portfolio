@@ -91,6 +91,7 @@ bioBtn.onclick = (e) =>{
         }, 200);
         setTimeout(() => {
             moreTxt.classList.add('aos-animate')
+            bioDiv.style.display = "none"
         }, 300);
 
     } else {
@@ -99,8 +100,7 @@ bioBtn.onclick = (e) =>{
         bioDiv.classList.remove('aos-animate')
         moreTxt.classList.remove('aos-animate')
         closeBioTxt.classList.remove('aos-animate')
-    
-        
+
         setTimeout(() => {
             bioDiv.classList.add('aos-animate')
         }, 100);

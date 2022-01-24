@@ -60,6 +60,9 @@ h2 {
 #social-links a:hover {
     color: #ff00d4;
 }
+#bio-btn{
+    min-width:100px;
+}
 .content-box{
     margin-left:auto;
     margin-right:auto;
