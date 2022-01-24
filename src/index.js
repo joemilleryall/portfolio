@@ -77,25 +77,40 @@ const closeBioTxt = document.querySelector("#close-bio-txt")
 
 
 
-bioBtn.onclick = () =>{
-    bioDiv.style.display = 'block'
+bioBtn.onclick = (e) =>{
+    if(e.target.dataset.close === "true" || e.target.id === 'close-bio-txt'){
+        bioBtn.dataset.close = "false"
+        bioDiv.classList.remove('aos-animate')
+        closeBioTxt.classList.remove('aos-animate')
+        moreTxt.classList.remove('aos-animate')
 
+        setTimeout(() => {
+            closeBioTxt.style.display = 'none';
+            moreTxt.style.display = 'block';
+        }, 200);
+        setTimeout(() => {
+            moreTxt.classList.add('aos-animate')
+        }, 300);
 
-    bioDiv.classList.remove('aos-animate')
-    moreTxt.classList.remove('aos-animate')
-    closeBioTxt.classList.remove('aos-animate')
-
+    } else {
+        bioBtn.dataset.close = "true"
+        bioDiv.style.display = 'block'
+        bioDiv.classList.remove('aos-animate')
+        moreTxt.classList.remove('aos-animate')
+        closeBioTxt.classList.remove('aos-animate')
     
-    setTimeout(() => {
-        bioDiv.classList.add('aos-animate')
-    }, 100);
-    setTimeout(() => {
-        closeBioTxt.style.display = 'block';
-        moreTxt.style.display = 'none';
-    }, 200);
-    setTimeout(() => {
-        closeBioTxt.classList.add('aos-animate')
-    }, 300);
+        
+        setTimeout(() => {
+            bioDiv.classList.add('aos-animate')
+        }, 100);
+        setTimeout(() => {
+            closeBioTxt.style.display = 'block';
+            moreTxt.style.display = 'none';
+        }, 200);
+        setTimeout(() => {
+            closeBioTxt.classList.add('aos-animate')
+        }, 300);
+    }
 }
 
 
