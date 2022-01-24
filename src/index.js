@@ -3,11 +3,11 @@ import ReactDOM from 'react-dom';
 import AOS from 'aos';
 import { Calendar } from './Calendar/Calendar.js';
 import { Bio } from './Bio/Bio.js';
+import resume  from "../assets/nuresume.pdf";
 import 'aos/dist/aos.css';
 import "../stylesheets/bio.css";
 import "../stylesheets/calendar.css";
 import "../stylesheets/index.css";
-import resume  from "../assets/nuresume.pdf";
 
 
 AOS.init({
@@ -15,11 +15,14 @@ AOS.init({
     duration: 100,
     once: true
 })
-
+console.log('%c=========/////////////============', 'color:red')
 console.log(resume)
+console.log('%c=========\\\\\\\\\\\\\\\\\\\\\\\\\============', 'color:red')
 
 const resumeLink = document.querySelector("#resume-link")
 resumeLink.setAttribute('href', resume)
+
+// ---------------------------------Calendar Component----------------------
 
 const calendarDiv = document.querySelector('#calendar');
 const calBtn = document.querySelector('#cal-btn');
@@ -34,7 +37,7 @@ calBtn.onclick = () => {
     calendarDiv.classList.remove('aos-animate')
     setTimeout(() => {
         calendarDiv.classList.add('aos-animate')
-    }, 100);
+    }, 500);
 
     back.style.display = 'none'
     back2.style.display = 'block'
@@ -42,7 +45,7 @@ calBtn.onclick = () => {
     back2.classList.remove('aos-animate')
     setTimeout(() => {
         back2.classList.add('aos-animate')
-    }, 100);
+    }, 200);
 }
 
 calBtnClose.onclick = () => {
@@ -74,8 +77,6 @@ const bioDiv = document.querySelector("#bio")
 const bioBtn = document.querySelector("#bio-btn")
 const moreTxt = document.querySelector("#more-txt")
 const closeBioTxt = document.querySelector("#close-bio-txt")
-
-
 
 bioBtn.onclick = (e) =>{
     if(e.target.dataset.close === "true" || e.target.id === 'close-bio-txt'){

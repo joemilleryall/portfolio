@@ -1,6 +1,4 @@
 // import { useState } from "react";
-// import { Month, DayModal } from '../components.js';
-// import "../../stylesheets/calendar.css";
 
 export const Bio = () => {
     return (

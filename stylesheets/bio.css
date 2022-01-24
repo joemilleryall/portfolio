@@ -1,5 +1,6 @@
 #bio{
     display:none;
+    border: white 2px solid;
 }
 #close-bio-txt{
     display:none;
