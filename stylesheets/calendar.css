@@ -2,10 +2,6 @@
 #calendar{
     display:none;
 }
-thead {
-    background-color: black;
-    color: white;
-}
 
 .month-btn{
     color:white;
@@ -20,6 +16,17 @@ thead {
 }
 .month-btn:hover{
     background-color: rgb(87, 87, 87);
+}
+table{
+    background-color: rgb(36, 36, 36);
+    border-radius: 20px;
+    padding:10px;
+}
+thead th{
+    background-color: rgb(26, 25, 25);
+    color: white;
+    border-radius: 20px;
+    padding:5px;
 }
 
 td {
