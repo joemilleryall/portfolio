@@ -30,10 +30,10 @@
 .component-nav button:hover{
     background-color: rgb(68, 68, 68);
 	border: 1px solid rgb(255, 255, 255);
-    cursor: pointer;
+
 }
 .selected{
     background-color: rgb(38, 38, 38) !important;
 	border: 1px solid rgb(109, 109, 109) !important;
-    cursor: pointer;
+
 }

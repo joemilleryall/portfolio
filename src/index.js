@@ -9,7 +9,6 @@ import "../stylesheets/bio.css";
 import "../stylesheets/calendar.css";
 import "../stylesheets/index.css";
 
-
 AOS.init({
     easing: 'ease-in-out',
     duration: 100,
@@ -32,36 +31,48 @@ const back2 = document.querySelector('.back-info2')
 
 
 calBtn.onclick = () => {
-    calendarDiv.style.display = "block"
-
     calendarDiv.classList.remove('aos-animate')
-    setTimeout(() => {
-        calendarDiv.classList.add('aos-animate')
-    }, 500);
-
-    back.style.display = 'none'
+    back.classList.remove('aos-animate')
     back2.style.display = 'block'
-
     back2.classList.remove('aos-animate')
+
+    bioBtn.dataset.close = "false"
+    bioDiv.classList.remove('aos-animate')
+    closeBioTxt.classList.remove('aos-animate')
+    moreTxt.classList.remove('aos-animate')
+
     setTimeout(() => {
+        calendarDiv.style.display = "block"
+        moreTxt.classList.add('aos-animate')
+        bioDiv.style.display = "none"
+    }, 100);
+
+    setTimeout(() => {
+        closeBioTxt.style.display = 'none'
+        moreTxt.style.display = 'block';
+        calendarDiv.classList.add('aos-animate')
+        back.style.display = 'none'
         back2.classList.add('aos-animate')
-    }, 200);
+    }, 300);
 }
 
 calBtnClose.onclick = () => {
-    back2.style.display = 'none'
-    back.style.display = 'block'
-
-    back.classList.remove('aos-animate')
-    setTimeout(() => {
-        back.classList.add('aos-animate')
-    }, 100);
-
     calendarDiv.classList.remove('aos-animate')
+    back.classList.remove('aos-animate')
+    back2.classList.remove('aos-animate')
+    moreTxt.classList.add('aos-animate')
+
+
     setTimeout(() => {
-        calendarDiv.style.display = "none"
-        calendarDiv.classList.add('aos-animate')
-    }, 800);
+        back2.style.display = 'none'
+        back.style.display = 'block'
+    }, 200);
+
+    setTimeout(() => {
+        back2.classList.add('aos-animate')
+        back.classList.add('aos-animate')
+        calendarDiv.style.display = 'none'
+    }, 300);
 }
 
 ReactDOM.render(
