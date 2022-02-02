@@ -11,7 +11,8 @@
 #close-bio-txt{
     display:none;
 }
-.bio{
+
+.component-nav{
     display:flex;
     justify-content: space-evenly;
 }
