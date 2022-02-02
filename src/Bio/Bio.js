@@ -7,11 +7,23 @@ export const Bio = () => {
         setIsSelected(e.target.name)
     }
 
-    const bgContent = <div>BG</div>
+    const bgContent = (
+        <div className="bio-content">
+            
+        </div>
+    )
 
-    const devContent = <div>dev</div>
+    const devContent = (
+        <div className="bio-content">
+            dev
+        </div>
+    )
 
-    const coachContent = <div>coach</div>
+    const coachContent = (
+        <div className="bio-content">
+            coach
+        </div>
+    )
 
     return (
         <div className="bio-container">
@@ -30,7 +42,6 @@ export const Bio = () => {
                             ? coachContent
                             : null
                 }
-
             </div>
         </div>
     );
