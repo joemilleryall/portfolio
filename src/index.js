@@ -102,8 +102,10 @@ bioBtn.onclick = (e) =>{
         }, 200);
         setTimeout(() => {
             moreTxt.classList.add('aos-animate')
-            bioDiv.style.display = "none"
         }, 300);
+        setTimeout(() => {
+            bioDiv.style.display = "none"
+        }, 500);
 
     } else {
         bioBtn.dataset.close = "true"
