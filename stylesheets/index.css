@@ -141,6 +141,7 @@ ul li:last-child{
 .back-info h3 {
     margin:0;
 }
+
 .back-info2 {
 	display:none;
 }
@@ -155,6 +156,8 @@ ul li:last-child{
 .btns{
 	display:flex;
 	justify-content: space-evenly;
+    position: relative;
+    top:15px;
 }
 /* #cal-btn{
     position: relative;

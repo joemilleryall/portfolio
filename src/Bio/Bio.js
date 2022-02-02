@@ -1,16 +1,14 @@
-// import { useState } from "react";
+import { useState } from "react";
 
 export const Bio = () => {
+    const [isSelected, setIsSelected] = useState('background')
     return (
         <div className="bio-container">
-                <div className="bio">
-                    <div className="self developer ">
-                        <h4>Web Developer</h4>
-                    </div>
-                    <div className="self coach">
-                        <h4>Combat Sports Coach</h4>
-                    </div>
-                </div>
+            <div className="bio">
+                <button className={isSelected === 'background' ? 'selected' : ''}>Background</button>
+                <button className={isSelected === 'dev' ? 'selected' : ''}>Web Developer</button>
+                <button className={isSelected === 'coach' ? 'selected' : ''}>Combat Sports Coach</button>
+            </div>
         </div>
     );
 };

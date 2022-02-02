@@ -1,6 +1,6 @@
 #bio{
     display:none;
-    /* border: white 2px solid; */
+    border: white 2px solid;
     width:600px;
     height:300px;
     border-radius: 20px;
@@ -13,5 +13,26 @@
 }
 .bio{
     display:flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+}
+button{
+    background-color: black;
+    font-size: .6em;
+    min-width:80px;
+    padding:.8em;
+	color: rgb(168, 168, 168);
+	border: 1px solid rgb(88, 49, 49);
+    text-align: center;
+    border-radius: 10px;
+    font-weight:bolder;
+}
+button:hover{
+    background-color: rgb(68, 68, 68);
+	border: 1px solid rgb(255, 255, 255);
+    cursor: pointer;
+}
+.selected{
+    background-color: rgb(68, 68, 68);
+	border: 1px solid rgb(255, 255, 255);
+    cursor: pointer;
 }
