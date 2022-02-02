@@ -16,17 +16,22 @@
 }
 .month-btn:hover{
     background-color: rgb(87, 87, 87);
+    border-radius: 50px;
 }
 table{
-    background-color: rgb(36, 36, 36);
+    background-color: rgb(14, 14, 14);
     border-radius: 20px;
     padding:10px;
+    border: 2px solid rgb(49, 49, 49);
+
 }
 thead th{
     background-color: rgb(26, 25, 25);
     color: white;
-    border-radius: 20px;
+    border-radius: 10px;
     padding:5px;
+    position: relative;
+    bottom:5px;
 }
 
 td {

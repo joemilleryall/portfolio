@@ -32,7 +32,12 @@ module.exports = {
             {
                 test: /\.pdf$/i,
                 include: path.resolve(__dirname, 'assets'),
-                use: ["file-loader"],
+                use: {
+                    loader: 'file-loader', 
+                    options: {
+                        name: '[path][name].[ext]'
+                    }
+                }
             },
         ]
     }

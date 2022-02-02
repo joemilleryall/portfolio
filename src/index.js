@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import AOS from 'aos';
 import { Calendar } from './Calendar/Calendar.js';
 import { Bio } from './Bio/Bio.js';
-import resume  from "../assets/nuresume.pdf";
+import resume  from "../assets/joeMillerResume.pdf";
 import 'aos/dist/aos.css';
 import "../stylesheets/bio.css";
 import "../stylesheets/calendar.css";
