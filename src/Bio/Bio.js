@@ -6,7 +6,13 @@ export const Bio = () => {
     const btnClick = (e) => {
         setIsSelected(e.target.name)
     }
-    
+
+    const bgContent = <div>BG</div>
+
+    const devContent = <div>dev</div>
+
+    const coachContent = <div>coach</div>
+
     return (
         <div className="bio-container">
             <div className="bio">
@@ -16,13 +22,13 @@ export const Bio = () => {
                     <button onClick={btnClick} name="coach" className={isSelected === 'coach' ? 'selected' : ''}>Combat Sports Coach</button>
                 </div>
 
-                {isSelected === 'background' 
-                    ? <div>background</div>
-                    : isSelected === 'dev' 
-                        ? <div>dev</div>
+                {isSelected === 'background'
+                    ? bgContent
+                    : isSelected === 'dev'
+                        ? devContent
                         : isSelected === 'coach'
-                            ? <div>coach</div>
-                            : <div>nothing</div>
+                            ? coachContent
+                            : null
                 }
 
             </div>
