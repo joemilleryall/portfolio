@@ -30,7 +30,7 @@ module.exports = {
                 use: ["style-loader", "css-loader"],
             },
             {
-                test: /\.pdf$/i,
+                test: /\.(png|jpe?g|gif|pdf)$/i,
                 include: path.resolve(__dirname, 'assets'),
                 use: {
                     loader: 'file-loader', 
