@@ -14,6 +14,7 @@ AOS.init({
     duration: 100,
     once: true
 })
+
 console.log('%c=========/////////////============', 'color:red')
 console.log(resume)
 console.log('%c=========\\\\\\\\\\\\\\\\\\\\\\\\\============', 'color:red')
