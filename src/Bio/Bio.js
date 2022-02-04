@@ -1,7 +1,4 @@
 import { useState } from "react";
-import florida from '../../assets/florida.png'
-import nyc from '../../assets/NYC.png'
-import coach from '../../assets/combat.png'
 
 
 
@@ -16,25 +13,70 @@ export const Bio = () => {
         <div className="bio-content">
             <div className="bg-body">
 
-                <img src={florida} alt="" />
+                {/* <img src={florida} alt="" /> */}
 
                 {/* maxime mollitia molestiae quas vel repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio eaque rerum Provident similique accusantium nemo autem Veritatis obcaecati tenetur iure earum ut molestias voluptate aliquam nihil eveniet aliquid culpa officia aut Impedit sit quaerat nesciunt ipsum debitis reprehenderit quia quo neque Ipsa eos sapiente officiis at excepturi expedita sint  */}
             </div>
         </div>
     )
 
-    const devContent = (
+    const skillsContent = (
         <div className="bio-content">
-            <div className="dev-body">
-                <img src={nyc} alt="" />
+            <div className="skills-body">
+                <div className="best">
+                    <h4>Current Favorites</h4>
+                    <div className="icons">
+                        <i className="devicon-react-original-wordmark"></i>
+                        <i className="fab fa-js-square"></i>
+                        <i className="devicon-nodejs-plain"></i>
+                        <i className="devicon-html5-plain-wordmark"></i>
+                        <i className="devicon-css3-plain-wordmark"></i>
+                        <i className="devicon-ruby-plain-wordmark"></i>
+                        <i className="devicon-rails-plain-wordmark"></i>
+                    </div>
+
+                </div>
+                <h4>Past Favorites</h4>
+                <div className="icons small-w">
+                    <i className="devicon-php-plain"></i>
+                    <i className="devicon-drupal-plain-wordmark"></i>
+                    <i className="devicon-postgresql-plain-wordmark"></i>
+                    <i className="devicon-jquery-plain-wordmark"></i>
+                    <i className="devicon-babel-plain"></i>
+                    <i className="devicon-webpack-plain"></i>
+                    <i className="devicon-git-plain-wordmark"></i>
+                    <i className="devicon-gulp-plain"></i>
+                    <i className="devicon-npm-original-wordmark"></i>
+                    <i className="devicon-sass-original"></i>
+                </div>
+
+
+                <div className="currently-learning">
+                    Currently intrigued by: 
+                    <i className="devicon-jest-plain"></i>
+                    <i className="devicon-nextjs-original"></i>
+                    <i className="devicon-typescript-plain"></i>
+                    <i class="devicon-graphql-plain"></i>
+                </div>
+
+
+
             </div>
         </div>
     )
 
-    const coachContent = (
+    const expContent = (
         <div className="bio-content">
-            <div className="coach-body">
-                <img src={coach} alt="" />
+            <div className="exp-body">
+
+            </div>
+        </div>
+    )
+
+    const projectsContent = (
+        <div className="bio-content">
+            <div className="projects-body">
+
             </div>
         </div>
     )
@@ -44,17 +86,20 @@ export const Bio = () => {
             <div className="bio">
                 <div className="component-nav">
                     <button onClick={btnClick} name="background" className={isSelected === 'background' ? 'selected' : ''}>Background</button>
-                    <button onClick={btnClick} name="dev" className={isSelected === 'dev' ? 'selected' : ''}>Web Developer</button>
-                    <button onClick={btnClick} name="coach" className={isSelected === 'coach' ? 'selected' : ''}>Combat Sports Coach</button>
+                    <button onClick={btnClick} name="skills" className={isSelected === 'skills' ? 'selected' : ''}>Skills</button>
+                    <button onClick={btnClick} name="exp" className={isSelected === 'exp' ? 'selected' : ''}>Experience</button>
+                    {/* <button onClick={btnClick} name="projects" className={isSelected === 'projects' ? 'selected' : ''}>Projects</button> */}
                 </div>
 
                 {isSelected === 'background'
                     ? bgContent
-                    : isSelected === 'dev'
-                        ? devContent
-                        : isSelected === 'coach'
-                            ? coachContent
-                            : null
+                    : isSelected === 'skills'
+                        ? skillsContent
+                        : isSelected === 'exp'
+                            ? expContent
+                            : isSelected === 'projects'
+                                ? projectsContent
+                                : null
                 }
             </div>
         </div>

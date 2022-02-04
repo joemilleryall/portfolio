@@ -18,64 +18,74 @@
 }
 .component-nav button{
     background-color: black;
-    font-size: .6em;
+    font-size: .8em;
     min-width:80px;
     padding:.8em;
 	color: rgb(168, 168, 168);
 	border: 1px solid rgb(88, 49, 49);
     text-align: center;
-    border-radius: 10px;
+    border-radius: 15px;
     font-weight:bolder;
 }
 .component-nav button:hover{
     background-color: rgb(68, 68, 68);
 	border: 1px solid rgb(255, 255, 255);
-
+    cursor: pointer;
 }
 .selected{
     background-color: rgb(38, 38, 38) !important;
 	border: 1px solid rgb(109, 109, 109) !important;
 
 }
-
 .bio-content{
 	border: 2px solid rgb(255, 83, 83);
-    height:250px;
+    /* background-color: rgba(255, 0, 0, 0.44); */
+    height:350px;
     border-radius: 20px;
     margin-top:20px;
-    padding:30px;
-    background-color: rgb(255, 0, 0);
-
+    padding:20px;
 }
-.bg-body{
-    height:100%;
-    width:100%;
-    /* border: 2px solid white; */
-}
-
-.bg-body img{
-    height:110%;
+.skills-body i{
+    font-size: 3.5em;
+    padding:0.1em;
     position: relative;
-    left:280px;
-    bottom:15px;
+    bottom:20px;
+
 }
-.dev-body{
-    /* background-color: blue; */
-    width:120%;
+.skills-body div.best i{
+    font-size: 4em;
+    position: relative;
+    bottom:20px;
 }
 
-.dev-body img{
-    width:100%;
+.skills-body h4{
     position: relative;
-    top:140px;
-    right:70px;
-}
-.coach-body{
-    
+    bottom:10px;
+    left:80px;
+    border-bottom: 1px solid red;
+    padding-left:10px;
+    width:40%;
+    font-family:'Courier New', Courier, monospace;
 }
 
-.coach-body img{
-    width:50%;
-    position: relative;
-    right:80px;
+.skills-body div.icons {
+    display:flex;
+    justify-content: center;
+    flex-wrap:wrap;
+    margin: 0 auto;
+}
+.currently-learning{
+    font-size: .3em;
+    position:relative;
+    left:350px;
+
+}
+.currently-learning i{
+    bottom:0px;
+    margin-left:10px;
+}
+/* ----resusable */
+
+.small-w{
+    width:90%;
 }
