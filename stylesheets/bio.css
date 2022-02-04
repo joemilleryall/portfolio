@@ -44,6 +44,7 @@
     margin-top:20px;
     padding:20px;
 }
+
 .skills-body i{
     font-size: 3.5em;
     padding:0.1em;
@@ -84,14 +85,11 @@
     margin-left:10px;
 }
 
-
 /* ----resusable */
 
 .small-w{
     width:90%;
 }
-.fade{
-    animation-name: opacity;
-    animation-duration: 1s;
-    animation-iteration-count: once;
+.opacity{
+    opacity: 0;
 }

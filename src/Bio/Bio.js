@@ -1,28 +1,33 @@
-import { useEffect, useState } from "react";
+import { useRef, useEffect, useState } from "react";
 
 export const Bio = () => {
-    const [isSelected, setIsSelected] = useState('background')
+    const [isSelected, setIsSelected] = useState('skills')
+    const fadeRef = useRef();
 
-    useEffect(()=>{
+    useEffect(() => {
+        console.log(fadeRef) 
+        fadeRef.current.animate(
+            {
+                opacity: [0, 1]
+            },
+            500
+        );
+        fadeRef.current.style.opacity = 1;
 
     }, [isSelected])
-    
+
     const btnClick = (e) => {
         setIsSelected(e.target.name)
     }
 
     const bgContent = (
-
-        <div className="bg-body">
-
-            {/* <img src={florida} alt="" /> */}
-
-            maxime mollitia molestiae quas vel repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio eaque rerum Provident similique accusantium nemo autem Veritatis obcaecati tenetur iure earum ut molestias voluptate aliquam nihil eveniet aliquid culpa officia aut Impedit sit quaerat nesciunt ipsum debitis reprehenderit quia quo neque Ipsa eos sapiente officiis at excepturi expedita sint 
+        <div className="bg-body opacity" ref={fadeRef}>
+            Coming very soon
         </div>
     )
 
     const skillsContent = (
-        <div className="skills-body">
+        <div className="skills-body opacity" ref={fadeRef} >
             <div className="best">
                 <h4>Current Favorites</h4>
                 <div className="icons">
@@ -49,10 +54,8 @@ export const Bio = () => {
                 <i className="devicon-npm-original-wordmark"></i>
                 <i className="devicon-sass-original"></i>
             </div>
-
-
             <div className="currently-learning">
-                Currently intrigued by: 
+                Currently expanding by:
                 <i className="devicon-jest-plain"></i>
                 <i className="devicon-nextjs-original"></i>
                 <i className="devicon-typescript-plain"></i>
@@ -63,16 +66,16 @@ export const Bio = () => {
 
     const expContent = (
 
-        <div className="exp-body">
-
+        <div className="exp-body opacity" ref={fadeRef}>
+            coming very soon
         </div>
 
     )
 
     const projectsContent = (
 
-        <div className="projects-body">
-
+        <div className="projects-body" ref={fadeRef}>
+            Coming very soon
         </div>
 
     )
