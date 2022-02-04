@@ -29,7 +29,7 @@ export const Bio = () => {
     const skillsContent = (
         <div className="skills-body opacity" ref={fadeRef} >
             <div className="best">
-                <h4>Current Favorites</h4>
+                <h4>Favorites</h4>
                 <div className="icons">
                     <i className="devicon-react-original-wordmark"></i>
                     <i className="fab fa-js-square"></i>
