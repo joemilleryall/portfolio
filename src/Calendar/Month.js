@@ -22,8 +22,6 @@ export const Month = ({ nextMonth, prevMonth, monthOriginDate }) => {
                 if (i < firstDayIndex) {
                     weekOneArr.push(<Day key={uniqid()} />);
                 } else {
-                    // weekData.today.setHours(19); 
-                    // Daylight savings 
                     let fullDate = new Date(weekData.year, weekData.monthIndex, date)
                         .toISOString()
                         .split("T")[0];

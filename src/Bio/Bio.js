@@ -29,23 +29,21 @@ export const Bio = () => {
     const skillsContent = (
         <div className="skills-body opacity" ref={fadeRef} >
             <div className="best">
-                <h4>Favorites</h4>
                 <div className="icons">
                     <i className="devicon-react-original-wordmark"></i>
                     <i className="fab fa-js-square"></i>
                     <i className="devicon-nodejs-plain"></i>
+                    <i className="devicon-postgresql-plain-wordmark"></i>
                     <i className="devicon-html5-plain-wordmark"></i>
                     <i className="devicon-css3-plain-wordmark"></i>
-                    <i className="devicon-ruby-plain-wordmark"></i>
-                    <i className="devicon-rails-plain-wordmark"></i>
+                    <i className="devicon-php-plain"></i>
+                    <i className="devicon-drupal-plain-wordmark"></i>
                 </div>
-
             </div>
-            <h4>Past Favorites</h4>
-            <div className="icons small-w">
-                <i className="devicon-php-plain"></i>
-                <i className="devicon-drupal-plain-wordmark"></i>
-                <i className="devicon-postgresql-plain-wordmark"></i>
+            <h4></h4>
+            <div className="icons">
+                <i className="devicon-ruby-plain-wordmark"></i>
+                <i className="devicon-rails-plain-wordmark"></i>
                 <i className="devicon-jquery-plain-wordmark"></i>
                 <i className="devicon-babel-plain"></i>
                 <i className="devicon-webpack-plain"></i>

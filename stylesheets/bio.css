@@ -37,7 +37,8 @@
 
 }
 .bio-content{
-	border: 2px solid rgb(255, 83, 83);
+	border: 2px solid rgb(120, 120, 120);
+    background-color: rgb(18, 18, 18);
     height:350px;
     border-radius: 20px;
     margin-top:20px;
@@ -61,10 +62,10 @@
     position: relative;
     bottom:10px;
     left:80px;
-    border-bottom: 1px solid red;
+    /* border-bottom: 1px solid red; */
     padding-left:10px;
     width:40%;
-    font-family:'Courier New', Courier, monospace;
+    /* font-family:'Courier New', Courier, monospace; */
 }
 
 .skills-body div.icons {
@@ -86,9 +87,6 @@
 
 /* ----resusable */
 
-.small-w{
-    width:90%;
-}
 .opacity{
     opacity: 0;
 }
