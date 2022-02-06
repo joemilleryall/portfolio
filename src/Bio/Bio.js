@@ -29,28 +29,31 @@ export const Bio = () => {
     const skillsContent = (
         <div className="skills-body opacity" ref={fadeRef} >
             <div className="best">
+                    <p>Front-end</p>
                 <div className="icons">
                     <i className="devicon-react-original-wordmark"></i>
                     <i className="fab fa-js-square"></i>
-                    <i className="devicon-nodejs-plain"></i>
-                    <i className="devicon-postgresql-plain-wordmark"></i>
+                    <i className="devicon-jquery-plain-wordmark"></i>
                     <i className="devicon-html5-plain-wordmark"></i>
                     <i className="devicon-css3-plain-wordmark"></i>
-                    <i className="devicon-php-plain"></i>
-                    <i className="devicon-drupal-plain-wordmark"></i>
                 </div>
             </div>
-            <h4></h4>
+            <p>Back-end</p>
             <div className="icons">
+                <i className="devicon-nodejs-plain"></i>
                 <i className="devicon-ruby-plain-wordmark"></i>
                 <i className="devicon-rails-plain-wordmark"></i>
-                <i className="devicon-jquery-plain-wordmark"></i>
+                <i className="devicon-php-plain"></i>
+            </div>
+            <p>and also..</p>
+            <div className="icons">
                 <i className="devicon-babel-plain"></i>
                 <i className="devicon-webpack-plain"></i>
                 <i className="devicon-git-plain-wordmark"></i>
                 <i className="devicon-gulp-plain"></i>
                 <i className="devicon-npm-original-wordmark"></i>
                 <i className="devicon-sass-original"></i>
+                <i className="devicon-drupal-plain-wordmark"></i>
             </div>
             <div className="currently-learning">
                 Currently expanding by:
