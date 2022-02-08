@@ -107,7 +107,7 @@
     right:57px;
     width:85%;
 }
-.timeline span:first-child{
+.timeline-date{
     position: relative;
     right:21px;
     font-size: 1.3rem;
@@ -115,8 +115,9 @@
     padding-left:10px;
     border-bottom: solid 1px red;
 }
-.timeline span:first-child:after{
+.timeline-date:after{
     position: relative;
+    left:6px;
     top:15px;
     content:"\A";
     width:15px;
@@ -129,6 +130,16 @@
     position: relative;
     left:70px;
     bottom:10px;
+}
+.skills-acquired{
+    font-size: .6rem;
+    line-height: .6rem;
+    margin-left:20px;
+}
+.skills-acquired span{
+    font-size: .8rem;
+    line-height: .8rem;
+    margin-right:5px;
 }
 /* ----resusable */
 .opacity{
