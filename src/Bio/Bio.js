@@ -4,17 +4,11 @@ export const Bio = () => {
     const [isSelected, setIsSelected] = useState('skills')
     const fadeRef = useRef();
 
-    useEffect(() => {
-        console.log(fadeRef) 
-        fadeRef.current.animate(
-            {
-                opacity: [0, 1]
-            },
-            500
-        );
-        fadeRef.current.style.opacity = 1;
-
-    }, [isSelected])
+    // useEffect(() => {
+    //     fadeRef.current.animate({opacity: [0, 1]},500);
+    //     fadeRef.current.style.opacity = 1;
+    // }, [isSelected])
+    //AOS fade ins are going backwards???? data-aos="fade-in" data-aos-duration="1800"
 
     const btnClick = (e) => {
         setIsSelected(e.target.name)
@@ -22,7 +16,34 @@ export const Bio = () => {
 
     const bgContent = (
         <div className="bg-body opacity" ref={fadeRef}>
-            Coming very soon
+            <div className="timeline">
+                <ul>
+                    {/* <li>
+                        <span>2006 - </span>
+                        test content for a bio point on this portfolio
+                    </li> */}
+                    <li>
+                        <span>2014 - </span>
+                        test content for a bio point on this portfolio
+                    </li>
+                    <li>
+                        <span>2016 - </span>
+                        test content for a bio point on this portfolio
+                    </li>
+                    <li>
+                        <span>2018 - </span>
+                        test content for a bio point on this portfolio
+                    </li>
+                    <li>
+                        <span>2019 - </span>
+                        test content for a bio point on this portfolio
+                    </li>
+                    <li>
+                        <span>2020 - </span>
+                        test content for a bio point on this portfolio
+                    </li>
+                </ul>
+            </div>
         </div>
     )
 
