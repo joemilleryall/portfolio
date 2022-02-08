@@ -1,7 +1,7 @@
 import { useRef, useEffect, useState } from "react";
 
 export const Bio = () => {
-    const [isSelected, setIsSelected] = useState('skills')
+    const [isSelected, setIsSelected] = useState('background')
     const fadeRef = useRef();
 
     // useEffect(() => {
@@ -23,24 +23,24 @@ export const Bio = () => {
                         test content for a bio point on this portfolio
                     </li> */}
                     <li>
-                        <span>2014 - </span>
-                        test content for a bio point on this portfolio
+                        <span>2014 </span>
+                        <div>test content for a bio point on this portfolio and more and more and more</div>
                     </li>
                     <li>
-                        <span>2016 - </span>
-                        test content for a bio point on this portfolio
+                        <span>2016 </span>
+                        <div>test content for a bio point on this portfolio and more and more and more</div>
                     </li>
                     <li>
-                        <span>2018 - </span>
-                        test content for a bio point on this portfolio
+                        <span>2018 </span>
+                        <div>test content for a bio point on this portfolio and more and more and more</div>
                     </li>
                     <li>
-                        <span>2019 - </span>
-                        test content for a bio point on this portfolio
+                        <span>2019 </span>
+                        <div>test content for a bio point on this portfolio and more and more and more</div>
                     </li>
                     <li>
-                        <span>2020 - </span>
-                        test content for a bio point on this portfolio
+                        <span>2020 </span>
+                        <div>test content for a bio point on this portfolio and more and more and more</div>
                     </li>
                 </ul>
             </div>
