@@ -90,6 +90,7 @@
 .timeline{
     height: 330px;
     margin-left:50px;
+    /* transform: scale(0.5); */
 }
 .timeline ul{
     list-style: none;
@@ -101,11 +102,12 @@
     height:100%;
     border-left:red 3px dotted;
     padding:0px;
+    
 }
 .timeline li {
     position: relative;
     right:57px;
-    width:85%;
+    width:85%;    
 }
 .timeline-date{
     position: relative;
@@ -130,7 +132,9 @@
     position: relative;
     left:70px;
     bottom:10px;
+    /* animation: grow 2s ease 1; */
 }
+
 .skills-acquired{
     font-size: .6rem;
     line-height: .6rem;
@@ -141,7 +145,22 @@
     line-height: .8rem;
     margin-right:5px;
 }
+
+
 /* ----resusable */
 .opacity{
     opacity: 1;
+}
+
+.grow {
+    animation: grow 2s ease once;
+}
+
+@keyframes grow {
+    from {
+        transform: scale(0.5);
+    }
+    to {
+        transform: scale(1);
+    }
 }

@@ -1,5 +1,4 @@
 import { useRef, useEffect, useState } from "react";
-import { unstable_renderSubtreeIntoContainer } from "react-dom";
 
 export const Bio = () => {
     const [isSelected, setIsSelected] = useState('background')
@@ -26,33 +25,34 @@ export const Bio = () => {
                 <ul>
                     <li>
                         <span className="timeline-date">2006</span>
-                        <div>Graduated from McFatter Technical High School</div>
+                        <div className="timeline-point">Graduated from McFatter Technical High School</div>
                         <div className="skills-acquired"><span>+</span>HTML, CSS, PHP, FTP clients, Photoshop, Final Cut, and building gaming PCs</div>
                     </li>
                     <li>
                         <span className="timeline-date">2014</span>
                         {/* <div>test content for a bio point on this portfolio and more and more and more</div> */}
-                        <div>Graduated from Florida State University</div>
-                    </li>
-                    <li>
-                        <span className="timeline-date">2015</span>
-                        <div>Started  </div>
+                        <div className="timeline-point">Graduated from Florida State University</div>
+                        <div className="skills-acquired"><span>+</span>Javascript, SEO, WCAG, B.A., Editing, Writing, and Media </div>
                     </li>
                     <li>
                         <span className="timeline-date">2016</span>
-                        <div>Moved to Chiang Mai, Thailand to train and compete in the combat sport of <a target="_blank" href="https://www.youtube.com/watch?v=mgbGDi_ziMA">Muay Thai</a>.</div>
+                        <div className="timeline-point">Moved to Chiang Mai, Thailand to compete in the combat sport of <a target="_blank" href="https://www.youtube.com/watch?v=mgbGDi_ziMA">Muay Thai</a>.</div>
+                        <div className="skills-acquired"><span>+</span>Freelancing experience, incredible cardio</div>
                     </li>
                     <li>
                         <span className="timeline-date">2018</span>
-                        <div>Moved to New York City t</div>
+                        <div className="timeline-point">Moved to New York City</div>
+                        {/* <div className="skills-acquired"><span>+</span>less money 4 me</div> */}
                     </li>
                     <li>
                         <span className="timeline-date">2019</span>
-                        <div>Completed Flatiron School's 15-week Immersive Software Engineering program.</div>
+                        <div className="timeline-point">Completed Flatiron School's Software Engineering program.</div>
+                        <div className="skills-acquired"><span>+</span>React, Ruby on Rails, Git, REST, JSON, AJAX, Webpack, Babel, npm, PostGreSQL, MVC</div>
                     </li>
                     <li>
                         <span className="timeline-date">2020</span>
-                        <div>Hired at Weill Cornell Medicine where I meet directly with stakeholders to design and fix web funcitonality based in JS, JQuery, PHP, and Drupal</div>
+                        <div className="timeline-point">Hired at Weill Cornell Medicine</div>
+                        <div className="skills-acquired"><span>+</span>PHP, Drupal, Gulp, Agile/Scrum, ServiceNow, Google Analytics, Quality Assurance</div>
                     </li>
                 </ul>
             </div>
