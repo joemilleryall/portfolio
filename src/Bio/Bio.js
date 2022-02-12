@@ -37,13 +37,12 @@ export const Bio = () => {
                     <li>
                         <span className="timeline-date">2016</span>
                         <div className="timeline-point">Moved to Chiang Mai, Thailand to compete in the combat sport of <a target="_blank" href="https://www.youtube.com/watch?v=mgbGDi_ziMA">Muay Thai</a>.</div>
-                        <div className="skills-acquired"><span>+</span>Freelancing experience, incredible cardio</div>
+                        <div className="skills-acquired"><span>+</span>Freelancing experience, sweet kicks</div>
                     </li>
-                    <li>
+                    {/* <li>
                         <span className="timeline-date">2018</span>
                         <div className="timeline-point">Moved to New York City</div>
-                        {/* <div className="skills-acquired"><span>+</span>less money 4 me</div> */}
-                    </li>
+                    </li> */}
                     <li>
                         <span className="timeline-date">2019</span>
                         <div className="timeline-point">Completed Flatiron School's Software Engineering program.</div>
@@ -124,6 +123,8 @@ export const Bio = () => {
                     {/* <button onClick={btnClick} name="projects" className={isSelected === 'projects' ? 'selected' : ''}>Projects</button> */}
                 </div>
                 <div className="bio-content">
+                <a className="bio-btn" target="_blank" href="https://github.com/joe-millers-code/portfolio/tree/master/src/Bio">code</a>
+                <span className="display-none">this Bio Component repo</span>
                     {isSelected === 'background'
                         ? bgContent
                         : isSelected === 'skills'
