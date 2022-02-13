@@ -90,7 +90,10 @@
 .timeline{
     height: 330px;
     margin-left:50px;
-    /* transform: scale(0.5); */
+    /* transform: scale(0.6); */
+    position: relative;
+    right:30px;
+    display:none;
 }
 .timeline ul{
     list-style: none;
@@ -100,14 +103,14 @@
     flex-direction: column;
     justify-content: space-evenly;
     height:100%;
-    border-left:red 3px dotted;
+    border-left:red 3px dashed;
     padding:0px;
     
 }
 .timeline li {
     position: relative;
-    right:57px;
-    width:85%;    
+    right:56px;
+    width:85%;
 }
 .timeline-date{
     position: relative;
@@ -132,7 +135,7 @@
     position: relative;
     left:70px;
     bottom:10px;
-    /* animation: grow 2s ease 1; */
+    visibility:hidden;
 }
 
 .skills-acquired{
@@ -159,6 +162,29 @@
 }
 .bio-btn:hover + span{
     display:flex;
+}
+
+.backdrop{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width:100%;
+    background:#000000e1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal{
+    width: clamp(50%, 700px, 90%);
+    height: min(50%, 300px);
+    
+    margin: auto;
+    padding: 0 2rem;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 
