@@ -1,6 +1,6 @@
 import { useRef, useEffect, useState } from "react";
 import { Modal } from "./Modal/Modal.js"
-import { motion } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion"
 
 export const Bio = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -8,6 +8,7 @@ export const Bio = () => {
     const open = () => setIsOpen(true);
     const close = () => setIsOpen(false);
 
+    const content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 
     return (
         <div className="bio-container">
@@ -20,7 +21,13 @@ export const Bio = () => {
                 Test Modal
             </motion.button>
 
-            {isOpen && <Modal isOpen={isOpen} handleClose={close}/>}
+            <AnimatePresence>
+                initial={false}
+                exitBeforeEnter={true}
+                onExitComplete={()=> null}
+                {isOpen && <Modal isOpen={isOpen} handleClose={close} text={content}/>}
+            </AnimatePresence>
+
         </div>
     );
 };

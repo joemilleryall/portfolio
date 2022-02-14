@@ -170,14 +170,14 @@
     left: 0;
     height: 100%;
     width:100%;
-    background:#000000e1;
+    background:#ff0000e1;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .modal{
-    width: clamp(50%, 700px, 90%);
-    height: min(50%, 300px);
+
+    border:white solid 2px;
     
     margin: auto;
     padding: 0 2rem;
@@ -194,25 +194,4 @@
 }
 .display-none{
     display:none;
-}
-
-.grow {
-    animation: grow 2s ease once;
-}
-@keyframes fadeIn {
-    from {
-        transform: opacity(0);
-    }
-    to {
-        transform: opacity(1);
-    }
-}
-
-@keyframes grow {
-    from {
-        transform: scale(0.5);
-    }
-    to {
-        transform: scale(1);
-    }
 }

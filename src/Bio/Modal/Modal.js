@@ -1,5 +1,5 @@
 import { useRef, useEffect, useState } from "react";
-import { Backdrop } from "../Backdrop/Backdrop.js"
+import { Backdrop } from "./Backdrop.js"
 import { motion } from "framer-motion"
 
 const dropIn = {
@@ -9,7 +9,13 @@ const dropIn = {
     },
     visible: {
         y: "0",
-        opacity:1
+        opacity:1,
+        transition: {
+            duration:0.1, 
+            type: "spring",
+            damping: 25,
+            stiffness: 500,
+        }
     },
     exit: {
         y:"100vh",
@@ -22,10 +28,10 @@ export const Modal = ({ handleClose, text }) => {
     return (
         <Backdrop onClick={handleClose}>
             <motion.div
-                onClick={ (e) => e.stopPropagation() }
+                // onClick={ (e) => e.stopPropagation() }
                 className="modal"
                 variants={dropIn}
-                intial="hidden"
+                initial="hidden"
                 animate="visible"
                 exit="exit"
             >
