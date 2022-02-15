@@ -1,43 +1,37 @@
 import { useRef, useEffect, useState } from "react";
-import { Backdrop } from "./Backdrop.js"
 import { motion } from "framer-motion"
 
 const dropIn = {
     hidden: {
-        y:"-100vh",
+        // y:"-100vh",
         opacity: 0,
     },
     visible: {
-        y: "0",
+        // y: "0",
         opacity:1,
         transition: {
-            duration:0.1, 
-            type: "spring",
-            damping: 25,
-            stiffness: 500,
+            duration:1, 
         }
     },
     exit: {
-        y:"100vh",
+        // y:"100vh",
         opacity: 0, 
     }
 }
 
-export const Modal = ({ handleClose, text }) => {
+export const InfoPane = ({ handleClose, content }) => {
 
     return (
-        <Backdrop onClick={handleClose}>
             <motion.div
-                // onClick={ (e) => e.stopPropagation() }
+                onClick={ (e) => e.stopPropagation() }
                 className="modal"
                 variants={dropIn}
                 initial="hidden"
                 animate="visible"
                 exit="exit"
             >
-                {text}
+                {content}
             </motion.div>
-        </Backdrop>
     );
 };
 
