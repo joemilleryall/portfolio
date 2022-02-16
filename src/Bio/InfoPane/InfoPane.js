@@ -1,7 +1,7 @@
 import { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion"
 
-const dropIn = {
+const fader = {
     hidden: {
         // y:"-100vh",
         opacity: 0,
@@ -20,12 +20,11 @@ const dropIn = {
 }
 
 export const InfoPane = ({ handleClose, content }) => {
-
     return (
             <motion.div
                 onClick={ (e) => e.stopPropagation() }
-                className="modal"
-                variants={dropIn}
+                className="info-pane"
+                variants={fader}
                 initial="hidden"
                 animate="visible"
                 exit="exit"

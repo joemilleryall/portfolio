@@ -64,43 +64,43 @@ export const Bio = () => {
 
     return (
         <div className="bio-container">
+            <div className="bio-nav">
+                <motion.div
+                    className="bio-btn"
+                    whileHover={{ scale: 1.2 }}
+                    whileTap={{ scale: 0.9 }}
+                    onClick={btnClick}
+                    data-name="timeline"
+                >
+                    Timeline
+                </motion.div>
+                <motion.div
+                    className="bio-btn"
+                    whileHover={{ scale: 1.2 }}
+                    whileTap={{ scale: 0.9 }}
+                    onClick={btnClick}
+                    data-name="skills"
+                >
+                    Skills
+                </motion.div>
+                <motion.div
+                    className="bio-btn"
+                    whileHover={{ scale: 1.2 }}
+                    whileTap={{ scale: 0.9 }}
+                    onClick={btnClick}
+                    data-name="experience"
+                >
+                    Experience
+                </motion.div>
+            </div>
 
-            <motion.div
-                className="port-btn"
-                whileHover={{ scale: 1.2 }}
-                whileTap={{ scale: 0.9 }}
-                onClick={btnClick}
-                data-name="timeline"
-            >
-                Timeline
-            </motion.div>
-            <motion.div
-                className="port-btn"
-                whileHover={{ scale: 1.2 }}
-                whileTap={{ scale: 0.9 }}
-                onClick={btnClick}
-                data-name="skills"
-            >
-                Skills
-            </motion.div>
-            <motion.div
-                className="port-btn"
-                whileHover={{ scale: 1.2 }}
-                whileTap={{ scale: 0.9 }}
-                onClick={btnClick}
-                data-name="experience"
-            >
-                Experience
-            </motion.div>
-
-
-            <AnimatePresence>
+            <AnimatePresence
                 initial={false}
                 exitBeforeEnter={true}
                 onExitComplete={() => null}
+            >
                 {isOpen && <InfoPane handleClose={close} content={content()} />}
             </AnimatePresence>
-
         </div>
     );
 };
