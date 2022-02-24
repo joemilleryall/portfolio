@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Home } from './Home/Home.js';
+import { Home } from './Sitebase/Home.js';
 import resume  from "../assets/joeMillerResume.pdf";
 import "../stylesheets/index.css";
 

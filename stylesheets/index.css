@@ -1,0 +1,15 @@
+.nav{
+    width:100vw;
+    height:3rem;
+    background-color: #4400ffe1;
+}
+.nav ul{
+    width:40%;
+    display:flex;
+    justify-content: space-evenly;
+    float:right;
+}
+.nav li{
+    list-style-type: none;
+    padding:1rem;
+}
