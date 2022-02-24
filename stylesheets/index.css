@@ -110,9 +110,9 @@ h2 {
     transition: transform 0.8s;
     transform-style: preserve-3d;
 }
-.card:hover .inner, .card:active{
+/* .card:hover .inner, .card:active{
     transform: rotateY(180deg);
-}
+} */
 ul li:last-child{
     pointer-events: none;
 }
@@ -194,6 +194,7 @@ ul li:last-child{
     cursor: pointer;
 }
 .flip-prompt {
+    display:none;
     width:10%;
     position: relative;
     left:330px;
