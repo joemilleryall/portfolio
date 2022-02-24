@@ -1,72 +1,17 @@
 #bio{
     display:none;
-    width:600px;
+    width:70vw;
     /* min-height:00px; */
     border-radius: 20px;
     margin: 0 auto;
     margin-top:20px;
     padding:10px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    /* border:dotted white 5px; */
-}
-.bio-nav{
-    display:flex;
-    justify-content: space-evenly;
+    border:dotted rgb(143, 143, 143) 2px;
 }
 
-.info-pane{
-    display:flex;
-    justify-content: space-around;
-}
-.timeline{
-    margin-left:20px;
-}
-.timeline ul{
-    list-style: none;
-    border-left:red 3px dashed;
-    position: relative;
-    left:80px;
-    top:10px;
-    padding:0px;
-}
-.timeline li {
-    position: relative;
-    right:78px;
-    width:85%;
-}
-.timeline-date{
-    /* position: relative;
-    right:21px; */
-    font-size: 1.3rem;
-    padding-bottom:3px;
-    padding-left:10px;
-    border-bottom: solid 1px red;
-}
-.timeline-date:after{
-    position: relative;
-    left:6px;
-    top:15px;
-    content:"\A";
-    width:15px;
-    height:15px;
-    border-radius:50%;
-    background: #ff0000;
-    display:inline-block;
-}
-.timeline div{
-    position: relative;
-    left:100px;
-    bottom:15px;
-    /* visibility:hidden; */
-}
-
-.skills-acquired{
-    font-size: .6rem;
-    line-height: .6rem;
-    margin-left:20px;
-}
-.skills-acquired span{
-    font-size: .8rem;
-    line-height: .8rem;
-    margin-right:5px;
+.intro-bubble{
+    /* background-color: blanchedalmond; */
+    border: solid red 1px;
+    border-radius: 100%;
 }

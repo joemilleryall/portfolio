@@ -5,7 +5,7 @@ import { motion, AnimatePresence, LayoutGroup } from "framer-motion"
 
 export const Bio = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const [isSelected, setIsSelected] = useState('background')
+    const [isSelected, setIsSelected] = useState('intro')
 
 
     // const open = () => setIsOpen(true);
@@ -59,12 +59,14 @@ export const Bio = () => {
             return "skills"
         } else if (isSelected === 'experience') {
             return "exp"
+        } else if (isSelected === 'intro') {
+            return "intro"
         }
     }
 
     return (
         <div className="bio-container">
-            <div className="bio-nav">
+            {/* <div className="bio-nav">
                 <motion.div
                     className="bio-btn"
                     whileHover={{ scale: 1.2 }}
@@ -92,7 +94,18 @@ export const Bio = () => {
                 >
                     Experience
                 </motion.div>
-            </div>
+            </div> */}
+
+
+            <motion.div
+                className="intro-bubble"
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}
+                onClick={btnClick}
+                data-name="intro"
+            >
+                I was born and raised in...
+            </motion.div>
 
             <AnimatePresence
                 initial={false}
