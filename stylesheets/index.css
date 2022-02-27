@@ -33,16 +33,32 @@ a {
 body{
     background-color: var(--bg);
 }
-.bg-1{
-    background-color: rgba(0, 255, 255, 0.753);
-    width:30%;
-    height:100%;
+.bg{
+    background-color: #00e1ff;
+    width:120%;
+    height:3%;
     position: absolute;
-    left:0;
-    transform: rotate(15deg);
+    transform: rotate(10deg);
     z-index: -9;
-    overflow:hidden;
-    border-radius: 1%;
+    top:35vh;
+}
+
+.bg:nth-child(2){
+    top:40vh;
+    background-color: #00b7ff;
+    transform: rotate(15deg);
+}
+.bg:nth-child(3){
+    top:45vh;
+    background-color: #00b7ff;
+    transform: rotate(20deg);
+
+}
+.bg:nth-child(4){
+    top:50vh;
+    background-color: #00e1ff;
+    transform: rotate(25deg);
+
 }
 .backdrop{
     position: relative;

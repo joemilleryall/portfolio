@@ -7,7 +7,10 @@ export const Gallery = ({ isOpen, close }) => {
     
     return (
         <div className="gallery">
-            <motion.div className="bg-1"></motion.div>
+            <motion.div className="bg "></motion.div>
+            <motion.div className="bg "></motion.div>
+            <motion.div className="bg "></motion.div>
+            <motion.div className="bg"></motion.div>
             <AnimatePresence>
                 {isOpen && <Backdrop onClick={close}><Modal isOpen={isOpen} handleClose={close} /></Backdrop>}
             </AnimatePresence>
