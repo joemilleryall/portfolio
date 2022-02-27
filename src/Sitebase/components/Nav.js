@@ -1,13 +1,42 @@
+import { motion } from 'framer-motion'
 
-export const Nav = () => {
+export const Nav = ({ open }) => {
     return (
-        <div className="nav">
-                <ul>
-                    <li>About</li>
-                    <li>Skills</li>
-                    <li>Experience</li>
-                    <li>Combat Sports</li>
-                </ul>
-        </div>
+        <nav>
+            <motion.div>
+                <motion.button
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.7 }}
+                    className="nav-btn"
+                    onClick={open}
+                >
+                    Open
+                </motion.button>
+                <motion.button
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    className="nav-btn"
+                    onClick={() => null}
+                >
+                    Button
+                </motion.button>
+                <motion.button
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    className="nav-btn"
+                    onClick={() => null}
+                >
+                    Button
+                </motion.button>
+                <motion.button
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    className="nav-btn"
+                    onClick={() => null}
+                >
+                    Button
+                </motion.button>
+            </motion.div>
+        </nav>
     );
 };
