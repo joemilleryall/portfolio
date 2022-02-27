@@ -33,33 +33,7 @@ a {
 body{
     background-color: var(--bg);
 }
-.bg{
-    background-color: #00e1ff;
-    width:120%;
-    height:3%;
-    position: absolute;
-    transform: rotate(10deg);
-    z-index: -9;
-    top:35vh;
-}
 
-.bg:nth-child(2){
-    top:40vh;
-    background-color: #00b7ff;
-    transform: rotate(15deg);
-}
-.bg:nth-child(3){
-    top:45vh;
-    background-color: #00b7ff;
-    transform: rotate(20deg);
-
-}
-.bg:nth-child(4){
-    top:50vh;
-    background-color: #00e1ff;
-    transform: rotate(25deg);
-
-}
 .backdrop{
     position: relative;
     top: 0;
@@ -139,4 +113,45 @@ nav div button:last-child:hover{
     position: absolute;
     width:100%;
     bottom:0;
+}
+
+
+.star{
+    height:3px;
+    width:3px;
+    background-color:white;
+    position: absolute;
+    bottom: 10px;
+    box-shadow:
+        0 0 6px 3px #fff,  /* inner white */
+        0 0 10px 6px #f0f, /* middle magenta */
+        0 0 14px 9px #0ff;
+    z-index: -9;
+}
+.star:nth-child(2){
+    left:10%;
+}
+.star:nth-child(3){
+    left:15%;
+}
+.star:nth-child(4){
+    left:20%;
+}
+.star:nth-child(5){
+    left:25%;
+}
+.star:nth-child(6){
+    left:30%;
+}
+.star:nth-child(7){
+    left:35%;
+}
+.star:nth-child(8){
+    left:40%;
+}
+.star:nth-child(9){
+    left:45%;
+}
+.star:nth-child(10){
+    left:50%;
 }
