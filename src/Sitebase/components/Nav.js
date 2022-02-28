@@ -34,7 +34,8 @@ export const Nav = ({ open }) => {
                     className="nav-btn"
                     onClick={() => null}
                 >
-                    Button
+                    Whats going on in Ukraine
+                    {/* https://www.reddit.com/r/UkrainianConflict/new.json */}
                 </motion.button>
             </motion.div>
         </nav>
