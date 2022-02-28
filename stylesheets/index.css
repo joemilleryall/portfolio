@@ -114,41 +114,15 @@ nav div button:last-child:hover{
     width:100%;
     bottom:0;
 }
-.bg-shape{
-    height:3px;
-    width:3px;
-    background-color:white;
+.galaxy {
+    display:flex;
     position: absolute;
-    bottom: 10px;
-    z-index: -9;
-    left:5%
 }
-.bg-shape:nth-child(2){
-    left:10%;
+.star{
     height:30px;
     width:30px;
+    background-color:white;
+    bottom: 10px;
+    z-index: -9;
 }
-.bg-shape:nth-child(3){
-    left:15%;
-}
-.bg-shape:nth-child(4){
-    left:20%;
-}
-.bg-shape:nth-child(5){
-    left:25%;
-}
-.bg-shape:nth-child(6){
-    left:30%;
-}
-.bg-shape:nth-child(7){
-    left:35%;
-}
-.bg-shape:nth-child(8){
-    left:40%;
-}
-.bg-shape:nth-child(9){
-    left:45%;
-}
-.bg-shape:nth-child(10){
-    left:50%;
-}
+
