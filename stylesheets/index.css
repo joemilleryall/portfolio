@@ -1,9 +1,9 @@
 :root {
-    --bg: #1b1b1b;
+    --bg: #000000;
     --bg-accent: #0f0f0fe1;
     --text-color: #dadce1;
     --hover-color: #2e2e2e;
-    --nav-size: 5vh;
+    --nav-size: 25vw;
     --gallery-size: 85vh;
     --footer-size: 5vh;
     --border: 2px solid var(--hover-color);
@@ -58,50 +58,58 @@ body{
 }
 /* -----nav     */
 nav div{
+    position: absolute;
     display: flex; 
-    width:60%;
-    margin: 0 auto;
-    height: var(--nav-size);
-    align-items: center;
+    flex-direction: column;
+    width: var(--nav-size);
+    height: 100vh;
+    /* align-items:center; */
     justify-content:space-evenly;
     background-color: var(--bg-accent);
-    border-bottom: var(--border);
-    border-radius: 0px 0px 30px 30px;
 }
-nav div button{
+.nav-btn{
+    margin: 0 auto;
     padding:0.5rem;
     width:13rem;
     color:white;
 }
-nav div button:hover{
+.nav-btn:hover{
     background-color: var(--hover-color);
     cursor: pointer;
     border: var(--border);
 }
-nav div button:first-child:hover{
-    background-color: var(--hover-color);
-    cursor: pointer;
-    border: var(--border);
-    border-radius: 0px 0px 0px 30px;
+.close-nav{
+    position: absolute;
+    top:0;
+    right:0;
+    color:white;
+    background-color: black;
+    /* border: var(--border); */
+    border-radius: 50%;
+    height:3rem;
+    width:3rem;
+    margin:1rem;
 }
-nav div button:last-child:hover{
-    background-color: var(--hover-color);
+.close-nav:hover{
+    background-color: var(--bg-accent);
     cursor: pointer;
-    border: var(--border);
-    border-radius: 0px 0px 30px 0px;
 }
+.open-nav{
+    position: absolute;
+    top:0;
+    left:0;
+    color:white;
+    background-color: black;
+    /* border: var(--border); */
+    border-radius: 50%;
+    height:3rem;
+    width:3rem;
+    margin:1rem;
+}
+
 /* -----gallery     */
 .gallery{
-    margin: auto;
-    margin-top:1rem;
-    display: flex; 
-    height: var(--gallery-size);
-    width: 80%;
-    align-items: center;
-    justify-content:space-evenly;
-    background-color: var(--bg-accent);
-    border: var(--border);
-    border-radius: var(--border-radius);
+
 }
 /* -----footer     */
 .footer{
@@ -114,7 +122,7 @@ nav div button:last-child:hover{
     width:100%;
     bottom:0;
 }
-.galaxy {
+.AnimatedBackground {
     display:flex;
     position: absolute;
 }
