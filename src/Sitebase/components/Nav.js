@@ -1,6 +1,5 @@
-import { motion, AnimatePresence } from 'framer-motion'
 import { useState } from 'react'
-
+import { motion, AnimatePresence } from 'framer-motion'
 
 export const Nav = ({ open }) => {
     const [isNavOpen, setIsNavOpen] = useState(false);
@@ -12,9 +11,9 @@ export const Nav = ({ open }) => {
         visible: {
             x: "0",
             transition: {
-                duration: 1, 
-                type: "spring", 
-                damping: 50, 
+                duration: 1,
+                type: "spring",
+                damping: 50,
                 stiffness: 700
             },
         },
@@ -27,10 +26,14 @@ export const Nav = ({ open }) => {
         <nav>
             <motion.button
                 key="open-nav-btn"
-                onClick={()=>{setIsNavOpen(true)}}
+                onClick={() => { setIsNavOpen(true) }}
                 className="open-nav"
+                whileHover={{scale:0.8}}
             >
-                open nav
+                <motion.span></motion.span>
+                <motion.span></motion.span>
+                <motion.span></motion.span>
+
             </motion.button>
             <AnimatePresence
                 initial={false}
@@ -38,53 +41,54 @@ export const Nav = ({ open }) => {
             >
                 {
                     isNavOpen && (<motion.div
-                            key="open-nav-div"
-                            variants={slideOut}
-                            initial="hidden"
-                            animate="visible"
-                            exit="exit"
+                        className="slideOutNav"
+                        key="open-nav-div"
+                        variants={slideOut}
+                        initial="hidden"
+                        animate="visible"
+                        exit="exit"
+                    >
+                        <motion.button
+                            onClick={() => { setIsNavOpen(false) }}
+                            className="close-nav"
                         >
-                            <motion.button
-                                onClick={()=>{setIsNavOpen(false)}}
-                                className="close-nav"
-                            >
-                                X
-                            </motion.button>
-                            <motion.button
-                                whileHover={{ scale: 1.1 }}
-                                whileTap={{ scale: 0.7 }}
-                                className="nav-btn"
-                                onClick={open}
-                            >
-                                Open
-                            </motion.button>
-                            <motion.button
-                                whileHover={{ scale: 1.1 }}
-                                whileTap={{ scale: 0.9 }}
-                                className="nav-btn"
-                                onClick={() => null}
-                            >
-                                Button
-                            </motion.button>
-                            <motion.button
-                                whileHover={{ scale: 1.1 }}
-                                whileTap={{ scale: 0.9 }}
-                                className="nav-btn"
-                                onClick={() => null}
-                            >
-                                Button
-                            </motion.button>
-                            <motion.button
-                                whileHover={{ scale: 1.1 }}
-                                whileTap={{ scale: 0.9 }}
-                                className="nav-btn"
-                                onClick={() => null}
-                            >
-                                .json?
-                                {/* https://www.reddit.com/r/UkrainianConflict/new.json */}
-                            </motion.button>
-                        </motion.div>)
-                
+                            X
+                        </motion.button>
+                        <motion.button
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.7 }}
+                            className="nav-btn"
+                            onClick={open}
+                        >
+                            Open
+                        </motion.button>
+                        <motion.button
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
+                            className="nav-btn"
+                            onClick={() => null}
+                        >
+                            Button
+                        </motion.button>
+                        <motion.button
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
+                            className="nav-btn"
+                            onClick={() => null}
+                        >
+                            Button
+                        </motion.button>
+                        <motion.button
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
+                            className="nav-btn"
+                            onClick={() => null}
+                        >
+                            .json?
+                            {/* https://www.reddit.com/r/UkrainianConflict/new.json */}
+                        </motion.button>
+                    </motion.div>)
+
                 }
             </AnimatePresence>
 

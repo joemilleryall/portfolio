@@ -1,6 +1,6 @@
 :root {
     --bg: #000000;
-    --bg-accent: #0f0f0fe1;
+    --bg-accent: #0f0f0f;
     --text-color: #dadce1;
     --hover-color: #2e2e2e;
     --nav-size: 25vw;
@@ -57,7 +57,7 @@ body{
     border-radius: var(--border-radius);
 }
 /* -----nav     */
-nav div{
+.slideOutNav{
     position: absolute;
     display: flex; 
     flex-direction: column;
@@ -100,28 +100,28 @@ nav div{
     left:0;
     color:white;
     background-color: black;
-    /* border: var(--border); */
-    border-radius: 50%;
     height:3rem;
     width:3rem;
     margin:1rem;
-}
-
-/* -----gallery     */
-.gallery{
-
-}
-/* -----footer     */
-.footer{
-    display: flex; 
-    height: var(--footer-size);
+    cursor: pointer;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-content:space-evenly;
-    background-color: var(--bg-accent);
-    position: absolute;
-    width:100%;
-    bottom:0;
 }
+/* .open-nav:hover{
+    background-color: white;
+    border-radius: 30%;
+    padding:1rem;
+} */
+
+.open-nav span{
+    border-bottom:var(--border);
+    padding:.2rem;
+    width:100%;
+}
+
+
 .AnimatedBackground {
     display:flex;
     position: absolute;
