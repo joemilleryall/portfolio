@@ -31,7 +31,7 @@ export const Nav = ({ open }) => {
                 duration: 1,
                 type: "spring",
                 damping: 50,
-                stiffness: 700
+                stiffness: 100
             },
         },
         exit: {
