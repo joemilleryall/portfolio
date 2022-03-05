@@ -83,44 +83,37 @@ body{
     top:0;
     right:0;
     color:white;
-    background-color: black;
-    /* border: var(--border); */
-    border-radius: 50%;
+    /* background-color: black; */
+    font-size: 2rem;;
+    /* border-radius: 50%; */
     height:3rem;
     width:3rem;
     margin:1rem;
-}
-.close-nav:hover{
-    background-color: var(--bg-accent);
     cursor: pointer;
 }
+
 .open-nav{
     position: absolute;
     top:0;
     left:0;
-    color:white;
-    background-color: black;
-    height:3rem;
-    width:3rem;
+    width:2rem;
     margin:1rem;
     cursor: pointer;
     display:flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-}
-/* .open-nav:hover{
-    background-color: white;
-    border-radius: 30%;
+    align-items: center; 
+    border-radius: 100%;
     padding:1rem;
-} */
+}
 
-.open-nav span{
-    border-bottom:var(--border);
-    padding:.2rem;
+.open-nav div{
+    position: relative;
+    bottom:.3rem;
+    border-bottom:solid 2px white;
+    padding:.3rem;
     width:100%;
 }
-
 
 .AnimatedBackground {
     display:flex;

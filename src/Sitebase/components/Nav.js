@@ -21,20 +21,41 @@ export const Nav = ({ open }) => {
             x: "-100vw",
         }
     }
+    const fader = {
+        hidden: {
+            x: "-100vw",
+        },
+        visible: {
+            x: "0",
+            transition: {
+                duration: 1,
+                type: "spring",
+                damping: 50,
+                stiffness: 700
+            },
+        },
+        exit: {
+            x: "-100vw",
+        }
+    }
 
     return (
         <nav>
-            <motion.button
+            <motion.div
                 key="open-nav-btn"
                 onClick={() => { setIsNavOpen(true) }}
                 className="open-nav"
-                whileHover={{scale:0.8}}
+                whileHover={{
+                    scale:1.5,
+                    transition: { duration: 0.2 },
+                }}
+                whileTap={{ scale: 0.7 }}
             >
-                <motion.span></motion.span>
-                <motion.span></motion.span>
-                <motion.span></motion.span>
+                <motion.div whileHover={{ scale: 1.2 }} key="top"></motion.div>
+                <motion.div whileHover={{ scale: 1.2 }} key="middle"></motion.div>
+                <motion.div whileHover={{ scale: 1.2 }} key="bottom"></motion.div>
 
-            </motion.button>
+            </motion.div>
             <AnimatePresence
                 initial={false}
                 exitBeforeEnter={true}
@@ -51,8 +72,10 @@ export const Nav = ({ open }) => {
                         <motion.button
                             onClick={() => { setIsNavOpen(false) }}
                             className="close-nav"
+                            whileHover={{ scale: 1.3, borderRadius: "100%", backgroundColor: "rgb(0, 0, 0)" }}
+                            whileTap={{ scale: 0.7 }}
                         >
-                            X
+                            &#x2936;
                         </motion.button>
                         <motion.button
                             whileHover={{ scale: 1.1 }}
