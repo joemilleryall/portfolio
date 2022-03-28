@@ -11,14 +11,17 @@ export const Nav = ({ open }) => {
         visible: {
             x: "0",
             transition: {
-                duration: 500,
                 type: "spring",
-                damping: 50,
-                stiffness: 700
+                damping: 100,
+                stiffness: 2000
             },
         },
         exit: {
             x: "-100vw",
+            transition: {
+                type: "spring",
+                duration:.1
+            },
         }
     }
 
