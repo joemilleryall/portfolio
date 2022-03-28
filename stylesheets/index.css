@@ -1,6 +1,6 @@
 :root {
     --bg: #000000;
-    --bg-accent: #0f0f0f;
+    --bg-accent: #0f0f0f59;
     --text-color: #dadce1;
     --hover-color: #2e2e2e;
     --nav-size: 25vw;
@@ -126,4 +126,3 @@ body{
     bottom: 10px;
     z-index: -9;
 }
-

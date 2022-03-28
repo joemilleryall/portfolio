@@ -11,7 +11,7 @@ export const Nav = ({ open }) => {
         visible: {
             x: "0",
             transition: {
-                duration: 1,
+                duration: 500,
                 type: "spring",
                 damping: 50,
                 stiffness: 700
@@ -21,59 +21,48 @@ export const Nav = ({ open }) => {
             x: "-100vw",
         }
     }
+
     const fader = {
         hidden: {
-            x: "-100vw",
+            opacity: "0",
         },
         visible: {
-            x: "0",
-            transition: {
-                duration: 1,
-                type: "spring",
-                damping: 50,
-                stiffness: 100
-            },
+            opacity: "1",
         },
         exit: {
-            x: "-100vw",
+            opacity: "0",
         }
+    }
+
+    const btnFunc = () => {
+        
     }
 
     return (
         <nav>
-            <motion.div
-                key="open-nav-btn"
-                onClick={() => { setIsNavOpen(true) }}
-                className="open-nav"
-                whileHover={{
-                    scale:1.5,
-                    transition: { duration: 0.2 },
-                }}
-                whileTap={{ scale: 0.7 }}
-            >
-                <motion.div whileHover={{ scale: 1.2 }} key="top"></motion.div>
-                <motion.div whileHover={{ scale: 1.2 }} key="middle"></motion.div>
-                <motion.div whileHover={{ scale: 1.2 }} key="bottom"></motion.div>
-
-            </motion.div>
             <AnimatePresence
                 initial={false}
                 exitBeforeEnter={true}
             >
                 {
-                    isNavOpen && (<motion.div
-                        className="slideOutNav"
-                        key="open-nav-div"
-                        variants={slideOut}
-                        initial="hidden"
-                        animate="visible"
-                        exit="exit"
-                    >
+                    isNavOpen ? (
+                        <motion.div
+                            className="slideOutNav"
+                            key="open-nav-div"
+                            variants={slideOut}
+                            initial="hidden"
+                            animate="visible"
+                            exit="exit"
+                        >
                         <motion.button
                             onClick={() => { setIsNavOpen(false) }}
                             className="close-nav"
                             whileHover={{ scale: 1.3, borderRadius: "100%", backgroundColor: "rgb(0, 0, 0)" }}
                             whileTap={{ scale: 0.7 }}
+                            variants={fader}
+                            initial="hidden"
+                            animate="visible"
+                            exit="exit"
                         >
                             &#x2936;
                         </motion.button>
@@ -110,11 +99,27 @@ export const Nav = ({ open }) => {
                             .json?
                             {/* https://www.reddit.com/r/UkrainianConflict/new.json */}
                         </motion.button>
+                    </motion.div>) 
+                    : (<motion.div
+                        key="open-nav-btn"
+                        onClick={() => { setIsNavOpen(true) }}
+                        className="open-nav"
+                        whileHover={{
+                            scale:1.5,
+                            transition: { duration: 0.2 },
+                        }}
+                        variants={slideOut}
+                        initial="hidden"
+                        animate="visible"
+                        exit="exit"
+                        whileTap={{ scale: 0.7 }}
+                    >
+                        <motion.div whileHover={{ scale: 1.2 }} key="top"></motion.div>
+                        <motion.div whileHover={{ scale: 1.2 }} key="middle"></motion.div>
+                        <motion.div whileHover={{ scale: 1.2 }} key="bottom"></motion.div>
                     </motion.div>)
-
                 }
             </AnimatePresence>
-
         </nav>
     );
 };
