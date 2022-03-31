@@ -1,4 +1,4 @@
-import { Nav, Gallery, AnimatedBackground } from './components.js'
+import { Nav, Gallery } from './components.js'
 import { useState, useEffect } from 'react'
 
 // so the idea is that each one of the main componnets are single page interactive react components which do something simple but sort of clever and then there will be larger projects divke creating the blogging app and the media showcase app or maybe media showcase, or whatever it may be.
@@ -14,7 +14,7 @@ export const Home = () => {
 
             <Nav open={open} />
             <Gallery isOpen={isOpen} close={close} />
-            {/* <AnimatedBackground /> */}
+
         </div>
     );
 };

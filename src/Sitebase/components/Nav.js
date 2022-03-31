@@ -12,28 +12,15 @@ export const Nav = ({ open }) => {
             x: "0",
             transition: {
                 type: "spring",
-                damping: 100,
-                stiffness: 2000
+                damping: 400,
+                stiffness: 5000
             },
         },
         exit: {
             x: "-100vw",
             transition: {
-                type: "spring",
-                duration:.1
+                duration: "0.2"
             },
-        }
-    }
-
-    const fader = {
-        hidden: {
-            opacity: "0",
-        },
-        visible: {
-            opacity: "1",
-        },
-        exit: {
-            opacity: "0",
         }
     }
 
@@ -60,12 +47,12 @@ export const Nav = ({ open }) => {
                         <motion.button
                             onClick={() => { setIsNavOpen(false) }}
                             className="close-nav"
+                            key="close-nav-btn"
                             whileHover={{ scale: 1.3, borderRadius: "100%", backgroundColor: "rgb(0, 0, 0)" }}
                             whileTap={{ scale: 0.7 }}
-                            variants={fader}
-                            initial="hidden"
-                            animate="visible"
-                            exit="exit"
+                            initial={{opacity: 0}}
+                            animate={{opacity: 1}}
+                            exit={{opacity: 0}}
                         >
                             &#x2936;
                         </motion.button>
@@ -107,15 +94,12 @@ export const Nav = ({ open }) => {
                         key="open-nav-btn"
                         onClick={() => { setIsNavOpen(true) }}
                         className="open-nav"
-                        whileHover={{
-                            scale:1.5,
-                            transition: { duration: 0.2 },
-                        }}
+                        whileHover={{ scale:1.5 }}
                         variants={slideOut}
                         initial="hidden"
                         animate="visible"
                         exit="exit"
-                        whileTap={{ scale: 0.7 }}
+                        
                     >
                         <motion.div whileHover={{ scale: 1.2 }} key="top"></motion.div>
                         <motion.div whileHover={{ scale: 1.2 }} key="middle"></motion.div>
