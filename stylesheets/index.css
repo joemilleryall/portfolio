@@ -121,8 +121,9 @@ body{
 
 .gallery{
     height:90vh;
-    width:80vw;
-    border: solid white 1px;
+    width:85vw;
+    border: dashed rgb(83, 83, 83) 0.4px;
     margin: auto;
     margin-top:5vh;
+    border-radius: 10px;
 }
