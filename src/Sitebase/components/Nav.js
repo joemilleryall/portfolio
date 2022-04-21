@@ -6,10 +6,10 @@ export const Nav = ({ open }) => {
 
     const slideOut = {
         hidden: {
-            x: "-100vw",
+            y: "-100vh",
         },
         visible: {
-            x: "0",
+            y: "0",
             transition: {
                 type: "spring",
                 damping: 400,
@@ -17,7 +17,7 @@ export const Nav = ({ open }) => {
             },
         },
         exit: {
-            x: "-100vw",
+            x: "-100vh",
             transition: {
                 duration: "0.2"
             },
@@ -45,13 +45,13 @@ export const Nav = ({ open }) => {
                                 onClick={() => { setIsNavOpen(false) }}
                                 className="close-nav"
                                 key="close-nav-btn"
-                                whileHover={{ scale: 1.3, borderRadius: "100%", backgroundColor: "rgb(0, 0, 0)" }}
+                                whileHover={{ scale: 1.3 }}
                                 whileTap={{ scale: 0.7 }}
                                 initial={{opacity: 0}}
                                 animate={{opacity: 1}}
                                 exit={{opacity: 0}}
                             >
-                                &#x2936;
+                                &#10005;
                             </motion.button>
                             <motion.button
                                 whileHover={{ scale: 1.1 }}
