@@ -6,7 +6,15 @@ export const Intro = ({ isOpen, close }) => {
 
     return (
         <div className="intro">
-            <h1>Hi, i'm Joe.</h1>
+            <h1>Hello!</h1>
+            <ul>
+                <li>I'm Joe Miller</li>
+                <li>Web Developer</li>
+                <li>Combat Sports Coach</li>
+                <li>Based in Brooklyn</li>
+            </ul>
+
+            <p>Welcome to my site</p>
         </div>
     );
 };
