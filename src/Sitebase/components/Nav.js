@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 export const Nav = ({ open }) => {
     const [isNavOpen, setIsNavOpen] = useState(false);
 
-    const slideOut = {
+    const dropDownSlideOut = {
         hidden: {
             y: "-100vh",
         },
@@ -36,7 +36,7 @@ export const Nav = ({ open }) => {
                         <motion.div
                             className="slideOutNav"
                             key="open-nav-div"
-                            variants={slideOut}
+                            variants={dropDownSlideOut}
                             initial="hidden"
                             animate="visible"
                             exit="exit"
@@ -93,7 +93,7 @@ export const Nav = ({ open }) => {
                             onClick={() => { setIsNavOpen(true) }}
                             className="open-nav"
                             whileHover={{ scale:1.5 }}
-                            variants={slideOut}
+                            variants={dropDownSlideOut}
                             initial="hidden"
                             animate="visible"
                             exit="exit"
